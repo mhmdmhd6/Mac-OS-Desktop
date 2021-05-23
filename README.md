@@ -19,7 +19,7 @@ make mac OS desktop with html , css , js 😀
 
                                                          Phone 👇
   
-  ![image](https://user-images.githubusercontent.com/79286306/119275851-a3587b80-bc2c-11eb-8162-04934174059b.png)
+             ![image](https://user-images.githubusercontent.com/79286306/119275851-a3587b80-bc2c-11eb-8162-04934174059b.png)
 
    //https://user-images.githubusercontent.com/79286306/119275680-ac951880-bc2b-11eb-9338-f785785fb362.mp4//
 
