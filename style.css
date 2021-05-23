@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: url(./background/q_imgfa_ir__5fe9e358e4dff_1.jpg);
+    background-size: cover;
+    max-width: 1280px;
+    background-position: bottom ;
+    cursor: url(./cursor/normal.cur) , default ;
+}
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-shadow: 2px 2px 10px  rgb(88, 88, 88);
+    background: linear-gradient(to right , #df8d81, #9c8ea9);
+}
+.navbar .left {
+    float: left;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    height: 25px;
+    width: 230px;
+}
+.navbar .right {
+    display: flex;
+    float: right;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    height: 25px;
+    width: 400px;
+}
+.navbar li {
+    /*font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+    font-family: 'Cabin', sans-serif;
+    cursor: url(./cursor/Link.cur) , pointer ;
+}
+.battery img {
+    transform: rotate(90deg);
+}
+@media screen and (max-width: 600px) {
+    .navbar .right {
+        width: 240px;
+    }
+    .hidden {
+        display: none;
+    }
+}
+
+
+
+
+
+.menu {
+    position: relative;
+}
+@media screen and (max-width: 900px) {
+    .menu {
+        right: 35vh;
+    }
+}
+@media screen and (max-width: 600px) {
+    .menu {
+        right: 15vh;
+    }
+}
+
+.earth {
+    position: fixed;
+    top: 90vh;
+    z-index: 1;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+
+    width: 320px;
+    height: 60px;
+    list-style: none;
+    opacity: 0.5;
+    transform: scale(1);
+    background-color: rgb(231, 231, 231);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.icon img{
+   /* font-size: 28px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+    cursor: url(./cursor/Link.cur) , pointer ;
+    width: 66px;
+    transition: 0.1s;
+    border-radius: 12px;
+}
+.icon img:hover {
+    width: 85px;
+    filter: drop-shadow( 1px 1px 5px white) ;
+}
