@@ -11,6 +11,7 @@ make mac OS desktop with html , css , js 😀
   
   
   Desktop 👇
+  ![image](https://user-images.githubusercontent.com/79286306/119275769-288f6080-bc2c-11eb-9576-105ad5d5efce.png)
 https://user-images.githubusercontent.com/79286306/119275542-f16c7f80-bc2a-11eb-8fb0-0ad329d99f1b.mp4
 
 
