@@ -6,14 +6,9 @@ body {
     background: url(./background/q_imgfa_ir__5fe9e358e4dff_1.jpg);
     background-size: cover;
     max-width: 1280px;
+    background-repeat: no-repeat;
     background-position: bottom ;
     cursor: url(./cursor/normal.cur) , default ;
-}
-@media screen and (max-width: 600px) {
-    body {
-        background-image: url(./background/q_imgfa_ir__5fe9e358e4dff_1.jpg);
-        background-size: cover;
-    }
 }
 .navbar {
     width: 100%;
@@ -111,7 +106,7 @@ body {
 }
 @media screen and (max-width: 600px) {
     .earth {
-        top: 81vh;
+        top: 74vh;
     }
 }
 .icon img{
