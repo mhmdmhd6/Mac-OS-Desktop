@@ -12,6 +12,8 @@ body {
 @media screen and (max-width: 600px) {
     body {
         background-repeat: no-repeat;
+        background-image: url(./background/q_imgfa_ir__5fe9e358e4dff_1.jpg);
+        background-size: cover;
     }
 }
 .navbar {
@@ -111,7 +113,7 @@ body {
 }
 @media screen and (max-width: 600px) {
     .earth {
-        top: 86vh;
+        top: 81vh;
     }
 }
 .icon img{
