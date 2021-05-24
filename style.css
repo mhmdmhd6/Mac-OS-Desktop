@@ -95,9 +95,8 @@ body {
     height: 60px;
     list-style: none;
     opacity: 0.5;
-    transform: scale(1);
     background-color: rgb(231, 231, 231);
-    box-shadow: 0 0 10px rgb(0, 0, 0);
+    box-shadow: -5px 5px 10px rgb(49, 49, 49);
     border-top-left-radius: 14px;
     border-top-right-radius: 14px;
     display: flex;
@@ -106,7 +105,7 @@ body {
 }
 @media screen and (max-width: 600px) {
     .earth {
-        top: 74vh;
+        top: 79vh;
     }
 }
 .icon img{
