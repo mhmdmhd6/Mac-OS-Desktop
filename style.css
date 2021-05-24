@@ -9,6 +9,11 @@ body {
     background-position: bottom ;
     cursor: url(./cursor/normal.cur) , default ;
 }
+@media screen and (max-width: 600px) {
+    body {
+        background-repeat: no-repeat;
+    }
+}
 .navbar {
     width: 100%;
     position: fixed;
@@ -34,9 +39,18 @@ body {
     height: 25px;
     width: 400px;
 }
+@media screen and (max-width: 600px) {
+    .navbar .right {
+        height: 18px;
+    } 
+     .navbar  .left{
+        height: 18px;
+    }
+}
 .navbar li {
     /*font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
     font-family: 'Cabin', sans-serif;
+    font-size: 15px;
     cursor: url(./cursor/Link.cur) , pointer ;
 }
 .battery img {
@@ -44,17 +58,21 @@ body {
 }
 @media screen and (max-width: 600px) {
     .navbar .right {
-        width: 240px;
+        width: 190px;
+    }
+    .navbar .left {
+        width: 190px;
     }
     .hidden {
         display: none;
     }
+    .navbar li {
+        font-size: 11px;
+    }
 }
 
 
-
-
-
+/*bootom menu*/
 .menu {
     position: relative;
 }
@@ -90,6 +108,11 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+@media screen and (max-width: 600px) {
+    .earth {
+        top: 86vh;
+    }
 }
 .icon img{
    /* font-size: 28px;
