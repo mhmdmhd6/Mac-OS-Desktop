@@ -11,7 +11,6 @@ body {
 }
 @media screen and (max-width: 600px) {
     body {
-        background-repeat: no-repeat;
         background-image: url(./background/q_imgfa_ir__5fe9e358e4dff_1.jpg);
         background-size: cover;
     }
@@ -50,7 +49,6 @@ body {
     }
 }
 .navbar li {
-    /*font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
     font-family: 'Cabin', sans-serif;
     font-size: 15px;
     cursor: url(./cursor/Link.cur) , pointer ;
@@ -117,8 +115,6 @@ body {
     }
 }
 .icon img{
-   /* font-size: 28px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
     cursor: url(./cursor/Link.cur) , pointer ;
     width: 66px;
     transition: 0.1s;
