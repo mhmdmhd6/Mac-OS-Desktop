@@ -1,9 +1,7 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>menu bar </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>menu bar</title>
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
     <body onload="startTime()">
@@ -15,33 +13,37 @@
             <li>Help</li>
         </ul>
         <ul class="right">
+
             <li class="hidden"><img src="./icon/search_black_24dp.svg" alt=""></li>
             <li class="battery hidden"><img src="./icon/battery_charging_full_black_24dp.svg" alt=""></li>
             <li class="hidden"><img src="./icon/wifi_black_24dp.svg" alt=""></li>      
             <li>EN</li>
             <li id="date"></li>
-            <script>
+
+           <!--script code(starting)-->
+           <script>
                 var d = new Date();
                 document.getElementById("date").innerHTML = d.toDateString();
         </script>
             <li id="txt"></li>
     <script>
-function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
-  m = checkTime(m);
-  s = checkTime(s);
-  document.getElementById('txt').innerHTML =
-  h + ":" + m + ":" + s;
-  var t = setTimeout(startTime, 1000);
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('txt').innerHTML =
+        h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 1000);
 }
-function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-  return i;
-}
-    </script>
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
+</script>
+    <!--finishing script code-->
         </ul>
     </div>
    <div class="menu">
