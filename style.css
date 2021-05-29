@@ -10,11 +10,11 @@ body {
     background-position: bottom ;
     cursor: url(./cursor/normal.cur) , default ;
 }
-@media screen and (max-width:600px){
+/*@media screen and (max-width:600px){
     body {
-        background-image: url(./background/q_imgfa_ir__5fe9e358e4dff_1.jpg);
+    cursor: none;
     }
-}
+}*/
 .navbar {
     width: 100%;
     position: fixed;
@@ -40,14 +40,14 @@ body {
     height: 25px;
     width: 400px;
 }
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
     .navbar .right {
         height: 18px;
     } 
      .navbar  .left{
         height: 18px;
     }
-}
+}*/
 .navbar li {
     font-family: 'Cabin', sans-serif;
     font-size: 15px;
@@ -56,12 +56,12 @@ body {
 .battery img {
     transform: rotate(90deg);
 }
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
     .navbar .right {
         width: 190px;
     }
     .navbar .left {
-        width: 190px;
+        width: 170px;
     }
     .hidden {
         display: none;
@@ -69,14 +69,14 @@ body {
     .navbar li {
         font-size: 11px;
     }
-}
+}*/
 
 
 /*bootom menu*/
 .menu {
     position: relative;
 }
-@media screen and (max-width: 900px) {
+/*@media screen and (max-width: 900px) {
     .menu {
         right: 35vh;
     }
@@ -85,7 +85,7 @@ body {
     .menu {
         right: 15vh;
     }
-}
+}*/
 
 .earth {
     position: fixed;
@@ -95,9 +95,9 @@ body {
     right:0;
     margin-left:auto;
     margin-right:auto;
-
     width: 320px;
     height: 60px;
+
     list-style: none;
     opacity: 0.5;
     transform: scale(1);
@@ -109,11 +109,11 @@ body {
     justify-content: space-around;
     align-items: center;
 }
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
     .earth {
-        top: 81vh;
+        top: 90vh;
     }
-}
+}*/
 .icon img{
     cursor: url(./cursor/Link.cur) , pointer ;
     width: 66px;
@@ -124,3 +124,11 @@ body {
     width: 85px;
     filter: drop-shadow( 1px 1px 5px white) ;
 }
+/*@media screen and (max-width:600px) {
+    .navbar li{
+        cursor: none;
+    }
+    .icon img {
+        cursor: none;
+    }
+}*/
