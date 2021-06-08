@@ -78,6 +78,11 @@ body {
     justify-content: space-around;
     align-items: center;
 }
+@media screen and (max-width:600px) {
+    .earth {
+        top: 80vh;
+    }
+}
 .icon img{
     cursor: url(./cursor/Link.cur) , pointer ;
     width: 66px;
