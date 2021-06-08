@@ -7,20 +7,18 @@ body {
     background-size: cover;
     max-width: 1280px;
     background-repeat: no-repeat;
-    background-position: bottom ;
     cursor: url(./cursor/normal.cur) , default ;
 }
-/*@media screen and (max-width:600px){
-    body {
-    cursor: none;
-    }
-}*/
 .navbar {
     width: 100%;
+    height: 25px;
     position: fixed;
     top: 0;
-    box-shadow: 2px 2px 10px  rgb(88, 88, 88);
-    background: linear-gradient(to right , #df8d81, #9c8ea9);
+    box-shadow: -2px -2px 10px rgb(88 88 88);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .navbar .left {
     float: left;
@@ -28,7 +26,6 @@ body {
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    height: 25px;
     width: 230px;
 }
 .navbar .right {
@@ -37,26 +34,17 @@ body {
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    height: 25px;
     width: 400px;
 }
-/*@media screen and (max-width: 600px) {
-    .navbar .right {
-        height: 18px;
-    } 
-     .navbar  .left{
-        height: 18px;
-    }
-}*/
 .navbar li {
     font-family: 'Cabin', sans-serif;
     font-size: 15px;
     cursor: url(./cursor/Link.cur) , pointer ;
 }
-.battery img {
-    transform: rotate(90deg);
+.navbar .right .battery img {
+    transform: rotate(270deg);
 }
-/*@media screen and (max-width: 600px) {
+@media screen and (max-width:600px) {
     .navbar .right {
         width: 190px;
     }
@@ -69,39 +57,20 @@ body {
     .navbar li {
         font-size: 11px;
     }
-}*/
+}
 
 
 /*bootom menu*/
-.menu {
-    position: relative;
-}
-/*@media screen and (max-width: 900px) {
-    .menu {
-        right: 35vh;
-    }
-}
-@media screen and (max-width: 600px) {
-    .menu {
-        right: 15vh;
-    }
-}*/
-
 .earth {
     position: fixed;
     top: 90vh;
-    z-index: 1;
     left:0;
     right:0;
-    margin-left:auto;
-    margin-right:auto;
+    margin: 0 auto;
     width: 320px;
     height: 60px;
-
     list-style: none;
-    opacity: 0.5;
-    transform: scale(1);
-    background-color: rgb(231, 231, 231);
+    backdrop-filter: blur(5px);
     box-shadow: 0 0 10px rgb(0, 0, 0);
     border-top-left-radius: 14px;
     border-top-right-radius: 14px;
@@ -109,26 +78,13 @@ body {
     justify-content: space-around;
     align-items: center;
 }
-/*@media screen and (max-width: 600px) {
-    .earth {
-        top: 90vh;
-    }
-}*/
 .icon img{
     cursor: url(./cursor/Link.cur) , pointer ;
     width: 66px;
     transition: 0.1s;
-    border-radius: 12px;
+    color: white;
 }
 .icon img:hover {
     width: 85px;
     filter: drop-shadow( 1px 1px 5px white) ;
 }
-/*@media screen and (max-width:600px) {
-    .navbar li{
-        cursor: none;
-    }
-    .icon img {
-        cursor: none;
-    }
-}*/
