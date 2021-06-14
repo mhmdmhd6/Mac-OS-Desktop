@@ -164,7 +164,7 @@ div.child-child {
     left:0;
     right:0;
     margin: 0 auto;
-    width: 400px;
+    width: 770px;
     height: 70px;
     list-style: none;
     backdrop-filter: blur(5px);
@@ -177,7 +177,9 @@ div.child-child {
 @media screen and (max-width:600px) {
     .earth {
         top: 75vh;
+        width: 310px;
     }
+    
 }
 @keyframes to-top-bottom {
     0%{
@@ -200,24 +202,28 @@ div.child-child {
     }
 }
 .icon{
-    width: 62px;
-    border-radius: 10px;
     transition: 0.1s;
-}
-.icon:hover{
-    width: 77px !important;
-    filter: none !important;
+    margin-top: 5px;
 }
 .icon:active{
     width: 64px !important;
     animation: to-top-bottom 1s ease-out !important;
 }
 .first {
-    width: 54px !important;
+    width: 51px !important;
+    border-radius: 10px;
+}
+.first:hover {
+    width: 69px !important;
 }
 .last{
     width: 65px;
+    transition: 0.1s;
 }
 .last:hover {
     width: 85px !important;
+}
+.border-column{
+    padding-right: 7px;
+    border-right: 1px solid black;
 }
