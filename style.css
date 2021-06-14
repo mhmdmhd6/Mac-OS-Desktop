@@ -1,11 +1,13 @@
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 body {
-    background: url(./background/q_imgfa_ir__5fe9e358e4dff_1.jpg);
+    background: url(./background/imac2.jpg);
     background-size: cover;
     max-width: 1280px;
+    background-position: right;
     background-repeat: no-repeat;
     cursor: url(./cursor/normal.cur) , default ;
 }
@@ -14,8 +16,10 @@ body {
     height: 25px;
     position: fixed;
     top: 0;
+    left: 0;
     box-shadow: -2px -2px 10px rgb(88 88 88);
     backdrop-filter: blur(5px);
+    background: rgba(225, 220, 227, 0.253);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,23 +30,99 @@ body {
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    width: 230px;
+    width: 430px;
 }
+
+.navbar li {
+    font-family: 'Cabin', sans-serif;
+    font-size: 15px;
+    cursor: url(./cursor/Link.cur) , pointer ;
+}
+.left .parent{
+    transition: 0.2s;
+    padding: 3px 5px;
+}
+.left .parent:hover{
+    background-color: #FD5B33;
+    color: white;
+}
+
+ul > li > ul {
+    position: absolute;
+    display: none;
+}
+ul > li:hover > ul {
+    display: block;
+    animation: opacity 200ms;
+}
+@keyframes opacity {
+    0% {
+        transform: translateY(-30px) scale(0);
+    }
+    100%{
+        transform: translateY(0px)  scale(1);
+    }
+}
+.child{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 154px;
+    height: 297px;
+    backdrop-filter: blur(6px);
+    background: rgba(225, 220, 227, 0.39);
+    border-radius: 7px;
+    margin-top: 4px;
+    margin-left: -10px;
+    backdrop-filter: opacity(0.8);
+    box-shadow: 0 0 7px #34282D;
+}
+.child p {
+    padding-left: 14px;
+    width: 91%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: black !important;
+}
+.border{
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ff00c8;
+    width: 90%;
+}
+.child p:hover{
+    color: white !important;
+    /*background-color: rgba(67, 126, 228, 0.897);*/
+    background: linear-gradient(to right , #FABE4C , transparent);
+}
+
+.child > .linking > ul {
+    position: absolute;
+    display: none;
+}
+.child > .linking:hover > ul {
+    display: block;
+}
+div.child-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    backdrop-filter: blur(5px);
+}
+
+
+
 .navbar .right {
     display: flex;
     float: right;
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    width: 400px;
-}
-.navbar li {
-    font-family: 'Cabin', sans-serif;
-    font-size: 15px;
-    cursor: url(./cursor/Link.cur) , pointer ;
+    width: 340px;
 }
 .navbar .right .battery img {
-    transform: rotate(270deg);
+    transform: rotate(90deg);
 }
 @media screen and (max-width:600px) {
     .navbar .right {
@@ -61,35 +141,67 @@ body {
 
 
 /*bootom menu*/
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .earth {
     position: fixed;
-    top: 90vh;
+    top: 87vh;
     left:0;
     right:0;
     margin: 0 auto;
-    width: 320px;
-    height: 60px;
+    width: 400px;
+    height: 70px;
     list-style: none;
     backdrop-filter: blur(5px);
-    box-shadow: 0 0 10px rgb(0, 0, 0);
-    border-top-left-radius: 14px;
-    border-top-right-radius: 14px;
+    background: rgba(225, 220, 227, 0.253);
+    border-radius: 14px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-@media screen and (max-width:600px) {
-    .earth {
-        top: 80vh;
+@keyframes to-top-bottom {
+    0%{
+        transform: translate(0);
+    }
+    20%{
+        transform: translateY(-7px);
+    }
+    40%{
+        transform: translateY(14px);
+    }
+    60%{
+        transform: translateY(-3px);
+    }
+    80%{
+        transform: translateY(6px);
+    }
+    100%{
+        transform: translateY(-3px);
     }
 }
-.icon img{
-    cursor: url(./cursor/Link.cur) , pointer ;
-    width: 66px;
+.icon{
+    width: 62px;
+    border-radius: 10px;
     transition: 0.1s;
-    color: white;
 }
-.icon img:hover {
-    width: 85px;
-    filter: drop-shadow( 1px 1px 5px white) ;
+.icon:hover{
+    width: 77px !important;
+    filter: none !important;
+}
+.icon:active{
+    width: 64px !important;
+    animation: to-top-bottom 1s ease-out !important;
+}
+.first {
+    width: 54px !important;
+}
+.last{
+    width: 65px;
+}
+.last:hover {
+    width: 85px !important;
 }

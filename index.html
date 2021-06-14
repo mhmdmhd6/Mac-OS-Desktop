@@ -5,18 +5,39 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
     <body onload="startTime()">
+    
     <div class="navbar">
         <ul class="left">
-            <li>Mim Academy</li>
-            <li>file</li>
-            <li>Edit</li>
-            <li>Help</li>
+            <li class="parent">Mim Academy</li>
+                <li class="parent"> file
+                    <ul>
+                        <li>
+                            <div class="child">
+                                <p>New File</p>
+                                <p class="border">New Window</p>
+                                <p>Open File</p>
+                                <p class="border linking">Open Recent File &nbsp;&nbsp;&nbsp;>
+                                </p>
+                                <p>save</p>
+                                <p class="border">save as</p>
+                                <p>Searching</p>
+                                <p class="border">Propertie File</p>
+                                <p class="border">Customize</p>
+                                <p>Exit...</p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            <li class="parent">Edit</li>
+            <li class="parent">View</li>
+            <li class="parent">Go</li>
+            <li class="parent">Tools</li>
+            <li class="parent">Help</li>
         </ul>
         <ul class="right">
-
-            <li class="hidden"><img src="./icon/search_black_24dp.svg" alt=""></li>
             <li class="battery hidden"><img src="./icon/battery_charging_full_black_24dp.svg" alt=""></li>
-            <li class="hidden"><img src="./icon/wifi_black_24dp.svg" alt=""></li>      
+            <li class="hidden"><img src="./icon/wifi_black_24dp.svg" alt=""></li>
+            <li class="hidden"><img src="./icon/search_black_24dp.svg" alt=""></li>
             <li>EN</li>
             <li id="date"></li>
 
@@ -47,11 +68,14 @@
         </ul>
     </div>
     <!--navbar bottom start-->
+
    <div class="menu">
         <ul class="earth">
-            <li class="icon"><img src="./icon/home_white_24dp.svg" alt=""></li>
-            <li class="icon"><img src="./icon/contact_mail_white_24dp.svg" alt=""></li>
-            <li class="icon"><img src="./icon/account_circle_white_24dp.svg" alt=""></li>
+            <li><img class="icon first" src="./icon/file explorer.jpg" alt=""></li>
+            <li><img class="icon" src="./icon/setting.webp" alt=""></li>
+            <li><img class="icon last" src="./icon/gallery.png" alt=""></li>
+            <li><img class="icon first" src="./icon/app store.png" alt=""></li>
+            <li><img class="icon first" src="./icon/Itunes music.png" alt=""></li>
         </ul>
    </div> 
     <!--navbar bottom end-->
