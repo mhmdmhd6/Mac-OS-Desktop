@@ -85,10 +85,21 @@ ul > li:hover > ul {
     padding-bottom: 2px;
     color: black !important;
 }
+@media screen and (max-width:600px) {
+    .child {
+        height: 200px;
+        width: 120px;
+    }
+}
 .border{
     padding-bottom: 8px;
     border-bottom: 2px solid #ff00c8;
     width: 90%;
+}
+@media screen and (max-width:600px){
+    .child p {
+        width: 88%;
+    }
 }
 .child p:hover{
     color: white !important;
@@ -162,6 +173,11 @@ div.child-child {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+@media screen and (max-width:600px) {
+    .earth {
+        top: 75vh;
+    }
 }
 @keyframes to-top-bottom {
     0%{
