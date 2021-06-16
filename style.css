@@ -186,7 +186,6 @@ ul > li:hover > ul {
 }
 .icon{
     transition: 0.1s;
-    margin-top: 5px;
 }
 .icon:active{
     width: 64px !important;
