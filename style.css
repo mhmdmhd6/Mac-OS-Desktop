@@ -53,14 +53,16 @@ ul > li > ul {
 }
 ul > li:hover > ul {
     display: block;
-    animation: opacity 200ms;
+    animation: opacity 270ms;
 }
 @keyframes opacity {
     0% {
-        transform: translateY(-30px) scale(0);
+        transform: scale(0.7);
+        opacity: 0;
     }
     100%{
-        transform: translateY(0px)  scale(1);
+        transform: scale(1)  ;
+        opacity: 1;
     }
 }
 .child{
@@ -70,12 +72,10 @@ ul > li:hover > ul {
     align-items: flex-start;
     width: 154px;
     height: 297px;
-    backdrop-filter: blur(6px);
     background: rgba(225, 220, 227, 0.39);
     border-radius: 7px;
     margin-top: 4px;
     margin-left: -10px;
-    backdrop-filter: opacity(0.8);
     box-shadow: 0 0 7px #34282D;
 }
 .child p {
@@ -106,23 +106,6 @@ ul > li:hover > ul {
     /*background-color: rgba(67, 126, 228, 0.897);*/
     background: linear-gradient(to right , #FABE4C , transparent);
 }
-
-.child > .linking > ul {
-    position: absolute;
-    display: none;
-}
-.child > .linking:hover > ul {
-    display: block;
-}
-div.child-child {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    backdrop-filter: blur(5px);
-}
-
-
 
 .navbar .right {
     display: flex;
@@ -164,7 +147,7 @@ div.child-child {
     left:0;
     right:0;
     margin: 0 auto;
-    width: 770px;
+    width: 790px;
     height: 70px;
     list-style: none;
     backdrop-filter: blur(5px);
@@ -176,8 +159,8 @@ div.child-child {
 }
 @media screen and (max-width:600px) {
     .earth {
-        top: 75vh;
-        width: 310px;
+        top: 83vh;
+        width: 280px;
     }
     
 }
@@ -221,9 +204,135 @@ div.child-child {
     transition: 0.1s;
 }
 .last:hover {
-    width: 85px !important;
+    width: 87px !important;
 }
 .border-column{
-    padding-right: 7px;
-    border-right: 1px solid black;
+    padding-left: 2px;
+    border-left: 1px solid rgb(31, 31, 31);
+}
+.container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.terminal {
+    width: 70%;
+    height: 430px;
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    box-shadow: 0 0 40px #252525;
+    display: none;
+    animation: zoom-out 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+@keyframes zoom-out {
+	0% {
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.2);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+
+/*scroll bar start*/
+::-webkit-scrollbar-track {
+  background-color: #34282D;
+  border-radius: 10px;
+  cursor: pointer;
+}
+ 
+::-webkit-scrollbar {
+  width: 11px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8b8b8d; 
+  border-radius: 10px;
+  cursor: pointer;
+}
+/*scroll bar end*/
+
+.taskbar-top {
+    height: 40px;
+    width: 100%;
+    background-color: #2A2A2A;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top: 2px solid rgb(190, 190, 190);
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+.left-content {
+    float: left;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 80px;
+}
+.button {
+    cursor: pointer;
+}
+.button:nth-child(1){
+    padding: 8px;
+    background-color: #FF6059;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+.button:nth-child(1):active {
+    background-color: #fc3c32;
+}
+.button:nth-child(2){
+    padding: 8px;
+    background-color: #FFBD2E;
+    border-radius: 10px;
+    transition: 200ms;
+}
+.button:nth-child(2):active{
+    background-color: #ffa600;
+}
+.button:nth-child(3){
+    padding: 8px;
+    background-color: #28C941;
+    border-radius: 10px;
+    transition: 200ms;
+}
+.button:nth-child(3):active{
+    background-color: #12aa29;
+}
+.right-content {
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 170px;
+    height: 100%;
+}
+.right-content h2 {
+    color: white;
+    font-weight: 100;
+    font-size: 19px;
+}
+/*.right-content img {
+    width: 28px;
+}*/
+textarea{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 20px;
+    align-items: flex-start !important;
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: #e7e3e3;
+    font-size: 19px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
