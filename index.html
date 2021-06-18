@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet"></head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <body onload="startTime()">
     
     <div class="navbar">
@@ -101,6 +103,11 @@
             <textarea name="terminal" id="commands" placeholder="Last Login : Wed 22 May 23:43:02 on console"></textarea>
         </div>
         <script src="./script.js"></script>
+        <script>
+            $(function () {
+                $(".terminal").draggable();
+            });
+        </script>
     </div>
     <!--navbar bottom end-->
 </body>
