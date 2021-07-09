@@ -5,10 +5,17 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet"></head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet"></head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <body onload="startTime()">
-    
     <div class="navbar">
         <ul class="left">
             <li class="parent">Mim Academy</li>
@@ -37,13 +44,12 @@
             <li class="parent hidden">Tools</li>
             <li class="parent">Help</li>
         </ul>
+
         <ul class="right">
-            <li class="battery hidden"><img src="./icon/battery_charging_full_black_24dp.svg" alt=""></li>
-            <li class="hidden"><img src="./icon/wifi_black_24dp.svg" alt=""></li>
-            <li class="hidden"><img src="./icon/search_black_24dp.svg" alt=""></li>
+            <li class="hidden"><i class="fas fa-wifi"></i></li>
+            <li class="battery hidden"><i class="fas fa-battery-full"></i></li>
             <li>EN</li>
             <li id="date"></li>
-
            <!--script code(starting)-->
            <script>
                 var d = new Date();
@@ -68,6 +74,8 @@
     }
 </script>
     <!--finishing script code-->
+            <li class="hidden"><img src="./icon/search_black_24dp.svg" alt=""></li>
+            <li class="hidden notification"><i class="fas fa-list-ul"></i></li>
         </ul>
     </div>
     <!--navbar bottom start-->
@@ -75,18 +83,74 @@
    <div class="menu">
         <ul class="earth">
             <li><img class="icon first" src="./icon/file explorer.jpg" alt=""></li>
+            <li><img class="icon last launching" src="./icon/launchpad.png" alt=""></li>
             <li class="hidden"><img class="icon last" src="./icon/safari.png" alt=""></li>
-            <li><img class="icon last" src="./icon/messages.png" alt=""></li>
-            <li><img class="icon last" src="./icon/setting.png" alt=""></li>
-            <li class="hidden"><img class="icon last" src="./icon/maps.png" alt=""></li>
+            <li class="hidden"><img class="icon last" src="./icon/messages.png" alt=""></li>
+            <li class="hidden"><img class="icon last" src="./icon/setting.png" alt=""></li>
             <li class="hidden"><img class="icon last" src="./icon/gallery.png" alt=""></li>
             <li class="hidden"><img class="icon last" src="./icon/app store.png" alt=""></li>
             <li class="hidden"><img class="icon last" src="./icon/Itunes music.png" alt=""></li>
-            <li class="hidden"><img class="icon last" src="./icon/notes.png" alt=""></li>
+            <li><img class="icon last opennote" src="./icon/notes.png" alt=""></li>
             <li><img class="icon last opening" src="./icon/terminal.png" alt=""></li>
             <li class="hidden border-column"><img class="icon last" src="./icon/trash bin.png" alt=""></li>
         </ul>
    </div> 
+   <!--launchpad start-->
+    <div class="launchpad">
+        <div class="searchbox">
+            <input type="search" name="search" placeholder="search">
+        </div>
+        <div class="container2">
+            <div class="child-launchpad">
+                <img src="./icon/app-store.png" alt="">
+                <p>App store</p>
+            </div>
+            <div class="child-launchpad">
+                <img src="./icon/calculator.png" alt="">
+                <p>calculator</p>
+            </div>
+            <div class="child-launchpad">
+                <img src="./icon/calendar.png" alt="">
+                <p>calendar</p>
+            </div>
+            <div class="child-launchpad">
+                <img src="./icon/contacts.png" alt="">
+                <p>contacts</p>
+            </div>
+            <div class="child-launchpad"> 
+                <img src="./icon/dictionary.png" alt="">
+                <p>Dictionary</p>
+            </div>
+            <div class="child-launchpad"> 
+                <img src="./icon/home.png" alt="">
+                <p>home</p>
+            </div>
+            <div class="child-launchpad"> 
+                <img src="./icon/mail.png" alt="">
+                <p>mail</p>
+            </div>
+            <div class="child-launchpad"> 
+                <img src="./icon/messages.png" alt="">
+                <p>messages</p>
+            </div>
+            <div class="child-launchpad"> 
+                <img src="./icon/netnewswire.png" alt="">
+                <p>netnewswire</p>
+            </div>
+            <div class="child-launchpad"> 
+                <img src="./icon/numbers.png" alt="">
+                <p>numbers</p>
+            </div>
+            <div class="child-launchpad"> 
+                <img src="./icon/pages.png" alt="">
+                <p>pages</p>
+            </div>
+            <div class="child-launchpad"> 
+                <img src="./icon/zoom.png" alt="">
+                <p>zoom</p>
+            </div>
+        </div>
+    </div>
    <div class="container">
         <div class="terminal">
             <div class="taskbar-top">
@@ -96,19 +160,58 @@
                     <span class="button backfull"></span>
                 </div>
                 <div class="right-content">
-                    <!--<img src="./file.png" alt="">-->
                     <h2>Documents</h2>
                 </div>
             </div>
             <textarea name="terminal" id="commands" placeholder="Last Login : Wed 22 May 23:43:02 on console"></textarea>
         </div>
-        <script src="./script.js"></script>
-        <script>
-            $(function () {
-                $(".terminal").draggable();
-            });
-        </script>
+        <!--note app start-->     
+        <div class="note">
+            <div class="taskbar-top">
+                <div class="left-content">
+                    <span class="button close-note"></span>
+                    <span class="button full-note"></span>
+                    <span class="button backfull-note"></span>
+                </div>
+                <div class="right-content">
+                    <h2>Notes</h2>
+                </div>
+            </div>
+            <!--taskbar center start-->
+                <div class="taskabr-center">
+                    <div class="content-left">
+                        <img src="./icon/add.svg" alt="" class="adding">
+                    </div>
+                    <div class="content-right">
+                        <img src="./icon/delete.svg" alt="" class="deleting">
+                    </div>
+                    <div class="center">
+                        <input type="search" name="searching" id="searching" placeholder="Type here">
+                    </div>
+                </div>
+            <!--taskbar center end-->
+            <div class="content">
+                <div class="sidebar">
+                    <h1>All Notes</h1>
+                    <div class="notes">
+                        <input type="text" name="txt" placeholder="writing name">
+                    </div>
+                </div>
+                <div class="impor-content">
+                    <textarea cols="30" rows="10" class="typing"></textarea>
+                </div>
+            </div>
+        </div>
+        <!--note app end-->
     </div>
+    <script src="./script.js"></script>
+
     <!--navbar bottom end-->
+    <script>
+        $(function () {
+            $(".terminal").draggable();
+            $(".note").draggable();
+        });
+    </script>
 </body>
 </html>
