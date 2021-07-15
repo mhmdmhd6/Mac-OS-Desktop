@@ -8,6 +8,7 @@ var container = document.querySelector('.container')
 var deleting = document.querySelector('.deleting')
 var full = document.querySelector('.full')
 var fullnote = document.querySelector('.full-note')
+var launching = document.querySelector('.launching')
 var launchpad = document.querySelector('.launchpad')
 var navbar = document.querySelector('.navbar')
 var note = document.querySelector('.note')
@@ -50,6 +51,12 @@ function handleFullnote() {
   note.style.height = '90%'
 }
 
+function handleOpenLaunching() {
+  launchpad.style.display = 'block'
+  navbar.style.display = 'none'
+  container.style.display = 'none'
+}
+
 function handleOpening() {
   terminal.style.display = 'block'
   container.style.display = 'flex'
@@ -82,6 +89,7 @@ closenote.addEventListener('click', handleClosenote)
 deleting.addEventListener('click', handleDeleting)
 full.addEventListener('click', handleFull)
 fullnote.addEventListener('click', handleFullnote)
+launching.addEventListener('click', handleOpenLaunching)
 notes.addEventListener('click', handleNotes)
 opening.addEventListener('click', handleOpening)
 openNote.addEventListener('click', handleOpenNote)
