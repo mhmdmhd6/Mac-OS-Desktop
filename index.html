@@ -1,217 +1,305 @@
 <html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>menu bar</title>
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet"></head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet"></head>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <body onload="startTime()">
+  </head>
+  <body onload="startTime()">
     <div class="navbar">
-        <ul class="left">
-            <li class="parent">Mim Academy</li>
-                <li class="parent"> file
-                    <ul>
-                        <li>
-                            <div class="child">
-                                <p>New File</p>
-                                <p class="border">New Window</p>
-                                <p>Open File</p>
-                                <p class="border linking">Open Recent File &nbsp;&nbsp;&nbsp;>
-                                </p>
-                                <p>save</p>
-                                <p class="border">save as</p>
-                                <p>Searching</p>
-                                <p class="border">Propertie File</p>
-                                <p class="border">Customize</p>
-                                <p>Exit...</p>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-            <li class="parent">Edit</li>
-            <li class="parent hidden">View</li>
-            <li class="parent hidden">Go</li>
-            <li class="parent hidden">Tools</li>
-            <li class="parent">Help</li>
-        </ul>
+      <ul>
+        <li class="parent">Mim Academy</li>
+        <li class="parent">
+          File
+          <ul>
+            <li>
+              <button>New File</button>
+              <button>New Window</button>
+            </li>
+            <li>
+              <button>Open File</button>
+              <button>Open Recent File</button>
+            </li>
+            <li>
+              <button>Save</button>
+              <button>Save as</button>
+            </li>
+            <li>
+              <button>Searching</button>
+              <button>Propertie File</button>
+            </li>
+            <li>
+              <button>Customize</button>
+            </li>
+            <li>
+              <button>Exit</button>
+            </li>
+          </ul>
+        </li>
+        <li class="parent">Edit</li>
+        <li class="parent hidden">View</li>
+        <li class="parent hidden">Go</li>
+        <li class="parent hidden">Tools</li>
+        <li class="parent">Help</li>
+      </ul>
 
-        <ul class="right">
-            <li class="hidden"><i class="fas fa-wifi"></i></li>
-            <li class="battery hidden"><i class="fas fa-battery-full"></i></li>
-            <li>EN</li>
-            <li id="date"></li>
-           <!--script code(starting)-->
-           <script>
-                var d = new Date();
-                document.getElementById("date").innerHTML = d.toDateString();
-        </script>
-            <li id="txt"></li>
-    <script>
-    function startTime() {
-        var today = new Date();
-        var h = today.getHours();
-        var m = today.getMinutes();
-        var s = today.getSeconds();
-        m = checkTime(m);
-        s = checkTime(s);
-        document.getElementById('txt').innerHTML =
-        h + ":" + m + ":" + s;
-        var t = setTimeout(startTime, 1000);
-}
-    function checkTime(i) {
-        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-        return i;
-    }
-</script>
-    <!--finishing script code-->
-            <li class="hidden"><img src="./icon/search_black_24dp.svg" alt=""></li>
-            <li class="hidden notification"><i class="fas fa-list-ul"></i></li>
-        </ul>
+      <ul class="navbar__right">
+        <li>
+          <svg width="24" height="24">
+            <path
+              d="M12 6c3.537 0 6.837 1.353 9.293 3.809l1.414-1.414C19.874 5.561 16.071 4 12 4 7.929 4.001 4.126 5.561 1.293 8.395l1.414 1.414C5.163 7.353 8.463 6 12 6zM17.671 14.307c-3.074-3.074-8.268-3.074-11.342 0l1.414 1.414c2.307-2.307 6.207-2.307 8.514 0L17.671 14.307z"
+            ></path>
+            <path
+              d="M20.437,11.293c-4.572-4.574-12.301-4.574-16.873,0l1.414,1.414c3.807-3.807,10.238-3.807,14.045,0L20.437,11.293z"
+            ></path>
+            <circle cx="12" cy="18" r="2"></circle>
+          </svg>
+        </li>
+        <li>EN</li>
+        <li class="clock">
+          <span id="date"></span>
+          <span id="txt"></span>
+        </li>
+        <li>
+          <svg width="24" height="24">
+            <path
+              d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z"
+            ></path>
+          </svg>
+        </li>
+        <li>
+          <svg width="24" height="24">
+            <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z"></path>
+          </svg>
+        </li>
+      </ul>
     </div>
     <!--navbar bottom start-->
 
-   <div class="menu">
-        <ul class="earth">
-            <li><img class="icon first" src="./icon/file explorer.jpg" alt=""></li>
-            <li><img class="icon last launching" src="./icon/launchpad.png" alt=""></li>
-            <li class="hidden"><img class="icon last" src="./icon/safari.png" alt=""></li>
-            <li class="hidden"><img class="icon last" src="./icon/messages.png" alt=""></li>
-            <li class="hidden"><img class="icon last" src="./icon/setting.png" alt=""></li>
-            <li class="hidden"><img class="icon last" src="./icon/gallery.png" alt=""></li>
-            <li class="hidden"><img class="icon last" src="./icon/app store.png" alt=""></li>
-            <li class="hidden"><img class="icon last" src="./icon/Itunes music.png" alt=""></li>
-            <li><img class="icon last opennote" src="./icon/notes.png" alt=""></li>
-            <li><img class="icon last opening" src="./icon/terminal.png" alt=""></li>
-            <li class="hidden border-column"><img class="icon last" src="./icon/trash bin.png" alt=""></li>
-        </ul>
-   </div> 
-   <!--launchpad start-->
-    <div class="launchpad">
-        <div class="searchbox">
-            <input type="search" name="search" placeholder="search">
-        </div>
-        <div class="container2">
-            <div class="child-launchpad">
-                <img src="./icon/app-store.png" alt="">
-                <p>App store</p>
-            </div>
-            <div class="child-launchpad">
-                <img src="./icon/calculator.png" alt="">
-                <p>calculator</p>
-            </div>
-            <div class="child-launchpad">
-                <img src="./icon/calendar.png" alt="">
-                <p>calendar</p>
-            </div>
-            <div class="child-launchpad">
-                <img src="./icon/contacts.png" alt="">
-                <p>contacts</p>
-            </div>
-            <div class="child-launchpad"> 
-                <img src="./icon/dictionary.png" alt="">
-                <p>Dictionary</p>
-            </div>
-            <div class="child-launchpad"> 
-                <img src="./icon/home.png" alt="">
-                <p>home</p>
-            </div>
-            <div class="child-launchpad"> 
-                <img src="./icon/mail.png" alt="">
-                <p>mail</p>
-            </div>
-            <div class="child-launchpad"> 
-                <img src="./icon/messages.png" alt="">
-                <p>messages</p>
-            </div>
-            <div class="child-launchpad"> 
-                <img src="./icon/netnewswire.png" alt="">
-                <p>netnewswire</p>
-            </div>
-            <div class="child-launchpad"> 
-                <img src="./icon/numbers.png" alt="">
-                <p>numbers</p>
-            </div>
-            <div class="child-launchpad"> 
-                <img src="./icon/pages.png" alt="">
-                <p>pages</p>
-            </div>
-            <div class="child-launchpad"> 
-                <img src="./icon/zoom.png" alt="">
-                <p>zoom</p>
-            </div>
-        </div>
+    <div class="menu">
+      <ul class="earth">
+        <li>
+          <img class="icon first" src="./icon/file explorer.jpg" alt="" />
+        </li>
+        <li>
+          <img class="icon last launching" src="./icon/launchpad.png" alt="" />
+        </li>
+        <li class="hidden">
+          <img class="icon last" src="./icon/safari.png" alt="" />
+        </li>
+        <li class="hidden">
+          <img class="icon last" src="./icon/messages.png" alt="" />
+        </li>
+        <li class="hidden">
+          <img class="icon last" src="./icon/setting.png" alt="" />
+        </li>
+        <li class="hidden">
+          <img class="icon last" src="./icon/gallery.png" alt="" />
+        </li>
+        <li class="hidden">
+          <img class="icon last" src="./icon/app store.png" alt="" />
+        </li>
+        <li class="hidden">
+          <img class="icon last" src="./icon/Itunes music.png" alt="" />
+        </li>
+        <li>
+          <img class="icon last opennote" src="./icon/notes.png" alt="" />
+        </li>
+        <li>
+          <img class="icon last opening" src="./icon/terminal.png" alt="" />
+        </li>
+        <li class="hidden border-column">
+          <img class="icon last" src="./icon/trash bin.png" alt="" />
+        </li>
+      </ul>
     </div>
-   <div class="container">
-        <div class="terminal">
-            <div class="taskbar-top">
-                <div class="left-content">
-                    <span class="button close"></span>
-                    <span class="button full"></span>
-                    <span class="button backfull"></span>
-                </div>
-                <div class="right-content">
-                    <h2>Documents</h2>
-                </div>
-            </div>
-            <textarea name="terminal" id="commands" placeholder="Last Login : Wed 22 May 23:43:02 on console"></textarea>
+    <!--launchpad start-->
+    <div class="launchpad">
+      <div class="searchbox">
+        <input type="search" name="search" placeholder="search" />
+      </div>
+      <div class="container2">
+        <div class="child-launchpad">
+          <img src="./icon/app-store.png" alt="" />
+          <p>App store</p>
         </div>
-        <!--note app start-->     
-        <div class="note">
-            <div class="taskbar-top">
-                <div class="left-content">
-                    <span class="button close-note"></span>
-                    <span class="button full-note"></span>
-                    <span class="button backfull-note"></span>
-                </div>
-                <div class="right-content">
-                    <h2>Notes</h2>
-                </div>
-            </div>
-            <!--taskbar center start-->
-                <div class="taskabr-center">
-                    <div class="content-left">
-                        <img src="./icon/add.svg" alt="" class="adding">
-                    </div>
-                    <div class="content-right">
-                        <img src="./icon/delete.svg" alt="" class="deleting">
-                    </div>
-                    <div class="center">
-                        <input type="search" name="searching" id="searching" placeholder="Type here">
-                    </div>
-                </div>
-            <!--taskbar center end-->
-            <div class="content">
-                <div class="sidebar">
-                    <h1>All Notes</h1>
-                    <div class="notes">
-                        <input type="text" name="txt" placeholder="writing name">
-                    </div>
-                </div>
-                <div class="impor-content">
-                    <textarea cols="30" rows="10" class="typing"></textarea>
-                </div>
-            </div>
+        <div class="child-launchpad">
+          <img src="./icon/calculator.png" alt="" />
+          <p>calculator</p>
         </div>
-        <!--note app end-->
+        <div class="child-launchpad">
+          <img src="./icon/calendar.png" alt="" />
+          <p>calendar</p>
+        </div>
+        <div class="child-launchpad">
+          <img src="./icon/contacts.png" alt="" />
+          <p>contacts</p>
+        </div>
+        <div class="child-launchpad">
+          <img src="./icon/dictionary.png" alt="" />
+          <p>Dictionary</p>
+        </div>
+        <div class="child-launchpad">
+          <img src="./icon/home.png" alt="" />
+          <p>home</p>
+        </div>
+        <div class="child-launchpad">
+          <img src="./icon/mail.png" alt="" />
+          <p>mail</p>
+        </div>
+        <div class="child-launchpad">
+          <img src="./icon/messages.png" alt="" />
+          <p>messages</p>
+        </div>
+        <div class="child-launchpad">
+          <img src="./icon/netnewswire.png" alt="" />
+          <p>netnewswire</p>
+        </div>
+        <div class="child-launchpad">
+          <img src="./icon/numbers.png" alt="" />
+          <p>numbers</p>
+        </div>
+        <div class="child-launchpad">
+          <img src="./icon/pages.png" alt="" />
+          <p>pages</p>
+        </div>
+        <div class="child-launchpad">
+          <img src="./icon/zoom.png" alt="" />
+          <p>zoom</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="terminal">
+        <div class="taskbar-top">
+          <div class="left-content">
+            <span class="button close"></span>
+            <span class="button full"></span>
+            <span class="button backfull"></span>
+          </div>
+          <div class="right-content">
+            <h2>Documents</h2>
+          </div>
+        </div>
+        <textarea
+          name="terminal"
+          id="commands"
+          placeholder="Last Login : Wed 22 May 23:43:02 on console"
+        ></textarea>
+      </div>
+      <!--note app start-->
+      <div class="note">
+        <div class="taskbar-top">
+          <div class="left-content">
+            <span class="button close-note"></span>
+            <span class="button full-note"></span>
+            <span class="button backfull-note"></span>
+          </div>
+          <div class="right-content">
+            <h2>Notes</h2>
+          </div>
+        </div>
+        <!--taskbar center start-->
+        <div class="taskabr-center">
+          <div class="content-left">
+            <img src="./icon/add.svg" alt="" class="adding" />
+          </div>
+          <div class="content-right">
+            <img src="./icon/delete.svg" alt="" class="deleting" />
+          </div>
+          <div class="center">
+            <input
+              type="search"
+              name="searching"
+              id="searching"
+              placeholder="Type here"
+            />
+          </div>
+        </div>
+        <!--taskbar center end-->
+        <div class="content">
+          <div class="sidebar">
+            <h1>All Notes</h1>
+            <div class="notes">
+              <input type="text" name="txt" placeholder="writing name" />
+            </div>
+          </div>
+          <div class="impor-content">
+            <textarea cols="30" rows="10" class="typing"></textarea>
+          </div>
+        </div>
+      </div>
+      <!--note app end-->
     </div>
     <script src="./script.js"></script>
 
     <!--navbar bottom end-->
     <script>
-        $(function () {
-            $(".terminal").draggable();
-            $(".note").draggable();
-        });
+      $(function () {
+        $('.terminal').draggable()
+        $('.note').draggable()
+      })
     </script>
-</body>
+
+    <script>
+      var d = new Date()
+      document.getElementById('date').innerHTML = d.toDateString()
+    </script>
+
+    <script>
+      function startTime() {
+        var today = new Date()
+        var h = today.getHours()
+        var m = today.getMinutes()
+        var s = today.getSeconds()
+        m = checkTime(m)
+        s = checkTime(s)
+        document.getElementById('txt').innerHTML = h + ':' + m + ':' + s
+        var t = setTimeout(startTime, 1000)
+      }
+      function checkTime(i) {
+        if (i < 10) {
+          i = '0' + i
+        } // add zero in front of numbers < 10
+        return i
+      }
+    </script>
+  </body>
 </html>
