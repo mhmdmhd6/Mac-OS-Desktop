@@ -39,6 +39,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
@@ -224,15 +228,16 @@
     </div>
 
     <div class="container">
-      <div class="terminal">
-        <div class="taskbar-top">
-          <div class="left-content">
-            <span class="button close"></span>
-            <span class="button full"></span>
-            <span class="button backfull"></span>
+      <!-- Terminal -->
+      <div class="window terminal">
+        <div class="window__taskbar">
+          <div class="window__taskbar--actions">
+            <button class="close"></button>
+            <button class="full"></button>
+            <button class="backfull"></button>
           </div>
-          <div class="right-content">
-            <h2>Documents</h2>
+          <div class="window__taskbar--content">
+            <h2>Terminal</h2>
           </div>
         </div>
         <textarea
@@ -241,19 +246,19 @@
           placeholder="Last Login : Wed 22 May 23:43:02 on console"
         ></textarea>
       </div>
-      <!--note app start-->
-      <div class="note">
-        <div class="taskbar-top">
-          <div class="left-content">
-            <span class="button close-note"></span>
-            <span class="button full-note"></span>
-            <span class="button backfull-note"></span>
+
+      <!-- Note -->
+      <div class="window note">
+        <div class="window__taskbar">
+          <div class="window__taskbar--actions">
+            <button class="close-note"></button>
+            <button class="full-note"></button>
+            <button class="backfull-note"></button>
           </div>
-          <div class="right-content">
+          <div class="window__taskbar--content">
             <h2>Notes</h2>
           </div>
         </div>
-        <!--taskbar center start-->
         <div class="taskabr-center">
           <div class="content-left">
             <img src="./icon/add.svg" alt="" class="adding" />

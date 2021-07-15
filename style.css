@@ -5,9 +5,11 @@
   --color-white-200: rgba(255, 255, 255, 0.2);
   --color-white-800: rgba(255, 255, 255, 0.8);
   --color-white-900: rgba(255, 255, 255, 0.9);
+  --color-black: #1e1e1e;
   --color-black-100: rgba(0, 0, 0, 0.1);
   --color-black-50: rgba(0, 0, 0, 0.05);
   --color-black-200: rgba(0, 0, 0, 0.2);
+  --color-black-600: rgba(0, 0, 0, 0.6);
 }
 
 /********** DEFAULT SETTINGS **********/
@@ -221,169 +223,85 @@ body {
   display: none;
 }
 
-.terminal {
+/********** WINDOW **********/
+.window {
+  display: none;
   width: 70%;
   height: 430px;
-  background-color: #1e1e1e;
+  overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 0 40px #252525;
-  display: none;
+  background: var(--color-black);
+  box-shadow: 0 20px 30px var(--color-black-200);
   animation: zoom-out 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-@keyframes zoom-out {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/*scroll bar start*/
-::-webkit-scrollbar-track {
-  background-color: #34282d;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-::-webkit-scrollbar {
-  width: 11px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #8b8b8d;
-  border-radius: 10px;
-  cursor: pointer;
-}
-/*scroll bar end*/
-
-.taskbar-top {
+.window__taskbar {
+  position: relative;
   height: 40px;
-  width: 100%;
-  background-color: #2a2a2a;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  border-top: 2px solid rgb(190, 190, 190);
-  border-bottom: 2px solid rgb(0, 0, 0);
-}
-.left-content {
-  float: left;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  width: 80px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--color-white-200);
 }
-
-.button {
+.window__taskbar--actions {
+  display: flex;
+  align-items: center;
+}
+.window__taskbar--actions button {
+  width: 1px;
+  height: 1px;
   cursor: pointer;
   padding: 8px;
-  border-radius: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
 }
-.button:nth-child(1) {
+.window__taskbar--actions button:not(:last-child) {
+  margin-right: 8px;
+}
+.window__taskbar--actions button:nth-child(1) {
   background-color: #ff6059;
-  transition: 0.4s;
 }
-.button:nth-child(1):active {
+.window__taskbar--actions button:nth-child(1):hover {
   background-color: #fc3c32;
 }
-.button:nth-child(2) {
+.window__taskbar--actions button:nth-child(2) {
   background-color: #ffbd2e;
-  transition: 200ms;
 }
-.button:nth-child(2):active {
+.window__taskbar--actions button:nth-child(2):hover {
   background-color: #ffa600;
 }
-.button:nth-child(3) {
+.window__taskbar--actions button:nth-child(3) {
   background-color: #28c941;
-  transition: 200ms;
 }
-.button:nth-child(3):active {
+.window__taskbar--actions button:nth-child(3):hover {
   background-color: #12aa29;
 }
-.right-content {
-  margin: 0 auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 170px;
-  height: 100%;
-}
-.right-content h2 {
-  color: white;
-  font-weight: 100;
-  font-size: 19px;
-}
-.terminal textarea {
+.window__taskbar--content {
   width: 100%;
-  height: 390px;
+  height: 100%;
   display: flex;
-  padding: 20px;
-  align-items: flex-start !important;
-  background-color: #1e1e1e;
-  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.window__taskbar--content h2 {
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 18px;
+}
+.window textarea {
+  width: 100%;
+  height: calc(100% - 41px);
+  display: flex;
+  padding: 16px;
+  background: transparent;
   border: none;
   outline: none;
-  color: #e7e3e3;
-  font-size: 19px;
-  font-family: 'Source Sans Pro', sans-serif;
+  resize: none;
+  color: var(--color-white-900);
+  font-size: 18px;
+  font-family: 'Roboto Mono', monospace;
 }
+
 /* note app start*/
-.note {
-  width: 70%;
-  height: 430px;
-  background-color: #212121;
-  border-radius: 10px;
-  box-shadow: 0px 0px 40px 3px #333232;
-  display: none;
-  animation: zoom-out 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-@keyframes zoom-out {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-.taskbar-top {
-  height: 40px;
-  width: 100%;
-  background-color: #212121;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  border-top: 2px solid rgb(190, 190, 190);
-  border-bottom: 1px solid rgb(102, 102, 102);
-}
-.left-content {
-  float: left;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  width: 80px;
-}
-.right-content {
-  margin: 0 auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 170px;
-  height: 100%;
-}
-.right-content h2 {
-  color: white;
-  font-weight: 900;
-  font-size: 22px;
-  font-family: 'Source Sans Pro', sans-serif;
-}
 .taskabr-center {
   width: 100%;
   height: 10%;
@@ -631,6 +549,25 @@ body {
   font-weight: 900;
 }
 
+/*scroll bar start*/
+::-webkit-scrollbar-track {
+  background-color: #34282d;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8b8b8d;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/*scroll bar end*/
+
 /********** ANIMATIONS **********/
 @keyframes opacity {
   0% {
@@ -639,6 +576,17 @@ body {
   }
   100% {
     opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes zoom-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
     transform: scale(1);
   }
 }
