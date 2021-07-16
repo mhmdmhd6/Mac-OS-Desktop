@@ -31,4 +31,10 @@ can you see webstie in the bottom👇
 
 ![new mac screen](https://user-images.githubusercontent.com/79286306/121961998-62f8a300-cd7d-11eb-9122-8e5ae37523e6.jpg)
 
+in this version I added new icon, launchpad and Notepad📒.
+![Screenshot 2021-07-10 135131](https://user-images.githubusercontent.com/79286306/125158490-d3c98a00-e186-11eb-82d1-25402eb44919.jpg)
+![Screenshot 2021-07-10 135229](https://user-images.githubusercontent.com/79286306/125158498-de841f00-e186-11eb-9881-74ef26db5216.jpg)
+
+you can using notepad for ever and writing your texts:) 
+
 📌also you can add new commit's, if you like this projects😁😃 
