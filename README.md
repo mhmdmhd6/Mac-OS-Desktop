@@ -29,7 +29,7 @@ to bottom taskbar , add menu to top taskbar.
 
 can you see webstie in the bottom👇
 
-![new mac screen](https://user-images.githubusercontent.com/79286306/121961998-62f8a300-cd7d-11eb-9122-8e5ae37523e6.jpg)
+![Screenshot 2021-07-17 020142](https://user-images.githubusercontent.com/79286306/126010532-0fb9e971-a912-481f-8578-38e48df3bbf2.jpg)
 
 in this version I added new icon, launchpad and Notepad📒.
 ![Screenshot 2021-07-10 135131](https://user-images.githubusercontent.com/79286306/125158490-d3c98a00-e186-11eb-82d1-25402eb44919.jpg)
