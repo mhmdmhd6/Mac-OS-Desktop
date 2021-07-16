@@ -464,14 +464,14 @@ body {
 }
 /*note app end */
 
-/*launchpad start*/
+/********** LAUNCHPAD **********/
 .launchpad {
+  display: none;
   width: 100%;
   height: 80%;
   background-color: transparent;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(5px);
-  display: none;
 }
 .searchbox {
   width: 100%;
