@@ -40,4 +40,4 @@ in this version I added new icon, launchpad and Notepad and adding calculator�
 you can using notepad for ever and writing your texts:) 
 
 📌also you can add new commit's, if you like this projects😁😃 
-and thanks @neysidev (Mehdi Neysi) for fixing my codes and helping me 🙏:heart
+and thanks @neysidev (Mehdi Neysi) for fixing my codes and helping me 🙏❤
