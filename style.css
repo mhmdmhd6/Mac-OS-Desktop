@@ -573,7 +573,7 @@ body {
 /*calculator start*/
 .calculator{
   width: 30%;
-  height: 65%;
+  height: 80%;
   background-color: rgba(0, 0, 0, 0.582);
   backdrop-filter: blur(6px);
   border-radius: 15px;
@@ -600,36 +600,41 @@ body {
   height: 30%;
   width: 30%;
 }
-.button {
-  cursor: pointer;
+
+.cal-taskabr{
+  height: 40px;
+  padding: 0 2px;
+  display: flex;
+  align-items: center;
 }
-.button:nth-child(1){
+.cal-taskabr button {
+  width: 1px;
+  height: 1px;
+  cursor: pointer;
   padding: 8px;
-  background-color: #FF6059;
-  border-radius: 10px;
+  border-radius: 50%;
+  margin-left: 8px;
   transition: 0.4s;
 }
-.button:nth-child(1):active {
+.cal-taskabr button:nth-child(1) {
+  background-color: #ff6059;
+}
+.cal-taskabr button:nth-child(1):hover {
   background-color: #fc3c32;
 }
-.button:nth-child(2){
-  padding: 8px;
-  background-color: #FFBD2E;
-  border-radius: 10px;
-  transition: 200ms;
+.cal-taskabr button:nth-child(2) {
+  background-color: #ffbd2e;
 }
-.button:nth-child(2):active{
+.cal-taskabr button:nth-child(2):hover {
   background-color: #ffa600;
 }
-.button:nth-child(3){
-  padding: 8px;
-  background-color: #28C941;
-  border-radius: 10px;
-  transition: 200ms;
+.cal-taskabr button:nth-child(3) {
+  background-color: #28c941;
 }
-.button:nth-child(3):active{
+.cal-taskabr button:nth-child(3):hover {
   background-color: #12aa29;
 }
+
 .output{
   float: right;
   width: 70%;
