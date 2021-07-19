@@ -580,7 +580,7 @@ body {
   background-color: rgba(0, 0, 0, 0.582);
   backdrop-filter: blur(6px);
   border-radius: 15px;
-  box-shadow: 0 0 20px rgb(80, 79, 79);
+  box-shadow: 0 0 30px rgb(34, 34, 34);
   border: 1px solid rgba(255, 255, 255, 0.384);
   animation: zoom-out 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   display: none;

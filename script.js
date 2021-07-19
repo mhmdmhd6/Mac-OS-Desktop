@@ -20,6 +20,7 @@ var typing = document.querySelector('.typing')
 var calculator = document.querySelector('.calculator')
 var opencalculator = document.querySelector('.open-cal')
 var closecal = document.querySelector('.close-cal')
+var opencalculator_lunchpad = document.querySelector('.open-cal-lunching') 
 /*var maxcal = document.querySelector('.max-cal')
 var mincal = document.querySelector('.min-cal')*/
 
@@ -93,6 +94,12 @@ function handleOpenCal() {
 function handleCloseCal() {
   calculator.style.display = 'none'
 }
+function handleOpenCal_lunchpad() {
+  calculator.style.display = 'block'
+  container.style.display = 'flex'
+  navbar.style.display = 'flex'
+  launchpad.style.display = 'none'
+} 
 
 /********** LISTENERS **********/
 adding.addEventListener('click', handleAdding)
@@ -109,6 +116,7 @@ opening.addEventListener('click', handleOpening)
 openNote.addEventListener('click', handleOpenNote)
 opencalculator.addEventListener('click', handleOpenCal)
 closecal.addEventListener('click', handleCloseCal)
+opencalculator_lunchpad.addEventListener('click' , handleOpenCal_lunchpad)
 
 //calculator code 
 // select all the buttons
