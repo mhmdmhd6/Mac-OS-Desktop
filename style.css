@@ -180,6 +180,11 @@ body {
   border-radius: 10px;
   transform: translateY(-2.5px);
 }
+@media screen and (max-width: 600px) {
+  .earth li img  {
+    width: 60px;
+  }
+}
 .earth li img:active{
   animation: to-top-bottom 1s;
 }
