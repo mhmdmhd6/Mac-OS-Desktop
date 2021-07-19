@@ -141,7 +141,7 @@ body {
 
 /*bootom menu*/
 
-.earth {
+.dock {
   position: fixed;
   padding: 3px 8px;
   bottom: 3%;
@@ -155,39 +155,36 @@ body {
   align-items: center;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.555);
 }
-@media screen and (max-width: 600px) {
-  .earth li img  {
+@media screen and (max-width: 900px) {
+  .dock li img  {
     width: 60px;
   }
-  .earth {
+  .dock {
     top: 83vh;
     padding: 6px 8px;
-    }
+  }
 }
-@media screen and (max-width:900px){
-  
-}
-.earth hr {
+.dock hr {
   width: 1px;
   height: 45px;
   margin: 0 4px;
   background: var(--color-black-50);
 }
-.earth li {
+.dock li {
   cursor: pointer;
   display: grid;
   place-items: center;
   transition: all 0.1s;
 }
-.earth li:hover {
+.dock li:hover {
   transform: scale(1.3);
 }
-.earth li img {
+.dock li img {
   width: 63px;
   border-radius: 10px;
   transform: translateY(-2.5px);
 }
-.earth li img:active{
+.dock li img:active{
   animation: to-top-bottom 1s;
 }
 
