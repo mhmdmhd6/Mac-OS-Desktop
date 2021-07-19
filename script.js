@@ -14,13 +14,18 @@ var navbar = document.querySelector('.navbar')
 var note = document.querySelector('.note')
 var notes = document.querySelector('.notes')
 var opening = document.querySelector('.opening')
-var openNote = document.querySelector('#openNote')
+var openNote = document.querySelector('.openNote')
 var terminal = document.querySelector('.terminal')
 var typing = document.querySelector('.typing')
 var calculator = document.querySelector('.calculator')
 var opencalculator = document.querySelector('.open-cal')
 var closecal = document.querySelector('.close-cal')
 var opencalculator_lunchpad = document.querySelector('.open-cal-lunching') 
+var point_terminal = document.querySelector('.point-terminal')
+var point_launchpad = document.querySelector('.point-launchpad')
+var point_cal = document.querySelector('.point-cal')
+var point_note = document.querySelector('.point-note')
+
 /*var maxcal = document.querySelector('.max-cal')
 var mincal = document.querySelector('.min-cal')*/
 
@@ -41,10 +46,12 @@ function handleBackfullnote() {
 
 function handleClose() {
   terminal.style.display = 'none'
+  point_terminal.style.display = 'none'
 }
 
 function handleClosenote() {
   note.style.display = 'none'
+  point_note.style.display = 'none'
 }
 
 function handleFull() {
@@ -61,6 +68,7 @@ function handleOpenLaunching() {
   launchpad.style.display = 'block'
   navbar.style.display = 'none'
   container.style.display = 'none'
+  point_launchpad.style.display = 'block'
 }
 
 function handleOpening() {
@@ -68,6 +76,8 @@ function handleOpening() {
   container.style.display = 'flex'
   navbar.style.display = 'flex'
   launchpad.style.display = 'none'
+  point_terminal.style.display = 'block'
+  point_launchpad.style.display = 'none'
 }
 
 function handleOpenNote() {
@@ -75,6 +85,8 @@ function handleOpenNote() {
   container.style.display = 'flex'
   navbar.style.display = 'flex'
   launchpad.style.display = 'none'
+  point_note.style.display = 'block'
+  point_launchpad.style.display = 'none'
 }
 
 function handleDeleting() {
@@ -90,9 +102,12 @@ function handleOpenCal() {
   container.style.display = 'flex'
   navbar.style.display = 'flex'
   launchpad.style.display = 'none'
+  point_cal.style.display = 'block'
+  point_launchpad.style.display = 'none'
 }
 function handleCloseCal() {
   calculator.style.display = 'none'
+  point_cal.style.display = 'none'
 }
 function handleOpenCal_lunchpad() {
   calculator.style.display = 'block'

@@ -28,7 +28,6 @@ body {
   background-position: right;
   background-repeat: no-repeat;
   cursor: url('./cursor/normal.cur'), default;
-  height: 100vh;
 }
 
 /********** NAVBAR **********/
@@ -165,7 +164,43 @@ body {
     bottom: 6%;
   }
 }
-.dock hr {
+.dock .point-launchpad {
+  width: 6px;
+  height: 6px;
+  margin: 0px 0;
+  background: lightcoral;
+  border-radius: 50%;
+  display: none;
+  animation: top-to-bottom 0.3s;
+}
+.dock .point-cal {
+  width: 6px;
+  height: 6px;
+  margin: 0px 0;
+  background: lightcoral;
+  border-radius: 50%;
+  animation: top-to-bottom 0.3s;
+  display: none;
+}
+.dock .point-terminal {
+  width: 6px;
+  height: 6px;
+  margin: 0px 0;
+  background: lightcoral;
+  border-radius: 50%;
+  animation: top-to-bottom 0.3s;
+  display: none;
+}
+.dock .point-note {
+  width: 6px;
+  height: 6px;
+  margin: 0px 0;
+  background: lightcoral;
+  border-radius: 50%;
+  animation: top-to-bottom 0.3s;
+  display: none;
+}
+.dock .column {
   width: 1px;
   height: 45px;
   margin: 0 4px;
