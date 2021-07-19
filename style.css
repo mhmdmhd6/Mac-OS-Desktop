@@ -587,7 +587,7 @@ body {
 }
 @media screen and (max-width:600px) {
   .calculator{
-      width: 50%;
+      width: 70%;
   }
 }
 .top{
