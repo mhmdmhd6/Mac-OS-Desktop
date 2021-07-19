@@ -114,6 +114,8 @@ function handleOpenCal_lunchpad() {
   container.style.display = 'flex'
   navbar.style.display = 'flex'
   launchpad.style.display = 'none'
+  point_cal.style.display = 'block'
+  point_launchpad.style.display = 'none'
 } 
 
 /********** LISTENERS **********/
