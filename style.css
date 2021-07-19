@@ -362,7 +362,10 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   transition: 1s;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width:600px) {
+  .taskabr-center .center{
+    width: 70%;
+  }
   .center input[type='search'] {
     width: 90%;
   }
