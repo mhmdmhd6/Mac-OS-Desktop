@@ -162,6 +162,7 @@ body {
   .dock {
     top: 83vh;
     height: 70px;
+    bottom: 6%;
   }
 }
 .dock hr {
