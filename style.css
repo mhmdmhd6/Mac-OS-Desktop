@@ -34,7 +34,7 @@ body {
 .navbar {
   width: 100%;
   /*padding: 2px 16px;*/
-  padding: 2px 0;
+  padding: 0.5px 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -161,7 +161,7 @@ body {
   }
   .dock {
     top: 83vh;
-    padding: 6px 8px;
+    height: 70px;
   }
 }
 .dock hr {
