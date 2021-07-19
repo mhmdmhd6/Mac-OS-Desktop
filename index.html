@@ -168,7 +168,7 @@
       <div class="searchbox">
         <input type="search" name="search" placeholder="search" />
       </div>
-      <div class="container2">
+      <div class="Apps-container">
         <div class="child-launchpad">
           <img src="./icon/app-store.png" alt="" />
           <p>App store</p>
@@ -236,7 +236,7 @@
         <textarea
           name="terminal"
           id="commands"
-          placeholder="Last Login : Wed 22 May 23:43:02 on console"
+          placeholder="Last Login : Yesterday on console"
         ></textarea>
       </div>
 
@@ -321,22 +321,8 @@
   </div>
     </div>
 
-    <script src="./script.js"></script>
 
     <!--navbar bottom end-->
-    <script>
-      $(function () {
-        $('.terminal').draggable()
-        $('.note').draggable()
-        $('.calculator').draggable()
-      })
-    </script>
-
-    <script>
-      var d = new Date()
-      document.getElementById('date').innerHTML = d.toDateString()
-    </script>
-
     <script>
       function startTime() {
         var today = new Date()
@@ -355,5 +341,7 @@
         return i
       }
     </script>
+    <script src="./script.js"></script>
+
   </body>
 </html>

@@ -148,3 +148,12 @@ function calculate(event) {
     display.value += clickedButtonValue;
   }
 }
+//App dragable
+$(function () {
+  $('.terminal').draggable()
+  $('.note').draggable()
+  $('.calculator').draggable()
+})
+//date and time
+var d = new Date()
+document.getElementById('date').innerHTML = d.toDateString()
