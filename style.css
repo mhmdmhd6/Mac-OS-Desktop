@@ -155,7 +155,7 @@ body {
   align-items: center;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.555);
 }
-@media screen and (max-width:600px){
+@media screen and (max-width:900px){
   .earth{
     padding: 6px 8px;
   }
