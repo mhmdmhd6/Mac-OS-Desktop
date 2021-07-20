@@ -105,7 +105,7 @@
             <path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z"></path>
           </svg>
         </li>
-        <li>
+        <li class="hidden">
           <svg width="24" height="24">
             <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z"></path>
           </svg>
@@ -116,11 +116,13 @@
 
       <ul class="dock">
         <li class="icon">
-          <img src="./icon/dock/finder.png" alt="Finder Logo" />
+          <img src="./icon/dock/finder.png"
+           alt="Finder Logo"
+           class="hidden" />
         </li>
         <li class="block-point icon">
           <img
-            class="launching"
+            class="launching hidden"
             src="./icon/dock/launchpad.png"
             alt="Launchpad Logo"
           />
@@ -130,10 +132,10 @@
           <img src="./icon/dock/app-store.png" alt="App Store Logo" class="hidden"/>
         </li>
         <li class="icon">
-          <img src="./icon/dock/messages.png" alt="Messages Logo" class="hidden"/>
+          <img src="./icon/dock/messages.png" alt="Messages Logo"/>
         </li>
         <li class="icon">
-          <img src="./icon/dock/music.png" alt="Music Logo" class="hidden"/>
+          <img src="./icon/dock/music.png" alt="Music Logo"/>
         </li>
         <li class="icon">
           <img src="./icon/dock/books.png" alt="Books Logo" class="hidden"/>
@@ -145,7 +147,7 @@
           <img src="./icon/dock/photos.png" alt="Photos Logo" class="hidden"/>
         </li>
         <li class="icon open-cal">
-          <img src="./icon/dock/calculator.png" alt="Calculator Logo" class="hidden"/>
+          <img src="./icon/dock/calculator.png" alt="Calculator Logo"/>
           <hr class="point-cal" /> 
         </li>
         <li class="openNote" class="icon">
@@ -156,6 +158,7 @@
           <img
             src="./icon/dock/terminal.png"
             alt="Terminal Logo"
+            class="hidden"
           />
           <hr class="point-terminal" />
         </li>
