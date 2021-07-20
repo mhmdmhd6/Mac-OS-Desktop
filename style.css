@@ -132,8 +132,7 @@ body {
 .navbar__right .clock {
   display: flex;
 }
-.navbar__right .clock #txt {
-  width: 65px;
+.navbar__right .clock #clock {
   margin-left: 5px;
   text-align: left;
 }

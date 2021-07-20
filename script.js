@@ -175,7 +175,7 @@ $(function () {
 var d = new Date()
 document.getElementById('date').innerHTML = d.toDateString()
 
-function startTime() {
+/*function startTime() {
   var today = new Date()
   var h = today.getHours()
   var m = today.getMinutes()
@@ -184,7 +184,37 @@ function startTime() {
   s = checkTime(s)
   document.getElementById('txt').innerHTML = h + ':' + m + ':' + s
   var t = setTimeout(startTime, 1000)
+}*/
+function digi() {
+  var date = new Date(),
+      hour = date.getHours(),
+      minute = checkTime(date.getMinutes()),
+      ss = checkTime(date.getSeconds());
+
+  function checkTime(i) {
+    if( i < 10 ) {
+      i = "0" + i;
+    }
+    return i;
+  }
+
+if ( hour > 12 ) {
+  hour = hour - 12;
+  if ( hour == 12 ) {
+    hour = checkTime(hour);
+  document.getElementById("clock").innerHTML = hour+":"+minute+" AM";
+  }
+  else {
+    hour = checkTime(hour);
+    document.getElementById("clock").innerHTML = hour+":"+minute+" PM";
+  }
 }
+else {
+  document.getElementById("clock").innerHTML = hour+":"+minute+" AM";
+}
+var time = setTimeout(digi,1000);
+}
+
 function checkTime(i) {
   if (i < 10) {
     i = '0' + i
