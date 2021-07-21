@@ -42,7 +42,7 @@ An example of new icons that are added:
 ![Screenshot 2021-07-21 173325](https://user-images.githubusercontent.com/79286306/126493067-447f65c7-b027-4a10-99e0-ba2e0c6fc71b.jpg)
 
 <p align="right" width="50%">
-  <img width="100%" src="![Screenshot 2021-07-21 173455](https://user-images.githubusercontent.com/79286306/126493211-8fafea3a-d45b-4fd2-aa3e-27b60042ade7.jpg)">
+  <img width="100%" src="https://user-images.githubusercontent.com/79286306/126493211-8fafea3a-d45b-4fd2-aa3e-27b60042ade7.jpg">
 </p>
 <p align="right" width="50%">
   <img width="100%" src="![Screenshot 2021-07-21 173455](https://user-images.githubusercontent.com/79286306/126493211-8fafea3a-d45b-4fd2-aa3e-27b60042ade7.jpg)">
