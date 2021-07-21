@@ -51,25 +51,25 @@ An example of new icons that are added:
 - [x] Navbar top
 - [x] dock
 - [x] clock **(AM , PM)**
-- [] Date
+- [ ] Date
 - [x] app Window
 - [x] Dot Under icons
 - [x] Drop down menu on navbar top
 - [x] Terminal app
 - [x] Note app
-- [] Add more notes on note app
+- [ ] Add more notes on note app
 - [x] Calculator app 
-- [] Add more notes on note app
-- [] Control center   
-- [] Search on navbar 
-- [] Preference app     
-- [] map app      
-- [] weather app      
-- [] calendar app      
+- [ ] Add more notes on note app
+- [ ] Control center   
+- [ ] Search on navbar 
+- [ ] Preference app     
+- [ ] map app      
+- [ ] weather app      
+- [ ] calendar app      
 - [x] Launchpad      
-- [] Launchpad icons vibrate    
-- [] Launchpad change page 
-- [] Launchpad animation      
+- [ ] Launchpad icons vibrate    
+- [ ] Launchpad change page 
+- [ ] Launchpad animation      
 
 <!-- ACKNOWLEDGEMENTS -->
 
