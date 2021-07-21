@@ -32,6 +32,7 @@ https://mhmdmhd6.github.io/Mac-OS-Desktop/
 
 In this version I have added new icons, launchpad, Notepad and calculator. 😃
 An example of new icons that are added:
+> This is how the new features looks like :)
 
 |new feature in this version| Launchpad |
 |------------|------------|
@@ -42,11 +43,12 @@ An example of new icons that are added:
 |------------|-----------------|
 | <img src="https://user-images.githubusercontent.com/79286306/126500902-53b741ce-cf55-4a02-8bef-e39cdfb6ed02.jpg" width="100%"> | <img src="https://user-images.githubusercontent.com/79286306/126493762-24c2d28d-7826-4f23-ab68-02842cdf5ffc.jpg" width="100%"> |  
 
-> This is how the Notes Application looks like and it's ready to be used to write your texts :)
-> And here is how the calculator looks like
-
+<hr>
 
 📌 Please feel free to contribute to this project with your commmits, and share this with your friends if you like this projects.😁 😃
+
+### List of components for this project {
+
 
 <!-- ACKNOWLEDGEMENTS -->
 
