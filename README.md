@@ -47,8 +47,29 @@ An example of new icons that are added:
 
 📌 Please feel free to contribute to this project with your commmits, and share this with your friends if you like this projects.😁 😃
 
-### List of components for this project {
-
+### List of components for this project : 
+- [x] Navbar top
+- [x] dock
+- [x] clock **(AM , PM)**
+- [] Date
+- [x] app Window
+- [x] Dot Under icons
+- [x] Drop down menu on navbar top
+- [x] Terminal app
+- [x] Note app
+- [] Add more notes on note app
+- [x] Calculator app 
+- [] Add more notes on note app
+- [] Control center   
+- [] Search on navbar 
+- [] Preference app     
+- [] map app      
+- [] weather app      
+- [] calendar app      
+- [x] Launchpad      
+- [] Launchpad icons vibrate    
+- [] Launchpad change page 
+- [] Launchpad animation    
 
 <!-- ACKNOWLEDGEMENTS -->
 
