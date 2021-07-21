@@ -26,6 +26,7 @@ https://mhmdmhd6.github.io/Mac-OS-Desktop/
 - [x] Bluring the taskbars (Bottom and Top).
 - [x] New icons are added to the bottom taskbar.
 - [x] Menu is added to top taskbar.
+- [x] Dots under the icons of open apps.
 
 ## Sample images for the changes are as follow:👇
 
