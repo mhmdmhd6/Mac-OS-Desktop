@@ -16,7 +16,11 @@ https://mhmdmhd6.github.io/Mac-OS-Desktop/
 </p>
                                       
 
-
+<p align="center">
+  <img width="50%" src="https://user-images.githubusercontent.com/79286306/126490693-326fa6dd-a431-461d-8e06-45c9d164b868.jpg">
+  <img width="50%" src="https://user-images.githubusercontent.com/79286306/126490693-326fa6dd-a431-461d-8e06-45c9d164b868.jpg">
+</p>
+       
 
 <hr> <br>
 
