@@ -42,15 +42,8 @@ An example of new icons that are added:
 
 | Note app   | Calculator App  |
 |------------|-----------------|
-| <img src="https://user-images.githubusercontent.com/79286306/126493211-8fafea3a-d45b-4fd2-aa3e-27b60042ade7.jpg" width="250"> | <img src="https://user-images.githubusercontent.com/79286306/126493762-24c2d28d-7826-4f23-ab68-02842cdf5ffc.jpg" width="250"> |  
+| <img src="https://user-images.githubusercontent.com/79286306/126493211-8fafea3a-d45b-4fd2-aa3e-27b60042ade7.jpg" width="50%"> | <img src="https://user-images.githubusercontent.com/79286306/126493762-24c2d28d-7826-4f23-ab68-02842cdf5ffc.jpg" width="50%"> |  
 
-This is how the Notes Application looks like and it's ready to be used to write your texts :)
-
-![Screenshot 2021-07-21 173455](https://user-images.githubusercontent.com/79286306/126493211-8fafea3a-d45b-4fd2-aa3e-27b60042ade7.jpg)
-
-And here is how the calculator looks like:
-
-![Screenshot 2021-07-21 173834](https://user-images.githubusercontent.com/79286306/126493762-24c2d28d-7826-4f23-ab68-02842cdf5ffc.jpg)
 
 
 📌 Please feel free to contribute to this project with your commmits, and share this with your friends if you like this projects.😁 😃
