@@ -41,7 +41,7 @@ An example of new icons that are added:
 ![Screenshot 2021-07-21 173325](https://user-images.githubusercontent.com/79286306/126493067-447f65c7-b027-4a10-99e0-ba2e0c6fc71b.jpg)
 
 | Note app   | Calculator App  |
-|This is how the Notes Application looks like and it's ready to be used to write your texts :)|And here is how the calculator looks like:|
+|------------|-----------------|
 | <img src="https://user-images.githubusercontent.com/79286306/126493211-8fafea3a-d45b-4fd2-aa3e-27b60042ade7.jpg" width="100%"> | <img src="https://user-images.githubusercontent.com/79286306/126493762-24c2d28d-7826-4f23-ab68-02842cdf5ffc.jpg" width="100%"> |  
 
 
