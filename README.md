@@ -47,6 +47,6 @@ And here is how the calculator looks like:
 
 ## Acknowledgements
 
-Thanks @neysidev (Mehdi Neysi) and @m-kashani (Mahdi Kashani) for helping me to improve this project 🙏❤
+> Thanks @neysidev (Mehdi Neysi) and @m-kashani (Mahdi Kashani) for helping me to improve this project 🙏❤
 
 
