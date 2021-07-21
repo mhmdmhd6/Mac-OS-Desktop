@@ -32,11 +32,12 @@ https://mhmdmhd6.github.io/Mac-OS-Desktop/
 
 <hr> <br>
 
-![Screenshot 2021-07-17 020142](https://user-images.githubusercontent.com/79286306/126010532-0fb9e971-a912-481f-8578-38e48df3bbf2.jpg)
+![Screenshot 2021-07-21 172212](https://user-images.githubusercontent.com/79286306/126491557-29f1c995-81c1-49a2-8942-07e6312630c9.jpg)
+
 
 In this version I have added new icons, launchpad, Notepad and calculator. 😃
 
-An example of new icons that are added:
+An example of new icons that are added:<br>
 ![Screenshot 2021-07-10 135131](https://user-images.githubusercontent.com/79286306/125158490-d3c98a00-e186-11eb-82d1-25402eb44919.jpg)
 
 This is how the Notes Application looks like and it's ready to be used to write your texts :)
