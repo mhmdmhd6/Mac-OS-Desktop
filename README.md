@@ -8,7 +8,7 @@ You can try this project :
 https://mhmdmhd6.github.io/Mac-OS-Desktop/
 
                                                 Sample Desktop Application 👇
-![Screenshot 2021-07-21 171430](https://user-images.githubusercontent.com/79286306/126490523-b1071cef-094a-4b94-97c8-1dab44671ce2.jpg)(https://mhmdmhd6.github.io/Mac-OS-Desktop/)       
+[![Screenshot 2021-07-21 171430](https://user-images.githubusercontent.com/79286306/126490523-b1071cef-094a-4b94-97c8-1dab44671ce2.jpg)](https://mhmdmhd6.github.io/Mac-OS-Desktop/)       
 
                                                Sample Mobile Application 👇
                                            
