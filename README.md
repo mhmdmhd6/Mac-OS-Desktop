@@ -46,7 +46,8 @@ This is how the Notes Application looks like and it's ready to be used to write 
 
 And here is how the calculator looks like:
 
-![Screenshot 2021-07-17 014655](https://user-images.githubusercontent.com/79286306/126010643-5e600224-4176-46b4-8e25-077aaf0a8e81.jpg)
+![Screenshot 2021-07-21 173834](https://user-images.githubusercontent.com/79286306/126493762-24c2d28d-7826-4f23-ab68-02842cdf5ffc.jpg)
+
 
 📌 Please feel free to contribute to this project with your commmits, and share this with your friends if you like this projects.😁 😃
 
