@@ -54,14 +54,9 @@ function handleClosenote() {
   point_note.style.display = 'none'
 }
 
-function handleFull() {
-  terminal.style.width = '90%'
-  terminal.style.height = '90%'
-}
-
-function handleFullnote() {
-  note.style.width = '90%'
-  note.style.height = '90%'
+function handleFullScreen(app) {
+  app.style.width = '90%'
+  app.style.height = '90%'
 }
 
 function handleOpenLaunching() {
@@ -125,8 +120,8 @@ backfullnote.addEventListener('click', handleBackfullnote)
 close.addEventListener('click', handleClose)
 closenote.addEventListener('click', handleClosenote)
 deleting.addEventListener('click', handleDeleting)
-full.addEventListener('click', handleFull)
-fullnote.addEventListener('click', handleFullnote)
+full.addEventListener('click', () => handleFullScreen(terminal))
+fullnote.addEventListener('click', () => handleFullScreen(note))
 launching.addEventListener('click', handleOpenLaunching)
 notes.addEventListener('click', handleNotes)
 opening.addEventListener('click', handleOpening)
