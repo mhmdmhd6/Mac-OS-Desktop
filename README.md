@@ -30,15 +30,12 @@ https://mhmdmhd6.github.io/Mac-OS-Desktop/
 
 <hr> <br>
 
-![Screenshot 2021-07-21 172212](https://user-images.githubusercontent.com/79286306/126491557-29f1c995-81c1-49a2-8942-07e6312630c9.jpg)
-
-
 In this version I have added new icons, launchpad, Notepad and calculator. 😃
 
 
 An example of new icons that are added: 
 
-![Screenshot 2021-07-21 173325](https://user-images.githubusercontent.com/79286306/126493067-447f65c7-b027-4a10-99e0-ba2e0c6fc71b.jpg)
+| ![Screenshot 2021-07-21 172212](https://user-images.githubusercontent.com/79286306/126491557-29f1c995-81c1-49a2-8942-07e6312630c9.jpg) | ![Screenshot 2021-07-21 173325](https://user-images.githubusercontent.com/79286306/126493067-447f65c7-b027-4a10-99e0-ba2e0c6fc71b.jpg) |
 
 
 | Note app   | Calculator App  |
