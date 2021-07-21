@@ -1,13 +1,11 @@
-# Mac-OS-Desktop
-
 ## Hello World 👋
-I am planing to make a mac OS simulator using HTML , CSS , and JavaScript. 😀
+I am planing to make a mac OS simulator using HTML, CSS, and JavaScript 😀
 
-You can try this project :
-https://mhmdmhd6.github.io/Mac-OS-Desktop/
+You can try this project:
+https://mhmdmhd6.github.io/Mac-OS-Desktop
 
                                       Sample Desktop Application 👇
-[![Screenshot 2021-07-21 171430](https://user-images.githubusercontent.com/79286306/126490523-b1071cef-094a-4b94-97c8-1dab44671ce2.jpg)](https://mhmdmhd6.github.io/Mac-OS-Desktop/)       
+[![Screenshot 2021-07-21 171430](https://user-images.githubusercontent.com/79286306/126490523-b1071cef-094a-4b94-97c8-1dab44671ce2.jpg)](https://mhmdmhd6.github.io/Mac-OS-Desktop/)
 
                                        Sample Mobile Application 👇
                                            
@@ -47,12 +45,12 @@ An example of new icons that are added:
 
 📌 Please feel free to contribute to this project with your commmits, and share this with your friends if you like this projects.😁 😃
 
-### List of components for this project : 
+### List of components for this project:
 > - [x] Navbar top
-> - [x] dock
-> - [x] clock **(AM , PM)**
+> - [x] Dock
+> - [x] Clock **(AM , PM)**
 > - [ ] Date
-> - [x] app Window
+> - [x] App Window
 > - [x] Dot Under icons
 > - [x] Drop down menu on navbar top
 > - [x] Terminal app
@@ -62,9 +60,9 @@ An example of new icons that are added:
 > - [ ] Control center   
 > - [ ] Search on navbar 
 > - [ ] Preference app     
-> - [ ] map app      
-> - [ ] weather app      
-> - [ ] calendar app      
+> - [ ] Map app      
+> - [ ] Weather app      
+> - [ ] Calendar app      
 > - [x] Launchpad      
 > - [ ] Launchpad icons vibrate    
 > - [ ] Launchpad change page 
@@ -75,5 +73,3 @@ An example of new icons that are added:
 ## Acknowledgements
 
 > Thanks @neysidev (Mehdi Neysi), @m-kashani (Mahdi Kashani) and @pooria faramarzian for helping me to improve this project 🙏❤
-
-
