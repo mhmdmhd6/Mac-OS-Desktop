@@ -41,6 +41,13 @@ An example of new icons that are added:
 
 ![Screenshot 2021-07-21 173325](https://user-images.githubusercontent.com/79286306/126493067-447f65c7-b027-4a10-99e0-ba2e0c6fc71b.jpg)
 
+<p align="right">
+  <img width="50%" src="https://user-images.githubusercontent.com/79286306/126490693-326fa6dd-a431-461d-8e06-45c9d164b868.jpg">
+</p>
+<p align="left">
+  <img width="50%" src="https://user-images.githubusercontent.com/79286306/126490693-326fa6dd-a431-461d-8e06-45c9d164b868.jpg">
+</p>               
+               
 
 This is how the Notes Application looks like and it's ready to be used to write your texts :)
 
