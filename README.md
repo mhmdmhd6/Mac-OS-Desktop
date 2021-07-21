@@ -8,12 +8,9 @@ You can try this project :
 https://mhmdmhd6.github.io/Mac-OS-Desktop/
 
                                       Sample Desktop Application 👇
-
-![image](https://user-images.githubusercontent.com/79286306/119275769-288f6080-bc2c-11eb-9576-105ad5d5efce.png)
-
+                                      
                                       Sample Mobile Application 👇
 
-![image](https://user-images.githubusercontent.com/79286306/119275851-a3587b80-bc2c-11eb-8162-04934174059b.png)
 
 <hr> <br>
 
