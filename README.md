@@ -1,7 +1,6 @@
 # Mac-OS-Desktop
 
 ## Hello World 👋
-<div width="100px" height="20px" style="background: red;">
 I am planing to make a mac OS simulator using HTML , CSS , and JavaScript. 😀
 
 You can try this project :
