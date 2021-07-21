@@ -10,7 +10,7 @@ https://mhmdmhd6.github.io/Mac-OS-Desktop/
                                                 Sample Desktop Application 👇
 ![Screenshot 2021-07-21 171430](https://user-images.githubusercontent.com/79286306/126490523-b1071cef-094a-4b94-97c8-1dab44671ce2.jpg)       
 
-                                              Sample Mobile Application 👇
+                                               Sample Mobile Application 👇
                                            
 <p align="center">
   <img src="https://user-images.githubusercontent.com/79286306/126490693-326fa6dd-a431-461d-8e06-45c9d164b868.jpg">
