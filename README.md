@@ -64,6 +64,7 @@ An example of new icons that are added:
 > - [ ] Weather app      
 > - [ ] Calendar app      
 > - [x] Launchpad      
+> - [x] search in Launchpad      
 > - [ ] Launchpad icons vibrate    
 > - [ ] Launchpad change page 
 > - [ ] Launchpad animation      
