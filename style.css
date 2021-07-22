@@ -3,12 +3,13 @@
   --color-white: #ffffff;
   --color-white-100: rgba(255, 255, 255, 0.1);
   --color-white-200: rgba(255, 255, 255, 0.2);
-  --color-white-800: rgba(255, 255, 255, 0.555);
+  --color-white-800: rgba(255, 255, 255, 0.8);
   --color-white-900: rgba(255, 255, 255, 0.9);
   --color-black: #1e1e1e;
   --color-black-100: rgba(0, 0, 0, 0.1);
   --color-black-50: rgba(211, 197, 197, 0.39);
   --color-black-200: rgba(0, 0, 0, 0.2);
+  --color-black-500: rgba(0, 0, 0, 0.5);
   --color-black-600: rgba(0, 0, 0, 0.6);
 }
 
@@ -33,7 +34,7 @@ body {
 /********** NAVBAR **********/
 .navbar {
   width: 100%;
-  padding: 0.5px 0;
+  padding: 1px 0px;
   position: fixed;
   top: 0;
   left: 0;
@@ -63,8 +64,8 @@ body {
   padding: 4px 8px;
   margin: 0 4px;
 }
-@media screen and (max-width:900px) {
-  .hidden{
+@media screen and (max-width: 900px) {
+  .hidden {
     display: none;
   }
 }
@@ -122,7 +123,7 @@ body {
   color: #ffffff;
   background: #007ff7;
 }
-.navbar__right > li{
+.navbar__right > li {
   margin-left: 16px;
 }
 .navbar__right img {
@@ -136,7 +137,7 @@ body {
   margin-left: 5px;
   text-align: left;
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .navbar__right .clock #clock {
     margin-left: 0;
   }
@@ -159,7 +160,7 @@ body {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.555);
 }
 @media screen and (max-width: 900px) {
-  .dock li img  {
+  .dock li img {
     width: 60px;
   }
   .dock {
@@ -224,7 +225,7 @@ body {
   border-radius: 10px;
   transform: translateY(-2.5px);
 }
-.dock li img:active{
+.dock li img:active {
   animation: to-top-bottom 1s;
 }
 
@@ -241,10 +242,10 @@ body {
   75% {
     transform: translateY(-21px);
   }
-  100%{
+  100% {
     transform: translateY(0px);
   }
-} 
+}
 
 .container {
   width: 100%;
@@ -267,7 +268,7 @@ body {
   box-shadow: 0 20px 30px var(--color-black-200);
   animation: zoom-out 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .window {
     width: 85%;
   }
@@ -402,8 +403,8 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   transition: 1s;
 }
-@media screen and (max-width:600px) {
-  .taskabr-center .center{
+@media screen and (max-width: 600px) {
+  .taskabr-center .center {
     width: 80%;
   }
   .center input[type='search'] {
@@ -632,27 +633,72 @@ body {
     transform: scale(1);
   }
 }
-/*calculator start*/
-.calculator{
-  width: 30%;
-  height: 80%;
-  background-color: rgba(0, 0, 0, 0.582);
-  backdrop-filter: blur(6px);
-  border-radius: 15px;
-  box-shadow: 0 0 30px rgb(34, 34, 34);
-  border: 1px solid rgba(255, 255, 255, 0.384);
-  animation: zoom-out 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+/********** CALCULATOR **********/
+.calculator {
   display: none;
+  width: 25rem;
+  max-width: 100%;
+  height: 40rem;
+  max-height: 80%;
+  background: var(--color-black-500);
+  backdrop-filter: blur(1rem);
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 2rem var(--color-black-500);
+  border: 1px solid var(--color-white-200);
+  animation: zoom-out 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-@media screen and (max-width:600px) {
-  .calculator{
-      width: 70%;
-  }
-}
-.top{
+.calculator__top {
   width: 100%;
   height: 30%;
   display: flex;
+  flex-direction: column;
+}
+.calculator__top--taskabr {
+  height: 40px;
+  padding: 0 2px;
+  display: flex;
+  align-items: center;
+}
+.calculator__top--taskabr button {
+  width: 1px;
+  height: 1px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  margin-left: 8px;
+  transition: 0.4s;
+}
+.calculator__top--taskabr button:nth-child(1) {
+  background-color: #ff6059;
+}
+.calculator__top--taskabr button:nth-child(1):hover {
+  background-color: #fc3c32;
+}
+.calculator__top--taskabr button:nth-child(2) {
+  background-color: #ffbd2e;
+}
+.calculator__top--taskabr button:nth-child(2):hover {
+  background-color: #ffa600;
+}
+.calculator__top--taskabr button:nth-child(3) {
+  background-color: #28c941;
+}
+.calculator__top--taskabr button:nth-child(3):hover {
+  background-color: #12aa29;
+}
+.calculator__top--output {
+  flex: 1;
+  color: var(--color-white);
+  font-size: 1.8rem;
+  border: none;
+  background: transparent;
+  padding: 0 0.8rem;
+}
+@media screen and (max-width: 600px) {
+  .calculator {
+    width: 70%;
+  }
 }
 .left-content {
   float: left;
@@ -662,69 +708,17 @@ body {
   height: 30%;
   width: 30%;
 }
-
-.cal-taskabr{
-  height: 40px;
-  padding: 0 2px;
-  display: flex;
-  align-items: center;
-}
-.cal-taskabr button {
-  width: 1px;
-  height: 1px;
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 50%;
-  margin-left: 8px;
-  transition: 0.4s;
-}
-.cal-taskabr button:nth-child(1) {
-  background-color: #ff6059;
-}
-.cal-taskabr button:nth-child(1):hover {
-  background-color: #fc3c32;
-}
-.cal-taskabr button:nth-child(2) {
-  background-color: #ffbd2e;
-}
-.cal-taskabr button:nth-child(2):hover {
-  background-color: #ffa600;
-}
-.cal-taskabr button:nth-child(3) {
-  background-color: #28c941;
-}
-.cal-taskabr button:nth-child(3):hover {
-  background-color: #12aa29;
-}
-
-.output{
-  float: right;
-  width: 70%;
-  height: 100%;
-  background-color: transparent;
-  border: none;
-  font-size: 26px;
-  color: white;
-  overflow-x: scroll;
-}
-.input{
+.input {
   width: 100%;
   height: 70%;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25% ;
+  grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 20% 20% 20% 20% 20%;
 }
-.child{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 22px;
-  font-family: tahoma;
-  border: 1px solid rgb(59, 59, 59);
-  cursor: pointer;
-  transition: 0.4s;
+.child {
+  font-size: 1.5rem;
 }
-button{
+button {
   width: 100%;
   height: 100%;
   border: 0;
@@ -732,27 +726,27 @@ button{
   cursor: pointer;
   border: 1px solid rgb(59, 59, 59);
 }
-.r-radius{
+.r-radius {
   border-bottom-right-radius: 15px;
 }
-.l-radius{
+.l-radius {
   border-bottom-left-radius: 15px;
 }
-.large{
+.large {
   grid-column-start: span 2;
 }
-.operator{
+.operator {
   backdrop-filter: blur(5px);
-  background-color: #FD9E2A;
+  background-color: #fd9e2a;
   color: rgb(255, 255, 255);
 }
-.number{
+.number {
   background-color: #6c7177;
   backdrop-filter: blur(5px);
   color: rgb(255, 255, 255);
   font-size: 25px;
 }
-.operator-2{
+.operator-2 {
   background-color: #4b4b4b;
   color: white;
 }
