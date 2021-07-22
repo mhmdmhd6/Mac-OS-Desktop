@@ -123,21 +123,30 @@ body {
   color: #ffffff;
   background: #007ff7;
 }
-.navbar__right > li {
-  margin-left: 16px;
-}
-.navbar__right img {
-  width: 18px;
-  height: 18px;
+.navbar__right{
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .navbar__right .clock {
   display: flex;
 }
+.navbar__right .clock{
+  display: flex;
+}
 .navbar__right .clock #clock {
-  margin-left: 5px;
-  text-align: left;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.navbar__right li .control-center{
+  width: 32px;
+  height: 29px;
 }
 @media screen and (max-width: 600px) {
+  .navbar__right{
+    width: 40%;
+  }
   .navbar__right .clock #clock {
     margin-left: 0;
   }
@@ -522,7 +531,7 @@ body {
   width: 100%;
   height: 80%;
   background-color: transparent;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(5px);
 }
 .searchbox {
