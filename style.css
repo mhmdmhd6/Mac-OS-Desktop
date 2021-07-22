@@ -33,8 +33,8 @@ body {
 
 /********** NAVBAR **********/
 .navbar {
-  width: 98%;
-  padding: 2px 16px;
+  width: 100%;
+  padding: 1px 0px;
   position: fixed;
   top: 0;
   left: 0;
