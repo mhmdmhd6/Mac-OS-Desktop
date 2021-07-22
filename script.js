@@ -10,6 +10,8 @@ var full = document.querySelector('.full');
 var fullnote = document.querySelector('.full-note');
 var launching = document.querySelector('.launching');
 var launchpad = document.querySelector('.launchpad');
+var launchpad_searchbox = document.querySelector('.launchpad .searchbox');
+var launchpad_app_container = document.querySelector('.Apps-container');
 var navbar = document.querySelector('.navbar');
 var note = document.querySelector('.note');
 var notes = document.querySelector('.notes');
@@ -113,6 +115,26 @@ function handleOpenCal_lunchpad() {
   point_launchpad.style.display = 'none';
 }
 
+function handleLaunchpadSearch(e) {
+    for (let app of launchpad_app_container.children) {
+        if (e.target.value) {
+            app.style.display = "none";
+            metas = app.getElementsByTagName('meta');
+            for (let i = 0; i < metas.length; i++) {
+                if (metas[i].getAttribute('name') === "keywords") {
+                    if (metas[i].getAttribute('content').includes(e.target.value)) {
+                        app.style.display = "flex";
+                    }
+                }
+            }
+        } else
+            app.style.display = "flex";
+
+    }
+}
+
+
+
 /********** LISTENERS **********/
 adding.addEventListener('click', handleAdding);
 backfull.addEventListener('click', handleBackfull);
@@ -129,6 +151,7 @@ openNote.addEventListener('click', handleOpenNote);
 opencalculator.addEventListener('click', handleOpenCal);
 closecal.addEventListener('click', handleCloseCal);
 opencalculator_lunchpad.addEventListener('click', handleOpenCal_lunchpad);
+launchpad_searchbox.addEventListener('input', handleLaunchpadSearch);
 
 //calculator code
 // select all the buttons
