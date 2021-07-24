@@ -67,8 +67,14 @@ function handleFullScreen(app) {
 }
 
 function handleOpenLaunching() {
-  launchpad.style.display = 'block';
-  navbar.style.display = 'none';
+  var x = document.getElementById("launchpad");
+  if (x.style.display === "none") {
+      x.style.display = "block";
+      navbar.style.display = 'none';
+  } else {
+      x.style.display = "none";
+      navbar.style.display = 'flex';
+  }
   container.style.display = 'none';
   point_launchpad.style.display = 'block';
 }
@@ -141,7 +147,8 @@ function handleLaunchpadSearch(e) {
 
     }
 }
-
+//laucnhpad start
+//laucnhpad end
 
 
 /********** LISTENERS **********/
