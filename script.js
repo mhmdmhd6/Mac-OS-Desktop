@@ -27,6 +27,9 @@ var point_terminal = document.querySelector('.point-terminal');
 var point_launchpad = document.querySelector('.point-launchpad');
 var point_cal = document.querySelector('.point-cal');
 var point_note = document.querySelector('.point-note');
+var app_name_terminal = document.querySelector('#Terminal');
+var app_name_notes = document.querySelector('#notes');
+var app_name_calculator = document.querySelector('#calculator');
 
 /*var maxcal = document.querySelector('.max-cal')
 var mincal = document.querySelector('.min-cal')*/
@@ -49,11 +52,13 @@ function handleBackfullnote() {
 function handleClose() {
   terminal.style.display = 'none';
   point_terminal.style.display = 'none';
+  app_name_terminal.style.display = 'none';
 }
 
 function handleClosenote() {
   note.style.display = 'none';
   point_note.style.display = 'none';
+  app_name_notes.style.display = 'none';
 }
 
 function handleFullScreen(app) {
@@ -62,8 +67,14 @@ function handleFullScreen(app) {
 }
 
 function handleOpenLaunching() {
-  launchpad.style.display = 'block';
-  navbar.style.display = 'none';
+  var x = document.getElementById("launchpad");
+  if (x.style.display === "none") {
+      x.style.display = "block";
+      navbar.style.display = 'none';
+  } else {
+      x.style.display = "none";
+      navbar.style.display = 'flex';
+  }
   container.style.display = 'none';
   point_launchpad.style.display = 'block';
 }
@@ -75,6 +86,7 @@ function handleOpening() {
   launchpad.style.display = 'none';
   point_terminal.style.display = 'block';
   point_launchpad.style.display = 'none';
+  app_name_terminal.style.display = 'block';
 }
 
 function handleOpenNote() {
@@ -84,6 +96,7 @@ function handleOpenNote() {
   launchpad.style.display = 'none';
   point_note.style.display = 'block';
   point_launchpad.style.display = 'none';
+  app_name_notes.style.display = 'block';
 }
 
 function handleDeleting() {
@@ -101,10 +114,12 @@ function handleOpenCal() {
   launchpad.style.display = 'none';
   point_cal.style.display = 'block';
   point_launchpad.style.display = 'none';
+  app_name_calculator.style.display = 'block';
 }
 function handleCloseCal() {
   calculator.style.display = 'none';
   point_cal.style.display = 'none';
+  app_name_calculator.style.display = 'none';
 }
 function handleOpenCal_lunchpad() {
   calculator.style.display = 'block';
@@ -127,7 +142,8 @@ function handleLaunchpadSearch(e) {
 
     }
 }
-
+//laucnhpad start
+//laucnhpad end
 
 
 /********** LISTENERS **********/

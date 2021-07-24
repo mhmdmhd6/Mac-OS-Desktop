@@ -3,6 +3,7 @@
   --color-white: #ffffff;
   --color-white-100: rgba(255, 255, 255, 0.1);
   --color-white-200: rgba(255, 255, 255, 0.2);
+  --color-white-400: rgba(255, 255, 255, 0.4);
   --color-white-800: rgba(255, 255, 255, 0.8);
   --color-white-900: rgba(255, 255, 255, 0.9);
   --color-black: #1e1e1e;
@@ -63,6 +64,7 @@ body {
   transition: 0.2s;
   padding: 4px 8px;
   margin: 0 4px;
+  text-shadow: 0 3px 10px rgb(0, 0, 0);
 }
 @media screen and (max-width: 900px) {
   .hidden {
@@ -84,13 +86,15 @@ body {
 }
 .parent:hover > ul {
   display: block;
-  animation: opacity 0.3s;
+}
+li.app_name {
+  display: none;
 }
 .parent > ul {
   font-weight: 600;
   padding: 4px;
   min-width: 200px;
-  background: var(--color-white-800);
+  background: var(--color-white-400);
   backdrop-filter: blur(5px);
   border-radius: 5px;
   margin-top: 5px;
@@ -123,26 +127,51 @@ body {
   color: #ffffff;
   background: #007ff7;
 }
-.navbar__right > li {
-  margin-left: 16px;
+.navbar__right{
+  display: flex;
+  align-items: center;
 }
-.navbar__right img {
-  width: 18px;
-  height: 18px;
+.navbar__right li {
+  margin: 0 5px;
+}
+.navbar__right .logo{
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
+  padding: 6px 8px;
+  text-shadow: 0 3px 10px rgb(0, 0, 0);
+}
+.navbar__right .logo img {
+  width: 26px; 
+  margin-right: 7px;
+}
+.navbar__right .logo img {
+  transform: translateY(1px);
+}
+.navbar__right .logo:hover {
+  color: var(--color-white);
+  border-radius: 5px;
+  background-color: var(--color-white-200);
 }
 .navbar__right .clock {
   display: flex;
 }
+.navbar__right .clock{
+  display: flex;
+}
 .navbar__right .clock #clock {
-  margin-left: 5px;
-  text-align: left;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.navbar__right li .control-center{
+  width: 32px;
+  height: 29px;
 }
 @media screen and (max-width: 600px) {
   .navbar__right .clock #clock {
     margin-left: 0;
   }
 }
-
 /*bootom menu*/
 
 .dock {
@@ -522,7 +551,7 @@ body {
   width: 100%;
   height: 80%;
   background-color: transparent;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(5px);
 }
 .searchbox {
@@ -612,7 +641,7 @@ body {
 /*scroll bar end*/
 
 /********** ANIMATIONS **********/
-@keyframes opacity {
+/*@keyframes opacity {
   0% {
     opacity: 0;
     transform: scale(0.7);
@@ -621,7 +650,7 @@ body {
     opacity: 1;
     transform: scale(1);
   }
-}
+}*/
 @keyframes zoom-out {
   0% {
     transform: scale(1);
