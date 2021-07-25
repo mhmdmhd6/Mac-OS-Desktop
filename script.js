@@ -8,7 +8,7 @@ var container = document.querySelector('.container');
 var deleting = document.querySelector('.deleting');
 var full = document.querySelector('.full');
 var fullnote = document.querySelector('.full-note');
-var launching = document.querySelector('.launching');
+//var launching = document.querySelector('.launching');
 var launchpad = document.querySelector('.launchpad');
 var launchpad_searchbox = document.querySelector('.launchpad .searchbox');
 var launchpad_app_container = document.querySelector('.Apps-container');
@@ -76,20 +76,21 @@ function handleFullScreen(app) {
   app.style.height = '90%';
 }
 
+handleOpenLaunching();
+
 function handleOpenLaunching() {
-  var x = document.getElementById("launchpad");
-  if (x.style.display === "none") {
-      x.style.display = "block";
-      navbar.style.display = 'none';
-      point_launchpad.style.display = 'block';
+  if(launchpad.style.display === 'none') {
+    launchpad.style.display = 'block';
+    navbar.style.display = 'none';
+    point_launchpad.style.display = 'block';
   } else {
-      x.style.display = "none";
-      navbar.style.display = 'flex';
-      point_launchpad.style.display = 'none';
+    launchpad.style.display = 'none';
+    navbar.style.display = 'flex';
+    point_launchpad.style.display = 'none';
   }
   container.style.display = 'none';
-
 }
+
 
 function handleOpening() {
   terminal.style.display = 'block';
@@ -167,7 +168,7 @@ closenote.addEventListener('click', handleClosenote);
 deleting.addEventListener('click', handleDeleting);
 full.addEventListener('click', () => handleFullScreen(terminal));
 fullnote.addEventListener('click', () => handleFullScreen(note));
-launching.addEventListener('click', handleOpenLaunching);
+//launching.addEventListener('click', handleOpenLaunching);
 notes.addEventListener('click', handleNotes);
 opening.addEventListener('click', handleOpening);
 openNote.addEventListener('click', handleOpenNote);
