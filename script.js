@@ -77,7 +77,7 @@ function handleFullScreen(app) {
   app.style.height = '90%';
 }
 
-handleOpenLaunching();
+
 
 function handleOpenLaunching() {
   if(launchpad.style.display === 'none') {
@@ -169,7 +169,7 @@ closenote.addEventListener('click', handleClosenote);
 deleting.addEventListener('click', handleDeleting);
 full.addEventListener('click', () => handleFullScreen(terminal));
 fullnote.addEventListener('click', () => handleFullScreen(note));
-//launching.addEventListener('click', handleOpenLaunching);
+handleOpenLaunching();
 notes.addEventListener('click', handleNotes);
 opening.addEventListener('click', handleOpening);
 openNote.addEventListener('click', handleOpenNote);
