@@ -38,8 +38,8 @@ var btn_change_lang = document.querySelector('.btn_change_lang');
 var mincal = document.querySelector('.min-cal')*/
 
 /********** HANDLERS **********/
-changeing();
-function changeing() {
+
+function lang_change() {
   if (change_lang.style.display === "none") {
     change_lang.style.display = "flex";
 } else {
@@ -161,6 +161,7 @@ function handleLaunchpadSearch(e) {
 
 
 /********** LISTENERS **********/
+lang_change();
 adding.addEventListener('click', handleAdding);
 backfull.addEventListener('click', handleBackfull);
 backfullnote.addEventListener('click', handleBackfullnote);
