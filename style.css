@@ -24,7 +24,7 @@
 }
 body {
   user-select: none;
-  font-family: Inter;
+  /*font-family: Inter;*/
   background: url('./background/mac\ os\ big\ sur.jpg');
   background-size: cover;
   background-position: right;
@@ -46,6 +46,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: 'Lexend', sans-serif;
 }
 .navbar > ul {
   display: flex;
@@ -108,6 +109,7 @@ li.app_name {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   padding-bottom: 5px;
   margin-bottom: 5px;
+  font-family: 'Lexend', sans-serif;
 }
 .parent > ul > li:last-child {
   border-bottom: 0;
