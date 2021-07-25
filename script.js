@@ -38,6 +38,7 @@ var btn_change_lang = document.querySelector('.btn_change_lang');
 var mincal = document.querySelector('.min-cal')*/
 
 /********** HANDLERS **********/
+changeing();
 function changeing() {
   if (change_lang.style.display === "none") {
     change_lang.style.display = "flex";
