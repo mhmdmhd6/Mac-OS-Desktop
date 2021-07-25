@@ -30,11 +30,21 @@ var point_note = document.querySelector('.point-note');
 var app_name_terminal = document.querySelector('#Terminal');
 var app_name_notes = document.querySelector('#notes');
 var app_name_calculator = document.querySelector('#calculator');
+// change lang
+var change_lang = document.querySelector('.change_lang');
+var btn_change_lang = document.querySelector('.btn_change_lang');
 
 /*var maxcal = document.querySelector('.max-cal')
 var mincal = document.querySelector('.min-cal')*/
 
 /********** HANDLERS **********/
+function changeing() {
+  if (change_lang.style.display === "none") {
+    change_lang.style.display = "flex";
+} else {
+    change_lang.style.display = "none";
+}
+}
 function handleAdding() {
   notes.style.display = 'flex';
 }

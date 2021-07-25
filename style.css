@@ -24,7 +24,7 @@
 }
 body {
   user-select: none;
-  /*font-family: Inter;*/
+  font-family: 'Lexend', sans-serif;
   background: url('./background/mac\ os\ big\ sur.jpg');
   background-size: cover;
   background-position: right;
@@ -137,11 +137,55 @@ li.app_name {
   margin: 0 5px;
 }
 .navbar__right .logo{
+  position: relative;
   display: flex;
   align-items: center;
   transition: 0.2s;
   padding: 6px 8px;
   text-shadow: 0 3px 10px rgb(0, 0, 0);
+}
+.navbar__right .logo ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  font-weight: 600;
+  padding: 4px;
+  min-width: 200px;
+  background: var(--color-white-400);
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  margin-top: 3px;
+  overflow: hidden;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+}
+
+.navbar__right .logo ul > li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.652);
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  font-family: 'Lexend', sans-serif;
+}
+.navbar__right .logo ul > li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.navbar__right .logo ul > li > button {
+  text-align: left;
+  padding: 4px 8px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 5px;
+}
+.navbar__right .logo ul > li > button:hover {
+  color: #ffffff;
+  background: #007ff7;
 }
 .navbar__right .logo img {
   width: 26px; 
