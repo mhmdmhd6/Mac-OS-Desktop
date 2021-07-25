@@ -71,12 +71,14 @@ function handleOpenLaunching() {
   if (x.style.display === "none") {
       x.style.display = "block";
       navbar.style.display = 'none';
+      point_launchpad.style.display = 'block';
   } else {
       x.style.display = "none";
       navbar.style.display = 'flex';
+      point_launchpad.style.display = 'none';
   }
   container.style.display = 'none';
-  point_launchpad.style.display = 'block';
+
 }
 
 function handleOpening() {
