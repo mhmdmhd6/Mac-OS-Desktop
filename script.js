@@ -134,13 +134,8 @@ function handleLaunchpadSearch(e) {
     for (let app of launchpad_app_container.children) {
         if (e.target.value) {
             app.style.display = "none";
-            metas = app.getElementsByTagName('meta');
-            for (let i = 0; i < metas.length; i++) {
-                if (metas[i].getAttribute('name') === "keywords") {
-                    if (metas[i].getAttribute('content').includes(e.target.value)) {
-                        app.style.display = "flex";
-                    }
-                }
+            if (app.dataset.keywords.includes(e.target.value)) {
+                app.style.display = "flex";
             }
         } else
             app.style.display = "flex";
