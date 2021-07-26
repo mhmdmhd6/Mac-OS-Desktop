@@ -115,7 +115,7 @@ function handleDeleting() {
 }
 
 function handleNotes() {
-  typing.style.display = 'block';
+  typing.style.display = 'flex';
 }
 function handleOpenCal() {
   calculator.style.display = 'block';
