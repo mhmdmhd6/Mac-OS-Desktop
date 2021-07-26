@@ -32,10 +32,6 @@ var app_name_notes = document.querySelector('#notes');
 var app_name_calculator = document.querySelector('#calculator');
 // change lang
 var change_lang = document.querySelector('.change_lang');
-var btn_change_lang = document.querySelector('.btn_change_lang');
-
-/*var maxcal = document.querySelector('.max-cal')
-var mincal = document.querySelector('.min-cal')*/
 
 /********** HANDLERS **********/
 
@@ -156,9 +152,6 @@ function handleLaunchpadSearch(e) {
 
     }
 }
-//laucnhpad start
-//laucnhpad end
-
 
 /********** LISTENERS **********/
 lang_change();
@@ -252,16 +245,6 @@ $(function () {
 var d = new Date();
 document.getElementById('date').innerHTML = d.toDateString();
 
-/*function startTime() {
-  var today = new Date()
-  var h = today.getHours()
-  var m = today.getMinutes()
-  var s = today.getSeconds()
-  m = checkTime(m)
-  s = checkTime(s)
-  document.getElementById('txt').innerHTML = h + ':' + m + ':' + s
-  var t = setTimeout(startTime, 1000)
-}*/
 function digi() {
   var date = new Date(),
     hour = date.getHours(),
