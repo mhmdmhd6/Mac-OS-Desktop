@@ -133,67 +133,60 @@
     </div>
     <!--navbar bottom start-->
 
-    <ul class="dock">
-      <li class="icon">
+    <div class="dock">
+      <button class="icon">
         <img src="./icon/dock/finder.png" alt="Finder Logo" class="hidden" />
-      </li>
-      <li class="block-point icon" onclick="handleOpenLaunching()">
-        <img
-          class="launching hidden"
-          src="./icon/dock/launchpad.png"
-          alt="Launchpad Logo"
-        />
-        <hr class="point-launchpad" />
-      </li>
-      <li class="icon">
-        <img
-          src="./icon/dock/app-store.png"
-          alt="App Store Logo"
-        />
-      </li>
-      <li class="icon">
+      </button>
+      <button class="block-point icon" onclick="handleOpenLaunching()">
+        <img class="launching hidden" src="./icon/dock/launchpad.png" alt="Launchpad Logo" />
+        <hr class="point-launchpad" />  
+      </button>
+      <button class="icon">
+        <img src="./icon/dock/app-store.png" alt="App Store Logo" />
+      </button>
+      <button class="icon">
         <img src="./icon/dock/messages.png" alt="Messages Logo" />
-      </li>
-      <li class="icon">
+      </button>
+      <button class="icon">
         <img src="./icon/dock/music.png" alt="Music Logo" />
-      </li>
-      <li class="icon">
+      </button>
+      <button class="icon">
         <img src="./icon/dock/books.png" alt="Books Logo" class="hidden" />
-      </li>
-      <li class="icon">
+      </button>
+      <button class="icon">
         <img src="./icon/dock/mail.png" alt="Mail Logo" class="hidden" />
-      </li>
-      <li class="icon">
+      </button>
+      <button class="icon">
         <img src="./icon/dock/photos.png" alt="Photos Logo" class="hidden" />
-      </li>
-      <li class="icon open-cal">
+      </button>
+      <button class="icon open-cal">
         <img src="./icon/dock/calculator.png" alt="Calculator Logo" />
         <hr class="point-cal" />
-      </li>
-      <li class="openNote" class="icon">
+      </button>
+      <button class="openNote" class="icon">
         <img src="./icon/dock/notes.png" alt="Notes Logo" />
         <hr class="point-note hidden" />
-      </li>
-      <li class="icon opening">
+      </button>
+      <button class="icon opening">
         <img
           src="./icon/dock/terminal.png"
           alt="Terminal Logo"
           class="hidden"
         />
         <hr class="point-terminal" />
-      </li>
-      <li class="icon">
+      </button>
+      <button class="icon">
         <img
           src="./icon/dock/preferences.png"
           alt="Preferences Logo"
           class="hidden"
         />
-      </li>
+      </button>
       <hr class="column hidden" />
-      <li class="icon">
+      <button class="icon">
         <img src="./icon/dock/bin.png" alt="Trash Bin Logo" class="hidden Trash" />
-      </li>
-    </ul>
+      </button>
+    </div>
     <!--navbar bottom end-->
     <!--launchpad start-->
     <div class="launchpad" id="launchpad">

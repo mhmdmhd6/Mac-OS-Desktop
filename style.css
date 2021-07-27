@@ -233,7 +233,7 @@ li.app_name {
   z-index: 10;
 }
 @media screen and (max-width: 900px) {
-  .dock li img {
+  .dock button img {
     width: 60px;
   }
   .dock {
@@ -284,14 +284,17 @@ li.app_name {
   margin: 0 4px;
   background: var(--color-black-50);
 }
-.dock li {
+.dock button {
   position   : relative;
   cursor     : pointer;
   display    : grid;
   place-items: center;
+  background: none;
+  border: none;
+  outline: none;
   transition : all 0.1s;
 }
-.dock li::after {
+.dock button::after {
   position   : absolute;
   display    : block;
   background : rgba(245, 245, 245, 0.412);
@@ -300,66 +303,66 @@ li.app_name {
   justify-content: center;
   align-items    : center;
   z-index        : -1;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 44% 92%, 49% 106%, 54% 92%, 0% 85%);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 44% 92%, 49% 106%, 54% 92%, 0% 85%);
+  /*-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 44% 92%, 49% 106%, 54% 92%, 0% 85%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 44% 92%, 49% 106%, 54% 92%, 0% 85%);*/
 } 
-.dock li:nth-child(1):hover::after{
+.dock button:nth-child(1):hover::after{
   content: 'Finder';
 }
-.dock li:nth-child(2):hover::after{
+.dock button:nth-child(2):hover::after{
   content: 'Launchpad';
 }
-.dock li:nth-child(3):hover::after{
+.dock button:nth-child(3):hover::after{
   content: 'App store';
 }
-.dock li:nth-child(4):hover::after{
+.dock button:nth-child(4):hover::after{
   content: 'Message';
 }
-.dock li:nth-child(5):hover::after{
+.dock button:nth-child(5):hover::after{
   content: 'Itunes music';
 }
-.dock li:nth-child(6):hover::after{
+.dock button:nth-child(6):hover::after{
   content: 'Book';
 }
-.dock li:nth-child(7):hover::after{
+.dock button:nth-child(7):hover::after{
   content: 'Mail';
 }
-.dock li:nth-child(8):hover::after{
+.dock button:nth-child(8):hover::after{
   content: 'Photos';
 }
-.dock li:nth-child(9):hover::after{
+.dock button:nth-child(9):hover::after{
   content: 'Calculator';
 }
-.dock li:nth-child(10):hover::after{
+.dock button:nth-child(10):hover::after{
   content: 'Notes';
 }
-.dock li:nth-child(11):hover::after{
+.dock button:nth-child(11):hover::after{
   content: 'Terminal';
 }
-.dock li:nth-child(12):hover::after{
+.dock button:nth-child(12):hover::after{
   content: 'Preferences';
 }
-.dock li:hover::after {
+.dock button:hover::after {
   font-size: 13px;
   position: absolute;
   z-index: 1;
   top: -50%;
   left: -10%;
   width: 78px;
-  height: 20px;
+  height: 16px;
   padding: 3px;
   border-radius: 4px;
 }
-.dock li:hover {
+.dock button:hover {
   transform: scale(1.6);
   z-index: 10;
 }
-.dock li img {
+.dock button img {
   width: 63px;
   transform: translateY(-2.5px);
   filter: drop-shadow(0 0 5px rgb(44, 44, 44));
 }
-.dock li img:active {
+.dock button img:active {
   animation: to-top-bottom 1s;
 }
 
