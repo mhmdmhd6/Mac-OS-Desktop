@@ -405,7 +405,7 @@ li.app_name {
   font-weight: 600;
   font-size: 18px;
 }
-/*.window textarea {
+.window textarea {
   width: 100%;
   height: calc(100% - 41px);
   display: flex;
