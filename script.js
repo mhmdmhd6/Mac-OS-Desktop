@@ -8,7 +8,6 @@ var container = document.querySelector('.container');
 var deleting = document.querySelector('.deleting');
 var full = document.querySelector('.full');
 var fullnote = document.querySelector('.full-note');
-//var launching = document.querySelector('.launching');
 var launchpad = document.querySelector('.launchpad');
 var launchpad_searchbox = document.querySelector('.launchpad .searchbox');
 var launchpad_app_container = document.querySelector('.Apps-container');

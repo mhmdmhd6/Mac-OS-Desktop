@@ -646,7 +646,7 @@ li.app_name {
 }
 @media screen and (min-width:1200px) {
   .launchpad .child-launchpad img {
-    width: 90px;
+    width: 95px;
   }
 }
 .launchpad .child-launchpad:active {
@@ -766,14 +766,6 @@ li.app_name {
     width: 70%;
   }
 }
-.left-content {
-  float: left;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 30%;
-  width: 30%;
-}
 .input {
   width: 100%;
   height: 70%;
@@ -781,7 +773,7 @@ li.app_name {
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 20% 20% 20% 20% 20%;
 }
-.child {
+.button {
   font-size: 1.5rem;
 }
 button {
@@ -790,25 +782,21 @@ button {
   border: 0;
   outline: 0;
   cursor: pointer;
-  border: 1px solid rgb(59, 59, 59);
+  border: 1px solid rgba(48, 48, 48, 0.563);
 }
 .r-radius {
   border-bottom-right-radius: 15px;
 }
-.l-radius {
-  border-bottom-left-radius: 15px;
-}
 .large {
   grid-column-start: span 2;
+  border-bottom-left-radius: 15px;
 }
 .operator {
-  backdrop-filter: blur(5px);
   background-color: #fd9e2a;
   color: rgb(255, 255, 255);
 }
 .number {
   background-color: #6c7177;
-  backdrop-filter: blur(5px);
   color: rgb(255, 255, 255);
   font-size: 25px;
 }
