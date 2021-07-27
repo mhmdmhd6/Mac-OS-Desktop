@@ -45,6 +45,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 20;
   font-family: 'Lexend', sans-serif;
 }
 .navbar > ul {
@@ -139,6 +140,11 @@ li.app_name {
   transition: 0.2s;
   padding: 6px 8px;
   text-shadow: 0 3px 10px rgb(0, 0, 0);
+}
+@media screen and (max-width:600px) {
+  .navbar__right .changing_lang{
+    display: none;
+  }
 }
 .navbar__right .changing_lang ul {
   position: absolute;
@@ -279,10 +285,70 @@ li.app_name {
   background: var(--color-black-50);
 }
 .dock li {
-  cursor: pointer;
-  display: grid;
+  position   : relative;
+  cursor     : pointer;
+  display    : grid;
   place-items: center;
-  transition: all 0.1s;
+  transition : all 0.1s;
+}
+.dock li::after {
+  position   : absolute;
+  display    : block;
+  background : rgba(245, 245, 245, 0.412);
+  backdrop-filter: blur(20px);
+  display    : flex;
+  justify-content: center;
+  align-items    : center;
+  z-index        : -1;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 44% 92%, 49% 106%, 54% 92%, 0% 85%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 44% 92%, 49% 106%, 54% 92%, 0% 85%);
+} 
+.dock li:nth-child(1):hover::after{
+  content: 'Finder';
+}
+.dock li:nth-child(2):hover::after{
+  content: 'Launchpad';
+}
+.dock li:nth-child(3):hover::after{
+  content: 'App store';
+}
+.dock li:nth-child(4):hover::after{
+  content: 'Message';
+}
+.dock li:nth-child(5):hover::after{
+  content: 'Itunes music';
+}
+.dock li:nth-child(6):hover::after{
+  content: 'Book';
+}
+.dock li:nth-child(7):hover::after{
+  content: 'Mail';
+}
+.dock li:nth-child(8):hover::after{
+  content: 'Photos';
+}
+.dock li:nth-child(9):hover::after{
+  content: 'Calculator';
+}
+.dock li:nth-child(10):hover::after{
+  content: 'Notes';
+}
+.dock li:nth-child(11):hover::after{
+  content: 'Terminal';
+}
+.dock li:nth-child(12):hover::after{
+  content: 'Preferences';
+}
+.dock li:hover::after {
+  font-size: 13px;
+  position: absolute;
+  z-index: 1;
+  top: -50%;
+  left: -10%;
+  width: 78px;
+  height: 20px;
+  padding: 3px;
+  border-radius: 4px;
 }
 .dock li:hover {
   transform: scale(1.6);
@@ -618,6 +684,13 @@ li.app_name {
   font-size: 17px;
   height: 30px;
   font-family: 'Roboto', sans-serif;
+}
+.searchbox input::before {
+  font-family: 'FontAwesome';
+  color:rgb(255, 254, 254);
+  position: relative;
+  left: -5px;
+  content: "fas fa-search";    
 }
 .searchbox input::placeholder {
   color: white;
