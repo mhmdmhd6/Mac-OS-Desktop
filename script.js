@@ -22,10 +22,10 @@ var calculator = document.querySelector('.calculator');
 var opencalculator = document.querySelector('.open-cal');
 var closecal = document.querySelector('.close-cal');
 var opencalculator_lunchpad = document.querySelector('.open-cal-lunching');
-var point_terminal = document.querySelector('.point-terminal');
-var point_launchpad = document.querySelector('.point-launchpad');
-var point_cal = document.querySelector('.point-cal');
-var point_note = document.querySelector('.point-note');
+var point_terminal = document.querySelector('#point-terminal');
+var point_launchpad = document.querySelector('#point-launchpad');
+var point_cal = document.querySelector('#point-cal');
+var point_note = document.querySelector('#point-note');
 var app_name_terminal = document.querySelector('#Terminal');
 var app_name_notes = document.querySelector('#notes');
 var app_name_calculator = document.querySelector('#calculator');
@@ -68,7 +68,7 @@ function handleClosenote() {
 }
 
 function handleFullScreen(app) {
-  app.style.width = '90%';
+  app.style.width = '99%';
   app.style.height = '90%';
 }
 

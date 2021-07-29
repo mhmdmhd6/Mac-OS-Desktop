@@ -12,6 +12,7 @@
   --color-black-200: rgba(0, 0, 0, 0.2);
   --color-black-500: rgba(0, 0, 0, 0.5);
   --color-black-600: rgba(0, 0, 0, 0.6);
+  --color-blue-800: #007ff7;
 }
 
 /********** DEFAULT SETTINGS **********/
@@ -40,7 +41,7 @@ body {
   left: 0;
   color: var(--color-white-900);
   box-shadow: 0 2px 10px var(--color-black-100);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(9px);
   background: var(--color-black-200);
   display: flex;
   align-items: center;
@@ -106,7 +107,6 @@ li.app_name {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   padding-bottom: 5px;
   margin-bottom: 5px;
-  font-family: 'Lexend', sans-serif;
 }
 .parent > ul > li:last-child {
   border-bottom: 0;
@@ -115,6 +115,9 @@ li.app_name {
 }
 .parent > ul > li > button {
   text-align: left;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   padding: 4px 8px;
   border: 0;
   outline: 0;
@@ -123,8 +126,8 @@ li.app_name {
   border-radius: 5px;
 }
 .parent > ul > li > button:hover {
-  color: #ffffff;
-  background: #007ff7;
+  color: var(--color-white);
+  background: var(--color-blue-800);
 }
 .navbar__right{
   display: flex;
@@ -242,7 +245,7 @@ li.app_name {
     border-radius: 20px;
   }
 }
-.dock .point-launchpad {
+.dock .point {
   width: 6px;
   height: 6px;
   margin: 0px 0;
@@ -250,38 +253,12 @@ li.app_name {
   border-radius: 50%;
   display: none;
   animation: top-to-bottom 0.3s;
-}
-.dock .point-cal {
-  width: 6px;
-  height: 6px;
-  margin: 0px 0;
-  background: lightcoral;
-  border-radius: 50%;
-  animation: top-to-bottom 0.3s;
-  display: none;
-}
-.dock .point-terminal {
-  width: 6px;
-  height: 6px;
-  margin: 0px 0;
-  background: lightcoral;
-  border-radius: 50%;
-  animation: top-to-bottom 0.3s;
-  display: none;
-}
-.dock .point-note {
-  width: 6px;
-  height: 6px;
-  margin: 0px 0;
-  background: lightcoral;
-  border-radius: 50%;
-  animation: top-to-bottom 0.3s;
-  display: none;
+  transition: 0.3s ;
 }
 .dock .column {
-  width: 1px;
-  height: 45px;
-  margin: 0 4px;
+  width     : 1px;
+  height    : 45px;
+  margin    : 0 4px;
   background: var(--color-black-50);
 }
 .dock button {
@@ -303,8 +280,6 @@ li.app_name {
   justify-content: center;
   align-items    : center;
   z-index        : -1;
-  /*-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 44% 92%, 49% 106%, 54% 92%, 0% 85%);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 44% 92%, 49% 106%, 54% 92%, 0% 85%);*/
 } 
 .dock button:nth-child(1):hover::after{
   content: 'Finder';
@@ -343,50 +318,34 @@ li.app_name {
   content: 'Preferences';
 }
 .dock button:hover::after {
-  font-size: 13px;
-  position: absolute;
-  z-index: 1;
-  top: -50%;
-  left: -15%;
-  width: 78px;
-  height: 16px;
-  padding: 3px;
-  border-radius: 4px;
+  font-size: 13px    ;  
+  position : absolute;
+  z-index  : 1       ;
+  top      : -50%    ;
+  left     : -15%    ;
+  width    : 78px    ;
+  height   : 16px    ;
+  padding  : 3px     ;
+  border-radius: 4px ;
 }
 .dock button:hover {
-  transform: scale(1.6);
-  z-index: 10;
+  transform: scale(1.5);
+  z-index  : 10;
 }
 .dock button img {
-  width: 63px;
+  width    : 63px;
   transform: translateY(-2.5px);
-  filter: drop-shadow(0 0 5px rgb(44, 44, 44));
+  filter   : drop-shadow(0 0 5px rgb(44, 44, 44));
 }
 .dock button img:active {
   animation: to-top-bottom 1s;
 }
 
-@keyframes to-top-bottom {
-  0% {
-    transform: translate(0);
-  }
-  25% {
-    transform: translateY(-12px);
-  }
-  50% {
-    transform: translateY(-3px);
-  }
-  75% {
-    transform: translateY(-21px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
+
 
 .container {
   width: 100%;
-  height: 80%;
+  height: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -643,16 +602,7 @@ li.app_name {
   outline: none;
   color: white;
 }
-@keyframes top-to-bottom {
-  0% {
-    transform: translateY(-60px);
-    opacity: 0;
-  }
-  100% {
-    transform: none;
-    opacity: 1;
-  }
-}
+
 /*note app end */
 
 /********** LAUNCHPAD **********/
@@ -729,14 +679,7 @@ li.app_name {
   animation: vibrate 0.1s ease-in forwards infinite alternate;
   transition: transform 0.1s cubic-bezier(0.42, 0, 1, 0.2);
 }
-@keyframes vibrate {
-  0% {
-    transform: rotate(9deg);
-  }
-  100% {
-    transform: rotate(-9deg);
-  }
-}
+
 
 .launchpad .child-launchpad p {
   color: white;
@@ -775,7 +718,41 @@ li.app_name {
     transform: scale(1);
   }
 }
-
+@keyframes to-top-bottom {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translateY(-12px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  75% {
+    transform: translateY(-21px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes vibrate {
+  0% {
+    transform: rotate(9deg);
+  }
+  100% {
+    transform: rotate(-9deg);
+  }
+}
+@keyframes top-to-bottom {
+  0% {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
 /********** CALCULATOR **********/
 .calculator {
   display: none;
