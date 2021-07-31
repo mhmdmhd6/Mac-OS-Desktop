@@ -70,7 +70,6 @@ An example of new icons that are added:
 > - [ ] Launchpad animation      
 > - [ ] dragable icon on dock      
 > - [ ] right click to duck icons
-> - [ ] dragable icon on dock        
 
 <!-- ACKNOWLEDGEMENTS -->
 
