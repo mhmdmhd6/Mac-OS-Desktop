@@ -622,28 +622,29 @@ li.app_name {
   justify-content: center;
   align-items: center;
 }
-.searchbox input {
-  border-radius: 4px;
-  background-color: transparent;
+.searchbox .searchContainer {
+  height: 30px;
+  width: 220px;
   backdrop-filter: blur(6px);
-  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   border-top: 1px solid rgba(255, 255, 255, 0.582);
   border-bottom: 1px solid rgba(255, 255, 255, 0.582);
   border-right: 1px solid rgba(255, 255, 255, 0.219);
   border-left: 1px solid rgba(255, 255, 255, 0.219);
-  padding-left: 6px;
+  border-radius: 4px;
+  padding: 0px 3px;
+}
+.searchbox input {
+  background-color: transparent;
+  border: none;
+  outline: none;
   text-align: center;
   color: white;
   font-size: 17px;
-  height: 30px;
+  height: 100%;
   font-family: 'Roboto', sans-serif;
-}
-.searchbox input::before {
-  font-family: 'FontAwesome';
-  color:rgb(255, 254, 254);
-  position: relative;
-  left: -5px;
-  content: "fas fa-search";    
 }
 .searchbox input::placeholder {
   color: white;
