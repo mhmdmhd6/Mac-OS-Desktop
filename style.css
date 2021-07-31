@@ -343,7 +343,7 @@ li.app_name {
 }
 .dock button img:active {
   animation: to-top-bottom 1s;
-  filter: grayscale(0.7) drop-shadow(0 0 5px rgb(44, 44, 44));
+  filter: brightness(0.6) drop-shadow(0 0 5px rgb(44, 44, 44));
 }
 
 
