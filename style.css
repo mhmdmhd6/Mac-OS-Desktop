@@ -124,10 +124,14 @@ li.app_name {
   cursor: pointer;
   background: transparent;
   border-radius: 5px;
+  transition: 80ms;
 }
 .parent > ul > li > button:hover {
   color: var(--color-white);
   background: var(--color-blue-800);
+}
+.parent > ul > li > button:active {
+  background-color: #0063f7;
 }
 .navbar__right{
   display: flex;
@@ -339,6 +343,7 @@ li.app_name {
 }
 .dock button img:active {
   animation: to-top-bottom 1s;
+  filter: grayscale(0.7) drop-shadow(0 0 5px rgb(44, 44, 44));
 }
 
 
