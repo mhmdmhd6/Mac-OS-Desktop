@@ -74,6 +74,12 @@ An example of new icons that are added:
 > - [ ] right click to duck icons
 > - [x] shortcuts for opening app and other parts of site     
 
+
+list of Shorcuts :
+Alt + t = opening Terminal 
+Alt + o = opening Launchpad 
+Alt + s = opening serach 
+
 <!-- ACKNOWLEDGEMENTS -->
 
 ## Acknowledgements
