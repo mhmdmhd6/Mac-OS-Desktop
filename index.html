@@ -119,7 +119,7 @@
       </ul>
 
       <ul class="navbar__right">
-        <li class="changing_lang" onclick="lang_change()">
+        <li class="changing_lang" onclick="lang_change()" accesskey="l">
           <img src="./icon/Us_flag.jpg" alt="">
           English
           <ul class="change_lang">
@@ -172,7 +172,7 @@
       <button class="icon">
         <img src="./icon/dock/finder.png" alt="Finder Logo" class="hidden" />
       </button>
-      <button class="block-point icon" onclick="handleOpenLaunching()">
+      <button accesskey="o" class="block-point icon" onclick="handleOpenLaunching()">
         <img class="launching hidden" src="./icon/dock/launchpad.png" alt="Launchpad Logo" />
         <hr class="point hidden" id="point-launchpad"/>  
       </button>
@@ -194,15 +194,15 @@
       <button class="icon">
         <img src="./icon/dock/photos.png" alt="Photos Logo" class="hidden" />
       </button>
-      <button class="icon open-cal">
+      <button accesskey="c" class="icon open-cal">
         <img src="./icon/dock/calculator.png" alt="Calculator Logo" />
         <hr class="point" id="point-cal" />
       </button>
-      <button class="icon openNote">
+      <button accesskey="n" class="icon openNote">
         <img src="./icon/dock/notes.png" alt="Notes Logo" />
         <hr class="point hidden" id="point-note"/>
       </button>
-      <button accesskey="P" class="icon opening">
+      <button accesskey="t" class="icon opening">
         <img src="./icon/dock/terminal.png" alt="Terminal Logo" class="hidden" />
         <hr class="point" id="point-terminal" />
       </button>
@@ -225,7 +225,7 @@
         <div class="searchContainer">
           <img src="./icon/search.svg" alt="">
           <input type="search" name="search" placeholder="search" id="
-          searchLaunchpad" />
+          searchLaunchpad"  accesskey="s" />
         </div>
       </div>
       <div class="Apps-container">
