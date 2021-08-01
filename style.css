@@ -163,11 +163,10 @@ li.app_name {
   padding: 4px;
   min-width: 200px;
   background: var(--color-white-400);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(3px);
   border-radius: 5px;
   margin-top: 3px;
   overflow: hidden;
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
 }
 
 .navbar__right .changing_lang ul > li {
@@ -219,7 +218,7 @@ li.app_name {
 }
 .navbar__right li .control-center{
   width: 32px;
-  height: 29px;
+  height: 20px;
 }
 @media screen and (max-width: 600px) {
   .navbar__right .clock #clock {
