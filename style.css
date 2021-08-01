@@ -61,7 +61,7 @@ body {
 .navbar svg {
   fill: var(--color-white);
 }
-.navbar .parent {
+.navbar .rightLi {
   position: relative;
   transition: 0.2s;
   padding: 4px 8px;
@@ -73,10 +73,10 @@ body {
     display: none;
   }
 }
-.navbar .parent.logo img {
+.navbar .rightLi.logo img {
   transform: translateY(1px);
 }
-.navbar .parent:hover {
+.navbar .rightLi:hover {
   color: var(--color-white);
   border-radius: 5px;
   background-color: var(--color-white-200);
@@ -85,7 +85,7 @@ body {
 li.app_name {
   display: none;
 }
-.parent > ul {
+.rightLi > ul {
   display: none;
   position: absolute;
   left: 0;
@@ -99,21 +99,21 @@ li.app_name {
   overflow: hidden;
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
 }
-.parent:hover > ul {
+.rightLi:hover > ul {
   display: block;
 }
-.parent > ul > li {
+.rightLi > ul > li {
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   padding-bottom: 5px;
   margin-bottom: 5px;
 }
-.parent > ul > li:last-child {
+.rightLi > ul > li:last-child {
   border-bottom: 0;
   padding-bottom: 0;
   margin-bottom: 0;
 }
-.parent > ul > li > button {
+.rightLi > ul > li > button {
   text-align: left;
   font-family: 'Lexend', sans-serif;
   font-weight: 600;
@@ -126,11 +126,11 @@ li.app_name {
   border-radius: 5px;
   transition: 80ms;
 }
-.parent > ul > li > button:hover {
+.rightLi > ul > li > button:hover {
   color: var(--color-white);
   background: var(--color-blue-800);
 }
-.parent > ul > li > button:active {
+.rightLi > ul > li > button:active {
   background-color: #0063f7;
 }
 .navbar__right{
@@ -160,10 +160,10 @@ li.app_name {
   align-items: center;
   top: 100%;
   left: 0;
-  padding: 2px;
+  padding: 4px;
   min-width: 200px;
   background: var(--color-white-400);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(20px);
   border-radius: 5px;
   margin-top: 3px;
   overflow: hidden;
@@ -175,7 +175,6 @@ li.app_name {
   border-bottom: 1px solid rgba(0, 0, 0, 0.652);
   padding-bottom: 5px;
   margin-bottom: 5px;
-  font-family: 'Lexend', sans-serif;
 }
 .navbar__right .changing_lang ul > li:last-child {
   border-bottom: 0;
@@ -188,8 +187,12 @@ li.app_name {
   border: 0;
   outline: 0;
   cursor: pointer;
+  display: flex;
   background: transparent;
   border-radius: 5px;
+  color: white;
+  font-weight: 700;
+  font-family: 'lexend' , sans-serif;
 }
 .navbar__right .changing_lang ul > li > button:hover {
   color: #ffffff;
@@ -199,6 +202,7 @@ li.app_name {
   width: 26px; 
   margin-right: 7px;
   transform: translateY(1px);
+  border-radius: 2px;
 }
 .navbar__right .changing_lang:hover {
   color: var(--color-white);
@@ -325,12 +329,14 @@ li.app_name {
   font-size: 13px    ;  
   position : absolute;
   z-index  : 1       ;
-  top      : -50%    ;
+  top      : -45%    ;
   left     : -15%    ;
   width    : 78px    ;
   height   : 16px    ;
   padding  : 3px     ;
-  border-radius: 4px ;
+  border-radius: 6px ;
+  font-family  : 'lexend' , sans-serif;
+  font-weight  : 700;
 }
 .dock button:hover {
   transform: scale(1.5);

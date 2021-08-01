@@ -151,7 +151,6 @@ function handleLaunchpadSearch(e) {
 
     }
 }
-
 /********** LISTENERS **********/
 lang_change();
 adding.addEventListener('click', handleAdding);

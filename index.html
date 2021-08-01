@@ -3,6 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mac os</title>
     <link rel="stylesheet" href="./style.css" />
+    
     <link rel="shortcut icon" type="image/png" href="./icon/./apple_icon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link
@@ -47,20 +48,43 @@
   </head>
   <body onload="digi()">
     <div class="navbar">
-      <ul>
-        <li class="parent logo">
+      <ul class="navbar_left">
+        <li class="rightLi logo">
           <img src="./icon/apple-white.png" alt="Apple" />
+          <ul>
+            <li>
+              <button>About This Mac</button>
+            </li>
+            <li>
+              <button>System Preferences...</button>
+            </li>
+            <li>
+              <button>Recent Items</button>
+            </li>
+            <li>
+              <button>Force Quit Finder</button>
+            </li>
+            <li>
+              <button>Sleep</button>
+              <button>Restart...</button>
+              <button>Shut Down...</button>
+            </li>
+            <li>
+              <button>Lock Screen</button>
+              <button>Log Out</button>
+            </li>
+          </ul>
         </li>
-        <li class="parent app_name" id="Terminal">
+        <li class="rightLi app_name" id="Terminal">
           <p>Terminal</p>
         </li>
-        <li class="parent app_name" id="Notes">
+        <li class="rightLi app_name" id="Notes">
           <p>Notes</p>
         </li>
-        <li class="parent app_name" id="Calculator">
+        <li class="rightLi app_name" id="Calculator">
           <p>Calculator</p>
         </li>        
-        <li class="parent">
+        <li class="rightLi">
           File
           <ul>
             <li>
@@ -87,11 +111,11 @@
             </li>
           </ul>
         </li>
-        <li class="parent hidden">Edit</li>
-        <li class="parent hidden">View</li>
-        <li class="parent hidden">Go</li>
-        <li class="parent hidden">Tools</li>
-        <li class="parent">Help</li>
+        <li class="rightLi hidden">Edit</li>
+        <li class="rightLi hidden">View</li>
+        <li class="rightLi hidden">Go</li>
+        <li class="rightLi hidden">Tools</li>
+        <li class="rightLi">Help</li>
       </ul>
 
       <ul class="navbar__right">
@@ -99,8 +123,18 @@
           <img src="./icon/Us_flag.jpg" alt="">
           English
           <ul class="change_lang">
-            <li><button><img src="./icon/iran_flag.webp" alt="">Persian</button></li>
-            <li><button><img src="./icon/Us_flag.jpg" alt="">English</button></li>  
+            <li>
+              <button>
+                <img src="./icon/iran_flag.webp" alt="">
+                <p>Persian</p>
+              </button>
+            </li>
+            <li>
+              <button>
+                <img src="./icon/Us_flag.jpg" alt="">
+                <p>English</p>
+              </button>
+            </li>  
           </ul>
         </li>
         <li>
@@ -168,7 +202,7 @@
         <img src="./icon/dock/notes.png" alt="Notes Logo" />
         <hr class="point hidden" id="point-note"/>
       </button>
-      <button class="icon opening">
+      <button accesskey="P" class="icon opening">
         <img src="./icon/dock/terminal.png" alt="Terminal Logo" class="hidden" />
         <hr class="point" id="point-terminal" />
       </button>
