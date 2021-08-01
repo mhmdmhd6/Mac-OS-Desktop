@@ -78,7 +78,7 @@ An example of new icons that are added:
 list of Shorcuts :
 Alt + t = opening Terminal 
 Alt + o = opening Launchpad 
-Alt + s = opening serach 
+Alt + s = opening serach in  launchpad
 
 <!-- ACKNOWLEDGEMENTS -->
 
