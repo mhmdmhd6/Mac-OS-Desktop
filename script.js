@@ -31,9 +31,17 @@ var app_name_notes = document.querySelector('#notes');
 var app_name_calculator = document.querySelector('#calculator');
 // change lang
 var change_lang = document.querySelector('.change_lang');
+// var rightclick_menu = document.querySelector('.rightclick_menu');
 
 /********** HANDLERS **********/
-
+// document.onmousedown = click;
+// function click(event) {
+				
+//   // Condition to disable left click
+//   if (event.button == 2) {
+//     rightclick_menu.style.display = "flex";
+//   }
+// }
 function lang_change() {
   if (change_lang.style.display === "none") {
     change_lang.style.display = "flex";

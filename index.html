@@ -198,10 +198,26 @@
         <img src="./icon/dock/calculator.png" alt="Calculator Logo" />
         <hr class="point" id="point-cal" />
       </button>
-      <button class="icon openNote">
+      <button class="icon openNote" onclick="click(event)">
         <img src="./icon/dock/notes.png" alt="Notes Logo" />
         <hr class="point hidden" id="point-note"/>
       </button>
+      <!-- <ul class="rightclick_menu">
+        <li>
+          <button>Forecast</button>
+        </li>
+        <li>
+          <button>Show Quick Entry</button>
+        </li>
+        <li>
+          <button>option</button>
+        </li>
+        <li>
+          <button>Show All Windows</button>
+          <button>Show</button>
+          <button>Quit</button> -->
+        </li>
+      </ul>
       <button accesskey="t" class="icon opening">
         <img src="./icon/dock/terminal.png" alt="Terminal Logo" class="hidden" />
         <hr class="point" id="point-terminal" />
@@ -355,7 +371,6 @@
             class="calculator__top--output display"
             type="text"
             value="0"
-            disabled
           />
         </div>
         <div class="input">
