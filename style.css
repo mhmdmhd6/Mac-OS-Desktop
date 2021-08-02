@@ -407,8 +407,9 @@ li.app_name {
 }
 .window__taskbar {
   position: relative;
-  height: 45px;
+  height: 10%;
   display: flex;
+  justify-content: space-between;
   padding: 0 16px;
   border-bottom: 1px solid var(--color-white-200);
   background: linear-gradient(to bottom, #131313, var(--color-black));
@@ -473,48 +474,35 @@ li.app_name {
 }
 
 /* note app start*/
-.taskabr-center {
-  width: 100%;
-  height: 10%;
-  background-color: #212121;
+.window__taskbar--right {
+  width: 45%;
+  height: 100%;
+  background-color: transparent;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.taskabr-center .content-left {
-  float: left;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 10%;
-  height: 100%;
-}
-.content-left img {
-  width: 33px;
-  padding: 2px;
+.Customize__icon img {
+  width: 27px;
+  padding: 3px;
   border: 1px solid rgba(123, 123, 123, 0.412);
   border-radius: 9px;
   transition: 0.2s;
   cursor: pointer;
 }
-.content-left img:hover {
+.Customize__icon img:hover {
   background-color: rgb(88, 88, 88);
 }
-.content-left img:active {
+.Customize__icon img:active {
   background-color: #464646;
   border-color: #dddbdb;
 }
-
-.taskabr-center .center {
-  width: 80%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.center input[type='search'] {
-  width: 100%;
-  height: 80%;
+.window__taskbar--right  input[type='search'] {
+  width: 60%;
+  height: 75%;
   background-color: #49474791;
-  /* box-shadow: 0px 4px 0px -1px black; */
   border-radius: 5px;
   border: 1px solid rgba(123, 123, 123, 0.412);
   padding-left: 8px;
@@ -531,32 +519,10 @@ li.app_name {
     width: 100%;
   }
 }
-.content-right {
-  float: right;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 10%;
-  height: 100%;
-}
-.content-right img {
-  width: 33px;
-  padding: 2px;
-  border: 1px solid rgba(123, 123, 123, 0.412);
-  border-radius: 9px;
-  transition: 0.2s;
-  cursor: pointer;
-}
-.content-right img:hover {
-  background-color: rgb(88, 88, 88);
-}
-.content-right img:active {
-  background-color: #464646;
-  border-color: #dddbdb;
-}
+
 .content {
   width: 100%;
-  height: 80%;
+  height: 90%;
   display: flex;
 }
 .sidebar {
@@ -564,27 +530,14 @@ li.app_name {
   height: 100%;
   border-right: 1px solid rgba(123, 123, 123, 0.412);
 }
-/* .sidebar h1 {
-  color: white;
-  font-weight: 100;
-  font-family: 'Source Sans Pro', sans-serif;
-  text-align: center;
-  border-bottom: 1px solid rgb(102, 102, 102);
-  font-size: 21px;
-}
-@media screen and (max-width) {
-  .sidebar h1 {
-    font-size: 13px;
-  }
-} */
 .impor-content {
   width: 70%;
   height: 100%;
 }
 .impor-content textarea {
   width: 100%;
-  height: calc(100% - 41px);
-  display: flex;
+  /* height: calc(100% - 41px); */
+  height: 100%;
   padding: 16px;
   background: transparent;
   border: none;
@@ -593,7 +546,7 @@ li.app_name {
   display: none;
   color: var(--color-white-900);
   font-size: 18px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Raleway', sans-serif;
 }
 .notes {
   display: none;
@@ -605,7 +558,6 @@ li.app_name {
   background-color: transparent;
   animation: top-to-bottom 0.3s;
 }
-
 .notes input[type='text'] {
   width: 100%;
   padding-left: 10px;
@@ -620,7 +572,11 @@ li.app_name {
 }
 .notes input[type='text']:active {
   background-color: #1b1b1b;
-  border-color: rgb(80, 79, 79);
+}
+@media screen and (max-width:900px) {
+  .window__taskbar--right {
+    width: 70%;
+  }
 }
 /*note app end */
 
