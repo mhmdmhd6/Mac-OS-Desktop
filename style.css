@@ -47,7 +47,8 @@ body {
   align-items: center;
   justify-content: space-between;
   z-index: 20;
-  font-family: 'Lexend', sans-serif;
+  font-weight: 400;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .navbar > ul {
   display: flex;
@@ -84,6 +85,7 @@ body {
 
 li.app_name {
   display: none;
+  font-weight: 900 !important;
 }
 .rightLi > ul {
   display: none;
