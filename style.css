@@ -407,10 +407,11 @@ li.app_name {
 }
 .window__taskbar {
   position: relative;
-  height: 40px;
+  height: 45px;
   display: flex;
   padding: 0 16px;
   border-bottom: 1px solid var(--color-white-200);
+  background: linear-gradient(to bottom, #131313, var(--color-black));
 }
 .window__taskbar--actions {
   display: flex;
@@ -476,7 +477,6 @@ li.app_name {
   width: 100%;
   height: 10%;
   background-color: #212121;
-  border-bottom: 1px solid rgb(102, 102, 102);
 }
 
 .taskabr-center .content-left {
@@ -489,14 +489,14 @@ li.app_name {
 }
 .content-left img {
   width: 33px;
-  padding: 5px;
-  border-radius: 50%;
+  padding: 2px;
+  border: 1px solid rgba(123, 123, 123, 0.412);
+  border-radius: 9px;
   transition: 0.2s;
   cursor: pointer;
 }
 .content-left img:hover {
   background-color: rgb(88, 88, 88);
-  border: 1px solid white;
 }
 .content-left img:active {
   background-color: #464646;
@@ -512,17 +512,16 @@ li.app_name {
 }
 .center input[type='search'] {
   width: 100%;
-  height: 83%;
-  background-color: #3d3c3c;
-  box-shadow: 0px 4px 0px -1px black;
-  border-radius: 7px;
-  border: none;
+  height: 80%;
+  background-color: #49474791;
+  /* box-shadow: 0px 4px 0px -1px black; */
+  border-radius: 5px;
+  border: 1px solid rgba(123, 123, 123, 0.412);
+  padding-left: 8px;
   outline: none;
-  padding-left: 10px;
   color: white;
   font-size: 18px;
   font-family: 'Source Sans Pro', sans-serif;
-  transition: 1s;
 }
 @media screen and (max-width: 600px) {
   .taskabr-center .center {
@@ -531,10 +530,6 @@ li.app_name {
   .center input[type='search'] {
     width: 100%;
   }
-}
-.center input[type='search']:focus {
-  box-shadow: none;
-  transform: translateY(1px);
 }
 .content-right {
   float: right;
@@ -546,14 +541,14 @@ li.app_name {
 }
 .content-right img {
   width: 33px;
-  padding: 5px;
-  border-radius: 50%;
+  padding: 2px;
+  border: 1px solid rgba(123, 123, 123, 0.412);
+  border-radius: 9px;
   transition: 0.2s;
   cursor: pointer;
 }
 .content-right img:hover {
   background-color: rgb(88, 88, 88);
-  border: 1px solid white;
 }
 .content-right img:active {
   background-color: #464646;
@@ -567,9 +562,9 @@ li.app_name {
 .sidebar {
   width: 30%;
   height: 100%;
-  border-right: 1px solid rgb(102, 102, 102);
+  border-right: 1px solid rgba(123, 123, 123, 0.412);
 }
-.sidebar h1 {
+/* .sidebar h1 {
   color: white;
   font-weight: 100;
   font-family: 'Source Sans Pro', sans-serif;
@@ -581,10 +576,9 @@ li.app_name {
   .sidebar h1 {
     font-size: 13px;
   }
-}
+} */
 .impor-content {
   width: 70%;
-  border-left: 1px solid rgb(102, 102, 102);
   height: 100%;
 }
 .impor-content textarea {
@@ -602,31 +596,32 @@ li.app_name {
   font-family: 'Roboto Mono', monospace;
 }
 .notes {
-  width: 100%;
-  height: 15%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  border-bottom: 1px solid rgb(102, 102, 102);
-  transition: 0.2s;
   display: none;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: transparent;
   animation: top-to-bottom 0.3s;
 }
-.notes:active {
-  background-color: #1b1b1b;
-  border-color: rgb(80, 79, 79);
-}
+
 .notes input[type='text'] {
-  width: 90%;
-  background-color: transparent;
-  border: none;
+  width: 100%;
+  padding-left: 10px;
+  height: 15%;
+  background-color: transparent; 
+  border-bottom: 1px solid rgb(102, 102, 102);
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   outline: none;
   color: white;
+  transition: 0.2s;
 }
-
+.notes input[type='text']:active {
+  background-color: #1b1b1b;
+  border-color: rgb(80, 79, 79);
+}
 /*note app end */
 
 /********** LAUNCHPAD **********/
