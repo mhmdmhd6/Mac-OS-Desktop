@@ -175,10 +175,22 @@ buttons.forEach(button => {
   button.addEventListener('click', event => calculate(event.target.value));
 });
 
+operators = ['+','-','*','/']
+function lastNumber(value){
+  var tempChar = operators[0]; // We can use the first token as a temporary join character
+  for(var i = 1; i < operators.length; i++){
+    value = value.split(operators[i]).join(tempChar);
+  }
+  value = value.split(tempChar);
+  return value[value.length -1]
+}
+
+
 function calculate(value) {
   const latestChar = display.value[display.value.length - 1];
 
   const isEmpty = display.value === '0';
+  const isDecimalLastOperand = lastNumber(display.value).includes(".");
   const isNumber =
     value === '0' ||
     value === '1' ||
@@ -201,25 +213,26 @@ function calculate(value) {
       if (!isEmpty) display.value = eval(display.value);
       return;
     case '.':
-      if (isEmpty) display.value = '0.';
+      if (!isDecimalLastOperand) display.value += '.';
       return;
     case 'C':
       return (display.value = '0');
     case '0':
       if (isEmpty) return;
+    case '+/-':
+      if(!operators.some((operator) => display.value.replace(/^-/, '').includes(operator))) display.value = -1 * (parseInt(display.value));
+      return;
     case '*':
     case '/':
     case '-':
     case '+':
     case '%':
-    case '+/-':
       if (
         latestChar === '/' ||
         latestChar === '*' ||
         latestChar === '-' ||
         latestChar === '+' ||
-        latestChar === '%' ||
-        latestChar === '+/-'
+        latestChar === '%'
       )
         return;
     default:
