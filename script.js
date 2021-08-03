@@ -4,7 +4,7 @@ var backfull = document.querySelector('.backfull');
 var backfullnote = document.querySelector('.backfull-note');
 var close = document.querySelector('.close');
 var closenote = document.querySelector('.close-note');
-var container = document.querySelector('.container');
+var container = document.querySelector('.container__Window');
 var deleting = document.querySelector('.deleting');
 var full = document.querySelector('.full');
 var fullnote = document.querySelector('.full-note');
@@ -31,17 +31,7 @@ var app_name_notes = document.querySelector('#notes');
 var app_name_calculator = document.querySelector('#calculator');
 // change lang
 var change_lang = document.querySelector('.change_lang');
-// var rightclick_menu = document.querySelector('.rightclick_menu');
 
-/********** HANDLERS **********/
-// document.onmousedown = click;
-// function click(event) {
-				
-//   // Condition to disable left click
-//   if (event.button == 2) {
-//     rightclick_menu.style.display = "flex";
-//   }
-// }
 function lang_change() {
   if (change_lang.style.display === "none") {
     change_lang.style.display = "flex";
@@ -76,7 +66,7 @@ function handleClosenote() {
 }
 
 function handleFullScreen(app) {
-  app.style.width = '99%';
+  app.style.width = '100%';
   app.style.height = '90%';
 }
 

@@ -147,7 +147,7 @@ li.app_name {
   display: flex;
   align-items: center;
   transition: 0.2s;
-  padding: 6px 8px;
+  padding: 4px 8px;
   text-shadow: 0 3px 10px rgb(0, 0, 0);
 }
 @media screen and (max-width:600px) {
@@ -161,7 +161,8 @@ li.app_name {
   flex-direction: column;
   align-items: center;
   top: 100%;
-  left: 0;
+  right: 50%;
+  transform: translateX(50%);
   padding: 4px;
   min-width: 200px;
   background: var(--color-white-400);
@@ -170,10 +171,9 @@ li.app_name {
   margin-top: 3px;
   overflow: hidden;
 }
-
 .navbar__right .changing_lang ul > li {
   width: 100%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.652);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.295);
   padding-bottom: 5px;
   margin-bottom: 5px;
 }
@@ -200,18 +200,17 @@ li.app_name {
   background: #007ff7;
 }
 .navbar__right .changing_lang img {
-  width: 26px; 
-  margin-right: 7px;
-  transform: translateY(1px);
-  border-radius: 2px;
+  width: 30px; 
+}
+.navbar__right .changing_lang ul > li > button img {
+  margin-right: 5px;
 }
 .navbar__right .changing_lang:hover {
   color: var(--color-white);
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: var(--color-white-200);
 }
 .navbar__right .clock {
-  display: flex;
   text-shadow: 0 3px 10px rgb(0, 0, 0);
 }
 .navbar__right .clock #clock {
@@ -220,15 +219,14 @@ li.app_name {
 }
 .navbar__right li .control-center{
   width: 32px;
-  height: 20px;
+  height: 19px;
 }
 @media screen and (max-width: 600px) {
   .navbar__right .clock #clock {
     margin-left: 0;
   }
 }
-/*bootom menu*/
-
+/**********DOCK Start*********/
 .dock {
   position: fixed;
   padding: 3px 8px;
@@ -264,18 +262,6 @@ li.app_name {
   animation: top-to-bottom 0.3s;
   transition: 0.3s ;
 }
-/* .dock ul.rightclick_menu {
-  display: none;
-  position: absolute;
-  font-weight: 600;
-  padding: 4px;
-  min-width: 200px;
-  background: var(--color-white-400);
-  border-radius: 5px;
-  backdrop-filter: blur(6px);
-  overflow: hidden;
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
-} */
 .dock .column {
   width     : 1px;
   height    : 45px;
@@ -365,19 +351,19 @@ li.app_name {
   filter: brightness(0.6) drop-shadow(0 0 5px rgb(44, 44, 44));
 }
 
+/**********DOCK End*********/
 
+/********** WINDOW Start**********/
 
-.container {
+.container__Window {
   width: 100%;
-  height: 95%;
+  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   display: none;
 }
-
-/********** WINDOW **********/
 .window {
   display: none;
   width: 70%;
@@ -386,28 +372,16 @@ li.app_name {
   border-radius: 1rem;
   background: var(--color-black);
   box-shadow: 0 20px 30px var(--color-black-200);
+  border: 1px solid #7c7d7d34;
   animation: zoom-out 0.3s;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width:600px) {
   .window {
     width: 85%;
   }
-  
-}
-@keyframes zoom-out {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 .window__taskbar {
-  position: relative;
-  height: 10%;
+  height: 40px;
   display: flex;
   justify-content: space-between;
   padding: 0 16px;
@@ -430,19 +404,19 @@ li.app_name {
   margin-right: 8px;
 }
 .window__taskbar--actions button:nth-child(1) {
-  background-color: #ff6059;
+  background-color: #FF6057;
 }
 .window__taskbar--actions button:nth-child(1):hover {
   background-color: #fc3c32;
 }
 .window__taskbar--actions button:nth-child(2) {
-  background-color: #ffbd2e;
+  background-color: #FEBC2E;
 }
 .window__taskbar--actions button:nth-child(2):hover {
   background-color: #ffa600;
 }
 .window__taskbar--actions button:nth-child(3) {
-  background-color: #28c941;
+  background-color: #28C740;
 }
 .window__taskbar--actions button:nth-child(3):hover {
   background-color: #12aa29;
@@ -473,7 +447,7 @@ li.app_name {
   font-family: 'Roboto Mono', monospace;
 }
 
-/* note app start*/
+/******** NOTE Start ********/
 .window__taskbar--right {
   width: 45%;
   height: 100%;
@@ -483,7 +457,6 @@ li.app_name {
   align-items: center;
   justify-content: space-around;
 }
-
 .Customize__icon img {
   width: 27px;
   padding: 3px;
@@ -511,15 +484,6 @@ li.app_name {
   font-size: 18px;
   font-family: 'Source Sans Pro', sans-serif;
 }
-@media screen and (max-width: 600px) {
-  .taskabr-center .center {
-    width: 80%;
-  }
-  .center input[type='search'] {
-    width: 100%;
-  }
-}
-
 .content {
   width: 100%;
   height: 90%;
