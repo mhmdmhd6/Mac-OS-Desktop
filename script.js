@@ -170,7 +170,7 @@ launchpad_searchbox.addEventListener('input', handleLaunchpadSearch);
 
 //calculator code
 // select all the buttons
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('.input button');
 // select the <input type="text" class="display" disabled> element
 const display = document.querySelector('.display');
 
@@ -221,10 +221,8 @@ function calculate(value) {
       return;
     case 'C':
       return (display.value = '0');
-    case '0':
-      if (isEmpty) return;
     case '+/-':
-      if(!operators.some((operator) => display.value.replace(/^-/, '').includes(operator))) display.value = -1 * (parseInt(display.value));
+      if(!operators.some((operator) => display.value.replace(/^-/, '').includes(operator))) display.value = -1 * (parseFloat(display.value));
       return;
     case '*':
     case '/':
@@ -238,7 +236,7 @@ function calculate(value) {
         latestChar === '+' ||
         latestChar === '%'
       )
-        return;
+        return display.value = display.value.slice(0, -1) + value;
     default:
       display.value += value;
   }
