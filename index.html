@@ -295,11 +295,23 @@
             <h2>Terminal</h2>
           </div>
         </div>
-        <textarea
-          name="terminal"
-          id="commands"
-          placeholder="Last Login : Yesterday on console"
-        ></textarea>
+        <div class="terminal_content">
+          <p>Last Login : Yesterday on console</p>
+
+          <!--    Oh My Zsh bash      -->
+          <div class="terminal_line">
+            <p><span class="color_green">➜</span>&nbsp;&nbsp;<span class="color_blue">~</span>&nbsp;
+              <span contenteditable="true" class="cursor"></span>
+            </p>
+          </div>
+
+          <!--    MacOs Default bash      -->
+<!--          <div class="terminal_line">-->
+<!--            <p>MacBook-Pro:~ root$&nbsp;-->
+<!--              <span contenteditable="true" class="cursor"></span>-->
+<!--            </p>-->
+<!--          </div>-->
+        </div>
       </div>
 
       <!-- Note -->

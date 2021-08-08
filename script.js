@@ -244,7 +244,18 @@ function calculate(value) {
 
 //App dragable
 $(function () {
-  $('.terminal').draggable();
+  $('.terminal').draggable()
+      .click(function(){
+        if ( $(this).is('.ui-draggable-dragging') ) {
+          return;
+        }
+        $(this).draggable( "option", "disabled", true );
+        $(this).find('.cursor').attr('contenteditable','true');
+      })
+      .blur(function(){
+        $(this).draggable( 'option', 'disabled', false);
+        $(this).find('.cursor').attr('contenteditable','false');
+      });
   $('.note').draggable();
   $('.calculator').draggable();
 });
@@ -286,3 +297,52 @@ function checkTime(i) {
   } // add zero in front of numbers < 10
   return i;
 }
+let terminal_line_html = $('.terminal_line').html();
+let path = "~";
+function init_terminal_line(){
+  $('.cursor').keydown(function(e) {
+
+    // trap the return key being pressed
+    if (e.keyCode === 13) {
+      e.preventDefault()
+      let command = $(this).html()
+      if(!command)
+        return;
+      let command_output = "zsh: command not found: " + command  + "<br>";
+
+      if(command.startsWith("cd ")){
+        path = command.substring(3)
+        command_output = "";
+      }else if(command === "ls"){
+        dirs = [
+            "Desktop",
+            "Downloads",
+            "Music",
+            "Documents",
+        ]
+        command_output = dirs.join("\t");
+      }else
+      $(this).removeAttr('contenteditable');
+      $(this).removeClass('cursor');
+      $('.terminal_content').append(command_output).append(terminal_line_html.replace("~",path));
+      placeCaretAtEnd( document.querySelector('.cursor') );
+      init_terminal_line();
+    }
+  });
+}
+
+init_terminal_line();
+$('.terminal_content').click(function (){
+  placeCaretAtEnd( document.querySelector('.cursor') );
+})
+
+function placeCaretAtEnd(el) {
+  el.focus();
+  var range = document.createRange();
+  range.selectNodeContents(el);
+  range.collapse(false);
+  var sel = window.getSelection();
+  sel.removeAllRanges();
+  sel.addRange(range);
+}
+
