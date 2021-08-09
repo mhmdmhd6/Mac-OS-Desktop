@@ -43,7 +43,7 @@ An example of new icons that are added:
 
 | Note app   | Calculator App  |
 |------------|-----------------|
-| <img src="https://user-images.githubusercontent.com/79286306/126500902-53b741ce-cf55-4a02-8bef-e39cdfb6ed02.jpg" width="100%"> | <img src="https://user-images.githubusercontent.com/79286306/126493762-24c2d28d-7826-4f23-ab68-02842cdf5ffc.jpg" width="100%"> |  
+| <img src="https://user-images.githubusercontent.com/79286306/126500902-53b741ce-cf55-4a02-8bef-e39cdfb6ed02.jpg" width="100%"> | <img src="https://user-images.githubusercontent.com/79286306/128676997-516155f0-3e7e-487e-a353-719059f39dc0.jpg" width="100%"> |  
 
 <hr>
 
