@@ -36,8 +36,7 @@ An example of new icons that are added:
 
 |new feature in this version| Launchpad |
 |------------|------------|
-| ![Screenshot 2021-07-21 172212](https://user-images.githubusercontent.com/79286306/126491557-29f1c995-81c1-49a2-8942-07e6312630c9.jpg) | ![Screenshot 2021-08-09 124147](https://user-images.githubusercontent.com/79286306/128676847-d07d0017-8241-44e0-bb16-8c26425d6f5f.jpg) |
-
+| ![desktop](https://user-images.githubusercontent.com/79286306/128682239-bf386345-7cf9-4414-b49f-52ed1ec72ddc.jpg) | ![Screenshot 2021-08-09 124147](https://user-images.githubusercontent.com/79286306/128676847-d07d0017-8241-44e0-bb16-8c26425d6f5f.jpg) |
 
 
 
