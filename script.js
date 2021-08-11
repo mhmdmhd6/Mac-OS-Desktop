@@ -313,7 +313,7 @@ function init_terminal_line(){
       if(command.startsWith("cd ")){
         path = command.substring(3)
         command_output = "";
-      }else if(command === "ls"){
+      } else if(command === "ls"){
         dirs = [
             "Desktop",
             "Downloads",
@@ -321,7 +321,7 @@ function init_terminal_line(){
             "Documents",
         ]
         command_output = dirs.join("\t");
-      }else
+      } else
       $(this).removeAttr('contenteditable');
       $(this).removeClass('cursor');
       $('.terminal_content').append(command_output).append(terminal_line_html.replace("~",path));
