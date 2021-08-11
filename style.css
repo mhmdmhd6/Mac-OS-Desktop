@@ -381,7 +381,7 @@ li.app_name {
   }
 }
 .window__taskbar {
-  height: 40px;
+  height: 10%;
   display: flex;
   justify-content: space-between;
   padding: 0 16px;
@@ -433,20 +433,6 @@ li.app_name {
   font-weight: 600;
   font-size: 18px;
 }
-.window textarea {
-  width: 100%;
-  height: calc(100% - 41px);
-  display: flex;
-  padding: 16px;
-  background: transparent;
-  border: none;
-  outline: none;
-  resize: none;
-  color: var(--color-white-900);
-  font-size: 18px;
-  font-family: 'Roboto Mono', monospace;
-}
-
 /******** NOTE Start ********/
 .window__taskbar--right {
   width: 45%;
@@ -801,13 +787,13 @@ button {
   font-size: 20px;
   padding: 15px;
   color: white;
-  width: 100%;
+  width: 90%;
   height: 100%;
+  background-color: transparent;
 }
-
 .color_green{
   color: green;
 }
 .color_blue{
-  color: blue;
+  color: rgb(31, 72, 255);
 }
