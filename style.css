@@ -567,6 +567,9 @@ li.app_name {
   border-radius: 4px;
   padding: 0px 3px;
 }
+.searchbox .searchContainer svg {
+  fill: white;
+}
 .searchbox input {
   background-color: transparent;
   border: none;
