@@ -441,7 +441,7 @@ li.app_name {
 }
 /******** NOTE Start ********/
 .window__taskbar--right {
-  width: 45%;
+  width: 60%;
   height: 100%;
   background-color: transparent;
   float: right;
@@ -465,7 +465,7 @@ li.app_name {
   border-color: #dddbdb;
 }
 .window__taskbar--right  input[type='search'] {
-  width: 60%;
+  width: 45%;
   height: 75%;
   background-color: #49474791;
   border-radius: 5px;
