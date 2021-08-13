@@ -449,6 +449,11 @@ li.app_name {
   align-items: center;
   justify-content: space-around;
 }
+@media screen and (max-width:600px) {
+  .window__taskbar--right {
+    width: 45%;
+  }
+}
 .Customize__icon img {
   width: 27px;
   padding: 3px;
