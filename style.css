@@ -14,7 +14,6 @@
   --color-black-600: rgba(0, 0, 0, 0.6);
   --color-blue-800: #007ff7;
 }
-
 /********** DEFAULT SETTINGS **********/
 * {
   margin: 0;
@@ -53,7 +52,6 @@ body {
 .navbar > ul {
   display: flex;
   align-items: center;
-  list-style: none;
 }
 .navbar li {
   font-size: 15px;
@@ -97,7 +95,7 @@ li.app_name {
   background: var(--color-white-400);
   backdrop-filter: blur(5px);
   border-radius: 5px;
-  margin-top: 5px;
+  margin-top: 4px;
   overflow: hidden;
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
 }
