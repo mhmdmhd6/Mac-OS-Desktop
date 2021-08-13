@@ -399,6 +399,9 @@ li.app_name {
   align-items: center;
 }
 .window__taskbar--actions button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 1px;
   height: 1px;
   cursor: pointer;
@@ -411,6 +414,16 @@ li.app_name {
 }
 .window__taskbar--actions button:nth-child(1) {
   background-color: #FF6057;
+  position: relative;
+}
+.window__taskbar--actions button:nth-child(1)::after{
+  content: '×';
+  display: block;
+  font-size: 14px;
+  color: transparent;
+}
+.window__taskbar--actions button:nth-child(1):hover::after{
+  color: black;
 }
 .window__taskbar--actions button:nth-child(1):hover {
   background-color: #fc3c32;
@@ -418,11 +431,31 @@ li.app_name {
 .window__taskbar--actions button:nth-child(2) {
   background-color: #FEBC2E;
 }
+.window__taskbar--actions button:nth-child(2)::after{
+  content: '−';
+  display: block;
+  font-size: 14px;
+  color: transparent;
+}
+.window__taskbar--actions button:nth-child(2):hover::after{
+  color: black;
+}
 .window__taskbar--actions button:nth-child(2):hover {
   background-color: #ffa600;
 }
 .window__taskbar--actions button:nth-child(3) {
   background-color: #28C740;
+}
+.window__taskbar--actions button:nth-child(3)::after{
+  content: '↨';
+  transform: rotate(-45deg) translateX(-1px) translateY(-2px);
+  display: block;
+  font-size: 14px;
+  color: transparent;
+  font-weight: 900;
+}
+.window__taskbar--actions button:nth-child(3):hover::after{
+  color: black;
 }
 .window__taskbar--actions button:nth-child(3):hover {
   background-color: #12aa29;
@@ -810,4 +843,45 @@ button {
 }
 .color_blue{
   color: rgb(31, 72, 255);
+}
+/* Right click menu */
+
+.context-menu {
+  padding: 4px;
+  position: absolute;
+  border-radius: 12px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.096);
+  border: 1px solid rgba(223, 219, 219, 0.068);
+  overflow: hidden;
+  backdrop-filter: blur(15px);
+}
+
+.context-menu ul {
+  padding: 0;
+  margin: 0;
+  min-width: 150px;
+  list-style: none;
+}
+
+.context-menu ul li {
+  text-align: left !important;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 3px 5px 3px 8px;
+  margin: 6px 0;
+  border-bottom: 1px solid rgba(221, 214, 214, 0.164);
+}
+.context-menu ul li:last-child {
+  border: none;
+}
+.context-menu ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.context-menu ul li:hover a{
+  color: white;
+}
+.context-menu ul li:hover {
+  background: var(--color-blue-800);
 }
