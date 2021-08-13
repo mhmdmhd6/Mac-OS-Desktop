@@ -268,7 +268,7 @@ li.app_name {
   margin    : 0 4px;
   background: var(--color-black-50);
 }
-.dock button {
+.dock .icon {
   position   : relative;
   cursor     : pointer;
   display    : grid;
@@ -278,53 +278,54 @@ li.app_name {
   outline: none;
   transition : all 0.1s;
 }
-.dock button::after {
+.dock .icon::after {
   position   : absolute;
   display    : block;
   background : rgba(245, 245, 245, 0.412);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(5px);
   display    : flex;
   justify-content: center;
   align-items    : center;
   z-index        : -1;
+  clip-path      : polygon(100% 0%, 100% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 80%, 43% 80%, 50% 101%, 57% 80%, 100% 80%, 100% 0%);
 } 
-.dock button:nth-child(1):hover::after{
+.dock .icon:nth-child(1):hover::after{
   content: 'Finder';
 }
-.dock button:nth-child(2):hover::after{
+.dock .icon:nth-child(2):hover::after{
   content: 'Launchpad';
 }
-.dock button:nth-child(3):hover::after{
+.dock .icon:nth-child(3):hover::after{
   content: 'App store';
 }
-.dock button:nth-child(4):hover::after{
+.dock .icon:nth-child(4):hover::after{
   content: 'Message';
 }
-.dock button:nth-child(5):hover::after{
+.dock .icon:nth-child(5):hover::after{
   content: 'Itunes music';
 }
-.dock button:nth-child(6):hover::after{
+.dock .icon:nth-child(6):hover::after{
   content: 'Book';
 }
-.dock button:nth-child(7):hover::after{
+.dock .icon:nth-child(7):hover::after{
   content: 'Mail';
 }
-.dock button:nth-child(8):hover::after{
+.dock .icon:nth-child(8):hover::after{
   content: 'Photos';
 }
-.dock button:nth-child(9):hover::after{
+.dock .icon:nth-child(9):hover::after{
   content: 'Calculator';
 }
-.dock button:nth-child(10):hover::after{
+.dock .icon:nth-child(10):hover::after{
   content: 'Notes';
 }
-.dock button:nth-child(11):hover::after{
+.dock .icon:nth-child(11):hover::after{
   content: 'Terminal';
 }
-.dock button:nth-child(12):hover::after{
+.dock .icon:nth-child(12):hover::after{
   content: 'Preferences';
 }
-.dock button:hover::after {
+.dock .icon:hover::after {
   font-size: 13px    ;  
   position : absolute;
   z-index  : 1       ;
@@ -332,24 +333,31 @@ li.app_name {
   left     : -15%    ;
   width    : 78px    ;
   height   : 16px    ;
-  padding  : 3px     ;
+  padding  : 4px 3px 10px 3px;
   border-radius: 6px ;
   font-family  : 'lexend' , sans-serif;
   font-weight  : 700;
+  transform: scale(0.8);
 }
-.dock button:hover {
+.dock .icon:hover {
   transform: scale(1.5);
   z-index  : 10;
 }
-.dock button img {
+.dock .icon img {
   width    : 63px;
   transform: translateY(-2.5px);
   filter   : drop-shadow(0 0 5px rgb(44, 44, 44));
 }
-.dock button img:active {
-  animation: to-top-bottom 1s;
+.dock .icon img:active {
+  /* animation: to-top-bottom 1s; */
   filter: brightness(0.6) drop-shadow(0 0 5px rgb(44, 44, 44));
+  /* outline: none;
+  background: transparent; */
 }
+/* .dock button img:focus{
+  background: transparent;
+  border: none;
+} */
 
 /**********DOCK End*********/
 
