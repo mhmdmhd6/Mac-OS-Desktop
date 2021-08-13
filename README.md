@@ -52,7 +52,7 @@ An example of new icons that are added:
 > - [x] Navbar top
 > - [x] Dock
 > - [x] Clock **(AM , PM)**
-> - [ ] Date
+> - [x] Date
 > - [x] App Window
 > - [x] Dot Under icons
 > - [x] Drop down menu on navbar top
@@ -73,6 +73,7 @@ An example of new icons that are added:
 > - [ ] Launchpad animation      
 > - [ ] dragable icon on dock      
 > - [ ] right click to duck icons
+> - [ ] right click to desktop
 > - [x] shortcuts for opening app and other parts of site     
 
 
