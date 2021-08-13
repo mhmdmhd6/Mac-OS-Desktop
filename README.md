@@ -73,6 +73,7 @@ An example of new icons that are added:
 > - [ ] Launchpad animation      
 > - [ ] dragable icon on dock      
 > - [ ] right click to duck icons
+> - [ ] right click to desktop
 > - [x] shortcuts for opening app and other parts of site     
 
 
