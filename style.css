@@ -847,41 +847,41 @@ button {
 /* Right click menu */
 
 .context-menu {
-  padding: 4px;
+  padding-right: 10px;
+  padding-left: 10px;
   position: absolute;
-  border-radius: 12px;
+  border-radius: 8px;
   text-align: center;
   background: rgba(0, 0, 0, 0.096);
   border: 1px solid rgba(223, 219, 219, 0.068);
   overflow: hidden;
   backdrop-filter: blur(15px);
 }
-
 .context-menu ul {
   padding: 0;
   margin: 0;
   min-width: 150px;
   list-style: none;
 }
-
 .context-menu ul li {
-  text-align: left !important;
-  cursor: pointer;
-  border-radius: 5px;
-  padding: 3px 5px 3px 8px;
-  margin: 6px 0;
   border-bottom: 1px solid rgba(221, 214, 214, 0.164);
 }
 .context-menu ul li:last-child {
   border: none;
 }
-.context-menu ul li a {
-  text-decoration: none;
+.context-menu ul li button {
+  cursor: pointer;
+  text-align: left;
+  background: none;
+  border: none;
   color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-family: "Lexend";
+  border-radius: 5px;
+  padding: 3px 5px 3px 8px;
+  margin: 4px 0;
+  font-weight: 300;
 }
-.context-menu ul li:hover a{
-  color: white;
-}
-.context-menu ul li:hover {
+.context-menu ul button:hover {
   background: var(--color-blue-800);
 }
