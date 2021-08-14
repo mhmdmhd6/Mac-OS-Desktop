@@ -163,6 +163,8 @@ li > ul > li:last-child {
   margin-top: 5px;
 }
 li > ul > li > button {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   text-align: left;
@@ -776,15 +778,12 @@ li > ul > li > button:active {
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 20% 20% 20% 20% 20%;
 }
-.button {
-  font-size: 1.8rem;
-  font-family: "Roboto" , sans-serif;
-}
-button {
+.input .button {
   width: 100%;
   height: 100%;
   outline: 0;
-  cursor: pointer;
+  font-size: 1.8rem;
+  font-family: "Roboto" , sans-serif;
   border: 1px solid rgba(48, 48, 48, 0.563);
 }
 .r-radius {
@@ -834,6 +833,8 @@ button {
   border: none;
 }
 .context-menu ul li button {
+  width: 100%;
+  height: 100%;
   cursor: pointer;
   text-align: left;
   background: none;
