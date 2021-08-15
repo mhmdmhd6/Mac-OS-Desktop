@@ -516,25 +516,25 @@ li > ul > li > button:active {
 }
 .notes {
   display: none;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  width  : 100%;
+  height : 100%;
+  flex-direction   column;
+  align-items     : center;
+  justify-content : flex-start;
   background-color: transparent;
   animation: top-to-bottom 0.3s;
 }
 .notes input[type='text'] {
-  width: 100%;
+  width       : 100%;
   padding-left: 10px;
-  height: 15%;
+  height      : 15% ;
   background-color: transparent; 
-  border-bottom: 1px solid rgb(102, 102, 102);
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16px;
-  outline: none;
-  color: white;
-  transition: 0.2s;
+  border-bottom   : 1px solid rgb(102, 102, 102);
+  font-family     : 'Source Sans Pro', sans-serif ;
+  font-size       : 16px;
+  outline   : none   ;
+  color     : white;
+  transition: 0.2s   ;
 }
 .notes input[type='text']:active {
   background-color: #1b1b1b;
@@ -549,93 +549,93 @@ li > ul > li > button:active {
 /********** LAUNCHPAD **********/
 .launchpad {
   display: none;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  backdrop-filter: blur(25px);
+  width  : 100%;
+  height : 100%;
+  background-color: transparent     ;
+  backdrop-filter : blur(25px)      ;
   -webkit-backdrop-filter: blur(5px);
-  z-index: -10;
+  z-index: -10 ;
 }
 .searchbox {
-  width: 100%;
-  height: 100px;
-  display: flex;
+  width  : 100% ;
+  height : 100px;
+  display: flex ;
   justify-content: center;
-  align-items: center;
+  align-items    : center;
 }
 .searchbox .searchContainer {
-  height: 30px;
-  width: 220px;
-  backdrop-filter: blur(6px);
+  height : 30px ;
+  width  : 220px;
+  backdrop-filter: blur(6px)   ;
   display: flex;
-  align-items: center;
+  align-items    : center      ;
   justify-content: space-evenly;
-  border-top: 1px solid rgba(255, 255, 255, 0.582);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.582);
-  border-right: 1px solid rgba(255, 255, 255, 0.219);
-  border-left: 1px solid rgba(255, 255, 255, 0.219);
-  border-radius: 4px;
-  padding: 0px 3px;
+  border-top     : 1px solid rgba(255, 255, 255, 0.582);
+  border-bottom  : 1px solid rgba(255, 255, 255, 0.582);
+  border-right   : 1px solid rgba(255, 255, 255, 0.219);
+  border-left    : 1px solid rgba(255, 255, 255, 0.219);
+  border-radius  : 4px;
+  padding: 0px 3px    ; 
 }
 .searchbox .searchContainer svg {
   fill: white;
 }
 .searchbox input {
   background-color: transparent;
-  border: none;
-  outline: none;
-  text-align: center;
-  color: white;
-  font-size: 17px;
-  height: 100%;
+  border     : none   ;
+  outline    : none   ;
+  text-align : center ;
+  color      : white;
+  font-size  : 17px   ;
+  height     : 100%   ;
   font-family: 'Roboto', sans-serif;
 }
 .searchbox input::placeholder {
-  color: white;
-  font-weight: 100;
+  color      : white;
+  font-weight: 100    ;
 }
 .searchbox input:focus {
-  text-align: left;
+  text-align : left   ;
 }
 .Apps-container {
-  width: 90%;
-  height: 60%;
-  margin: 0 auto;
-  display: grid;
+  width  : 90%   ;
+  height : 60%   ;
+  margin : 0 auto;
+  display: grid  ; 
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 33% 33% 33%;
+  grid-template-rows   : 33% 33% 33%    ;
 }
 .launchpad .child-launchpad {
-  display: flex;
+  display: flex   ;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  cursor: pointer;
+  align-items    : center;
+  flex-direction : column;
+  cursor : pointer;
 }
 .launchpad .child-launchpad img {
-  width: 80px;
+  width  : 80px;
 }
 @media screen and (min-width:1200px) {
   .launchpad .child-launchpad img {
-    width: 95px;
+    width   : 95px;
   }
 }
 .launchpad .child-launchpad:active {
-  animation: vibrate 0.1s ease-in forwards infinite alternate;
-  transition: transform 0.1s cubic-bezier(0.42, 0, 1, 0.2);
+  animation : vibrate 0.1s ease-in forwards infinite alternate;
+  transition: transform 0.1s cubic-bezier(0.42, 0, 1, 0.2)    ;
 }
 
 
 .launchpad .child-launchpad p {
-  color: white;
+  color      : white;
   font-family: 'Roboto', sans-serif;
-  font-weight: 900;
+  font-weight: 900    ;
 }
 
 /*scroll bar start*/
 ::-webkit-scrollbar-track {
   background-color: #34282d;
-  border-radius: 10px;
+  border-radius   : 10px     ;
   cursor: pointer;
 }
 
@@ -645,22 +645,22 @@ li > ul > li > button:active {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #8b8b8d;
-  border-radius: 10px;
-  cursor: pointer;
+  background   : #8b8b8d;
+  border-radius: 10px  ;
+  cursor: pointer      ;
 }
 /*scroll bar end*/
 
 /********** ANIMATIONS **********/
 @keyframes zoom-out {
   0% {
-    transform: scale(1);
+    transform: scale(1)  ;
   }
   50% {
     transform: scale(1.2);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1)  ;
   }
 }
 @keyframes to-top-bottom {
@@ -671,18 +671,18 @@ li > ul > li > button:active {
     transform: translateY(-12px);
   }
   50% {
-    transform: translateY(-3px);
+    transform: translateY(-3px) ;
   }
   75% {
     transform: translateY(-21px);
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(0px)  ;
   }
 }
 @keyframes vibrate {
   0% {
-    transform: rotate(9deg);
+    transform: rotate(9deg) ;
   }
   100% {
     transform: rotate(-9deg);
@@ -691,47 +691,47 @@ li > ul > li > button:active {
 @keyframes top-to-bottom {
   0% {
     transform: translateY(-60px);
-    opacity: 0;
+    opacity  : 0;
   }
   100% {
     transform: none;
-    opacity: 1;
+    opacity  : 1   ;
   }
 }
 /********** CALCULATOR **********/
 .calculator {
-  display: none;
-  width: 20rem;
-  max-width: 100%;
-  height: 25rem;
-  max-height: 80%;
+  display   : none  ;
+  width     : 20rem ;
+  max-width : 100%  ;
+  height    : 25rem ;
+  max-height: 80%   ;
   background: var(--color-black-500);
   backdrop-filter: blur(1rem);
-  border-radius: 1rem;
+  border-radius  : 1rem      ;
   box-shadow: 0 0.5rem 2rem var(--color-black-500);
-  border: 1px solid var(--color-white-200);
-  animation: zoom-out 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  border    : 1px solid var(--color-white-200)    ;
+  animation : zoom-out 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .calculator__top {
-  width: 100%;
-  height: 30%;
-  display: flex;
+  width  : 100% ;
+  height : 30%  ;
+  display: flex ;
   flex-direction: column;
 }
 .calculator__top--taskabr {
-  height: 40px;
-  padding: 0 2px;
-  display: flex;
+  height     : 40px  ;
+  padding    : 0 2px ;
+  display    : flex  ;
   align-items: center;
 }
 .calculator__top--taskabr button {
-  width: 1px;
-  height: 1px;
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 50%;
-  margin-left: 8px;
-  transition: 0.4s;
+  width  : 1px;
+  height : 1px;
+  cursor : pointer;
+  padding: 8px    ;
+  border-radius: 50% ;
+  margin-left  : 8px ;
+  transition   : 0.4s;
 }
 .calculator__top--taskabr button:nth-child(1) {
   background-color: #ff6059;
@@ -752,35 +752,35 @@ li > ul > li > button:active {
   background-color: #12aa29;
 }
 .calculator__top--output {
-  flex: 1;
+  flex : 1;
   color: var(--color-white);
-  font-size: 1.8rem;
+  font-size  : 1.8rem;
   font-family: "Roboto" , sans-serif;
-  border: none;
-  background: transparent;
-  padding: 0 0.8rem;
+  border     : none  ;
+  background : transparent;
+  padding    : 0 0.8rem   ;
 }
 .input {
-  width: 100%;
-  height: 70%;
+  width  : 100%;
+  height : 70% ;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 20% 20% 20% 20% 20%;
+  grid-template-columns: 25% 25% 25% 25%     ;
+  grid-template-rows   : 20% 20% 20% 20% 20%    ;
 }
 .input .button {
-  width: 100%;
-  height: 100%;
-  outline: 0;
-  font-size: 1.8rem;
+  width  : 100%;
+  height : 100%;
+  outline: 0   ;
+  font-size  : 1.8rem;
   font-family: "Roboto" , sans-serif;
   border: 1px solid rgba(48, 48, 48, 0.563);
 }
 .r-radius {
-  border-bottom-right-radius: 15px;
+  border-bottom-right-radius: 15px  ;
 }
 .large {
-  grid-column-start: span 2;
-  border-bottom-left-radius: 15px;
+  grid-column-start         : span 2;
+  border-bottom-left-radius : 15px  ;
 }
 .operator {
   background-color: #fd9e2a;
@@ -799,21 +799,21 @@ li > ul > li > button:active {
 /* Right click menu */
 
 .context-menu {
-  padding-right: 10px;
-  padding-left: 10px;
-  position: absolute;
-  border-radius: 8px;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.096);
-  border: 1px solid rgba(223, 219, 219, 0.068);
-  overflow: hidden;
+  padding-right: 10px ;
+  padding-left : 10px ;
+  position: absolute  ;
+  border-radius: 8px  ;
+  text-align: center  ;
+  background: rgba(0, 0, 0, 0.096)            ;
+  border    : 1px solid rgba(255, 255, 255, 0.281);
+  overflow  : hidden   ;
   backdrop-filter: blur(15px);
 }
 .context-menu ul {
   padding: 0;
-  margin: 0;
-  min-width: 150px;
-  list-style: none;
+  margin : 0;
+  min-width : 150px;
+  list-style: none ;
 }
 .context-menu ul li {
   border-bottom: 1px solid rgba(221, 214, 214, 0.164);
@@ -822,20 +822,20 @@ li > ul > li > button:active {
   border: none;
 }
 .context-menu ul li button {
-  width: 100%;
+  width : 100%;
   height: 100%;
-  cursor: pointer;
+  cursor: pointer ;
   text-align: left;
   background: none;
   border: none;
-  color: rgb(255, 255, 255);
-  font-size: 15px;
-  font-family: "Lexend";
+  color : rgb(255, 255, 255);
+  font-size    : 15px;
+  font-family  : "Lexend";
   border-radius: 5px;
   padding: 3px 5px 3px 8px;
-  margin: 4px 0;
+  margin : 4px 0  ;
   font-weight: 300;
 }
 .context-menu ul button:hover {
-  background: var(--color-blue-800);
+  background : var(--color-blue-800);
 }
