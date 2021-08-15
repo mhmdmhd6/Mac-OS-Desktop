@@ -1,25 +1,25 @@
 /********** VARIABLES **********/
 :root {
-  --color-white: #ffffff;
+  --color-white    : #ffffff;
   --color-white-100: rgba(255, 255, 255, 0.1);
   --color-white-200: rgba(255, 255, 255, 0.2);
   --color-white-400: rgba(255, 255, 255, 0.4);
   --color-white-800: rgba(255, 255, 255, 0.8);
   --color-white-900: rgba(255, 255, 255, 0.9);
-  --color-black: #1e1e1e;
+  --color-black    : #1e1e1e;
   --color-black-100: rgba(0, 0, 0, 0.1);
-  --color-black-50: rgba(211, 197, 197, 0.39);
+  --color-black-50 : rgba(211, 197, 197, 0.39);
   --color-black-200: rgba(0, 0, 0, 0.2);
   --color-black-500: rgba(0, 0, 0, 0.5);
   --color-black-600: rgba(0, 0, 0, 0.6);
-  --color-blue-800: #007ff7;
+  --color-blue-800 : #007ff7;
 }
 /********** DEFAULT SETTINGS **********/
 * {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  border: 0;
+  margin    : 0   ;
+  padding   : 0   ;
+  outline   : 0   ;
+  border    : 0   ;
   list-style: none;
 }
 button img{
@@ -28,41 +28,41 @@ button img{
 body {
   user-select: none;
   font-family: 'Lexend', sans-serif;
-  background: url('./background/mac\ os\ big\ sur.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background : url('./background/mac\ os\ big\ sur.jpg');
+  background-size    : cover    ;
+  background-position: center   ;
+  background-repeat  : no-repeat;
 }
 
 /********** NAVBAR **********/
 .navbar {
-  width: 100%;
-  padding: 1px 0px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  color: var(--color-white-900);
-  box-shadow: 0 2px 10px var(--color-black-100);
-  backdrop-filter: blur(9px);
-  background: var(--color-black-200);
-  display: flex;
-  align-items: center;
+  width   : 100%   ;
+  padding : 1px 0px;
+  position: fixed  ;
+  top  : 0;
+  left : 0;
+  color: var(--color-white-900) ;
+  box-shadow     : 0 2px 10px var(--color-black-100);
+  backdrop-filter: blur(9px)    ;
+  background     : var(--color-black-200);
+  display        : flex         ;
+  align-items    : center       ;
   justify-content: space-between;
-  z-index: 20;
+  z-index    : 20 ;
   font-weight: 400;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .navbar > ul {
-  display: flex;
+  display    : flex  ;
   align-items: center;
 }
 .navbar li {
   position   : relative;
-  font-size  : 15px;
-  margin   : 0 4px;
+  font-size  : 15px    ;  
+  margin   : 0 4px     ;
   cursor     : url('./cursor/Link.cur'), pointer;
   text-shadow: 0 3px 10px rgb(0, 0, 0);
-  transition : 0.2s;
+  transition : 0.2s    ;
 }
 .navbar .leftLi.logo img {
   transform  : translateY(1px);
@@ -105,11 +105,11 @@ li.app_name {
   width: 30px; 
 }
 .navbar__right .changing_lang ul > li > button img {
-  margin-right: 5px;
+  margin-right    : 5px;
 }
 .navbar__right .changing_lang:hover {
   color: var(--color-white);
-  border-radius: 3px;
+  border-radius   : 3px;
   background-color: var(--color-white-200);
 }
 .navbar__right .clock #clock {
@@ -121,55 +121,55 @@ li.app_name {
   height : 19px ; 
 }
 li > ul {
-  display: none;
-  position: absolute;
-  align-items: center;
-  flex-direction: column;
-  left: 0%;
-  top: 100%;
+  display       : none    ;
+  position      : absolute;
+  align-items   : center  ;
+  flex-direction: column  ;
+  left: 0%  ;
+  top : 100%;
   font-weight: 600;
-  padding: 4px;
-  min-width: 200px;
-  background: var(--color-white-400);
+  padding    : 4px;
+  min-width  : 200px;
+  background : var(--color-white-400);
   backdrop-filter: blur(5px);
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.363);
+  border-radius  : 5px      ;
+  overflow   : hidden;
+  box-shadow : 0 2px 7px rgba(0, 0, 0, 0.363)  ;
 }
 li:hover > ul {
-  display: flex;
+  display   : flex;
 }
 li > ul > li {
-  width: 100%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  padding-bottom: 5px;
-  margin-bottom: 5px;
+  width         : 100%;
+  border-bottom : 1px solid rgba(0, 0, 0, 0.15);
+  padding-bottom: 5px ;
+  margin-bottom : 5px ;
 }
 li > ul > li:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  margin-top: 5px;
+  border-bottom : 0   ;
+  padding-bottom: 0   ;
+  margin-bottom : 0   ;
+  margin-top    : 5px ;
 }
 li > ul > li > button {
-  width: 100%;
-  height: 100%;
+  width  : 100%;
+  height : 100%;
   display: flex;
   flex-direction: row;
-  text-align: left;
-  font-family: 'Lexend', sans-serif;
-  font-weight: 600;
+  text-align    : left   ;
+  font-family   : 'Lexend', sans-serif;
+  font-weight   : 600  ;
   letter-spacing: 0.5px;
-  padding: 4px 8px;
-  border: 0;
-  outline: 0;
-  cursor: pointer;
+  padding       : 4px 8px;
+  border    : 0;
+  outline   : 0;
+  cursor    : pointer    ;
   background: transparent;
-  border-radius: 5px;
-  transition: 80ms;
+  border-radius: 5px ;
+  transition   : 80ms;
 }
 li > ul > li > button:hover {
-  color: var(--color-white);
+  color     : var(--color-white)   ;
   background: var(--color-blue-800);
 }
 li > ul > li > button:active {
@@ -177,107 +177,107 @@ li > ul > li > button:active {
 }
 @media screen and (max-width: 600px) {
   .navbar__right .clock #clock {
-    margin-left: 0;
+    margin-left   : 0;
   }
 }
 /**********DOCK Start*********/
 .dock {
-  position: fixed;
-  padding: 3px 8px;
-  bottom: 3%;
-  left: 50%;
+  position : fixed  ;
+  padding  : 3px 8px;
+  bottom   : 3%     ;
+  left     : 50%    ;
   transform: translateX(-50%);
   backdrop-filter: blur(80px);
   border: 0.25px solid var(--color-white-100);
-  background: var(--color-white-100);
+  background   : var(--color-white-100);
   border-radius: 14px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.555);
-  z-index: 10;
+  display      : flex;
+  align-items  : center;
+  box-shadow   : 0 0 30px rgba(0, 0, 0, 0.555);
+  z-index      : 10;
 }
 @media screen and (max-width: 900px) {
   .dock button img {
-    width: 60px;
+    width : 60px;
   }
   .dock {
-    top: 83vh;
+    top   : 83vh;
     height: 64px;
     border-radius: 20px;
   }
 }
 .dock .point {
-  width: 6px;
-  height: 6px;
+  width : 6px  ;
+  height: 6px  ;
   margin: 0px 0;
-  background: lightcoral;
-  border-radius: 50%;
-  display: none;
-  animation: top-to-bottom 0.3s;
-  transition: 0.3s ;
+  background   : lightcoral;
+  border-radius: 50%         ;
+  display      : none        ;
+  animation    : top-to-bottom 0.3s;
+  transition   : 0.3s ;
 }
 .dock .column {
-  width     : 1px;
-  height    : 45px;
+  width     : 1px  ;
+  height    : 45px ;
   margin    : 0 4px;
   background: var(--color-black-50);
 }
 .dock .icon {
   position   : relative;
-  cursor     : pointer;
-  display    : grid;
-  place-items: center;
-  background: none;
-  border: none;
-  outline: none;
+  cursor     : pointer ;
+  display    : grid    ;
+  place-items: center  ;
+  background : none    ;
+  border     : none    ;
+  outline    : none    ;
   transition : all 0.1s;
 }
 .dock .icon::after {
-  position   : absolute;
-  display    : block;
+  position   : absolute     ;
+  display    : block        ;
   background : rgba(245, 245, 245, 0.412);
   backdrop-filter: blur(5px);
-  display    : flex;
-  justify-content: center;
-  align-items    : center;
-  z-index        : -1;
+  display        : flex     ;
+  justify-content: center   ;
+  align-items    : center   ;
+  z-index        : -1       ;
   clip-path      : polygon(100% 0%, 100% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 80%, 43% 80%, 50% 101%, 57% 80%, 100% 80%, 100% 0%);
 } 
 .dock .icon:nth-child(1):hover::after{
-  content: 'Finder';
+  content: 'Finder'      ;
 }
 .dock .icon:nth-child(2):hover::after{
-  content: 'Launchpad';
+  content: 'Launchpad'   ;
 }
 .dock .icon:nth-child(3):hover::after{
-  content: 'App store';
+  content: 'App store'   ;
 }
 .dock .icon:nth-child(4):hover::after{
-  content: 'Message';
+  content: 'Message'     ;
 }
 .dock .icon:nth-child(5):hover::after{
   content: 'Itunes music';
 }
 .dock .icon:nth-child(6):hover::after{
-  content: 'Book';
+  content: 'Book'        ;
 }
 .dock .icon:nth-child(7):hover::after{
-  content: 'Mail';
+  content: 'Mail'        ;
 }
 .dock .icon:nth-child(8):hover::after{
-  content: 'Photos';
+  content: 'Photos'      ;
 }
 .dock .icon:nth-child(9):hover::after{
-  content: 'Calculator';
+  content: 'Calculator'  ;
 }
 .dock .icon:nth-child(10):hover::after{
-  content: 'Notes';
+  content: 'Notes'       ;
 }
 .dock .icon:nth-child(11):hover::after{
-  content: 'Terminal';
+  content: 'Terminal'    ;
 }
 .dock .icon:nth-child(12):hover::after{
-  content: 'Preferences';
+  content: 'Preferences' ;
 }
 .dock .icon:hover::after {
   font-size: 13px    ;  
@@ -295,7 +295,7 @@ li > ul > li > button:active {
 }
 .dock .icon:hover {
   transform: scale(1.5);
-  z-index  : 10;
+  z-index  : 10        ;
 }
 .dock .icon img {
   width    : 63px;
@@ -304,37 +304,31 @@ li > ul > li > button:active {
 }
 .dock .icon img:active {
   /* animation: to-top-bottom 1s; */
-  filter: brightness(0.6) drop-shadow(0 0 5px rgb(44, 44, 44));
+  filter   : brightness(0.6) drop-shadow(0 0 5px rgb(44, 44, 44));
   /* outline: none;
   background: transparent; */
 }
-/* .dock button img:focus{
-  background: transparent;
-  border: none;
-} */
-
 /**********DOCK End*********/
 
 /********** WINDOW Start**********/
-
 .container__Window {
-  width: 100%;
-  height: 90%;
+  width  : 100%;
+  height : 90% ;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  display: none;
+  align-items: center    ;
+  margin : 0 auto        ;
+  display: none          ;
 }
 .window {
-  display: none;
-  width: 70%;
-  height: 430px;
-  overflow: hidden;
+  display : none     ;
+  width   : 70%      ;
+  height  : 430px    ;
+  overflow: hidden   ;
   border-radius: 1rem;
-  background: var(--color-black);
-  box-shadow: 0 20px 30px var(--color-black-200);
-  border: 1px solid #7c7d7d34;
+  background   : var(--color-black);
+  box-shadow   : 0 20px 30px var(--color-black-200);
+  border   : 1px solid #7c7d7d34 ;
   animation: zoom-out 0.3s;
 }
 @media screen and (max-width:600px) {
@@ -343,40 +337,40 @@ li > ul > li > button:active {
   }
 }
 .window__taskbar {
-  height: 10%;
-  display: flex;
+  height    : 10%               ;
+  display   : flex              ;
   justify-content: space-between;
-  padding: 0 16px;
+  padding   : 0 16px            ;
   border-bottom: 1px solid var(--color-white-200);
   background: linear-gradient(to bottom, #131313, var(--color-black));
 }
 .window__taskbar--actions {
-  display: flex;
+  display    : flex  ;
   align-items: center;
 }
 .window__taskbar--actions button {
-  display: flex;
+  display: flex      ;
   justify-content: center;
-  align-items: center;
-  width: 1px;
-  height: 1px;
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 50%;
-  transition: 0.4s;
+  align-items    : center;
+  width  : 1px       ;
+  height : 1px       ;
+  cursor : pointer   ;
+  padding: 8px       ;
+  border-radius: 50% ;
+  transition   : 0.4s;
 }
 .window__taskbar--actions button:not(:last-child) {
-  margin-right: 8px;
+  margin-right    : 8px;
 }
 .window__taskbar--actions button:nth-child(1) {
   background-color: #FF6057;
-  position: relative;
+  position        : relative ;
 }
 .window__taskbar--actions button:nth-child(1)::after{
-  content: '×';
-  display: block;
-  font-size: 14px;
-  color: transparent;
+  content  : '×'        ;
+  display  : block      ;
+  font-size: 14px       ;
+  color    : transparent;
 }
 .window__taskbar--actions button:nth-child(1):hover::after{
   color: black;
@@ -388,10 +382,10 @@ li > ul > li > button:active {
   background-color: #FEBC2E;
 }
 .window__taskbar--actions button:nth-child(2)::after{
-  content: '−';
-  display: block;
-  font-size: 14px;
-  color: transparent;
+  content  : '−'  ;
+  display  : block;
+  font-size: 14px ;
+  color    : transparent;
 }
 .window__taskbar--actions button:nth-child(2):hover::after{
   color: black;
@@ -403,39 +397,39 @@ li > ul > li > button:active {
   background-color: #28C740;
 }
 .window__taskbar--actions button:nth-child(3)::after{
-  content: '↨';
-  transform: rotate(-45deg) translateX(-1px) translateY(-2px);
-  display: block;
-  font-size: 14px;
-  color: transparent;
-  font-weight: 900;
+  content    : '↨'  ;
+  transform  : rotate(-45deg) translateX(-1px) translateY(-2px);
+  display    : block;
+  font-size  : 14px ;
+  color      : transparent;
+  font-weight: 900  ;
 }
 .window__taskbar--actions button:nth-child(3):hover::after{
-  color: black;
+  color      : black;
 }
 .window__taskbar--actions button:nth-child(3):hover {
   background-color: #12aa29;
 }
 .window__taskbar--content {
-  width: 100%;
-  height: 100%;
+  width  : 100%;
+  height : 100%;
   display: flex;
-  align-items: center;
+  align-items    : center;
   justify-content: center;
 }
 .window__taskbar--content h2 {
-  color: var(--color-white);
-  font-weight: 600;
-  font-size: 18px;
+  color      : var(--color-white);
+  font-weight: 600 ;
+  font-size  : 18px;
 }
 /********** TERMINAL start ********/
 .terminal_content{
   font-family: "Courier New", Courier, monospace;
-  font-size: 20px;
-  padding: 15px;
-  color: white;
-  width: 100%;
-  height: 90%;
+  font-size  : 20px   ; 
+  padding    : 15px   ;
+  color      : white;
+  width      : 100%   ;
+  height     : 90%    ;
   background-color: transparent;
 }
 .color_green{
