@@ -446,12 +446,12 @@ li > ul > li > button:active {
 }
 /******** NOTE Start ********/
 .window__taskbar--right {
-  width: 60%;
-  height: 100%;
+  width  : 60%  ;
+  height : 100% ;
   background-color: transparent;
-  float: right;
-  display: flex;
-  align-items: center;
+  float  : right;
+  display: flex ;
+  align-items    : center      ;
   justify-content: space-around;
 }
 @media screen and (max-width:600px) {
@@ -460,69 +460,69 @@ li > ul > li > button:active {
   }
 }
 .Customize__icon img {
-  width: 27px;
-  padding: 3px;
-  border: 1px solid rgba(123, 123, 123, 0.412);
-  border-radius: 9px;
-  transition: 0.2s;
-  cursor: pointer;
+  width  : 27px;
+  padding: 3px ;
+  border : 1px solid rgba(123, 123, 123, 0.412);
+  border-radius: 9px ;
+  transition   : 0.2s;
+  cursor : pointer   ;
 }
 .Customize__icon img:hover {
   background-color: rgb(88, 88, 88);
 }
 .Customize__icon img:active {
   background-color: #464646;
-  border-color: #dddbdb;
+  border-color    : #dddbdb;
 }
 .window__taskbar--right  input[type='search'] {
-  width: 45%;
+  width : 45%;
   height: 75%;
   background-color: #49474791;
-  border-radius: 5px;
+  border-radius   : 5px ;
   border: 1px solid rgba(123, 123, 123, 0.412);
-  padding-left: 8px;
-  outline: none;
-  color: white;
-  font-size: 18px;
+  padding-left    : 8px ;
+  outline         : none;
+  color : white  ;
+  font-size  : 18px;
   font-family: 'Source Sans Pro', sans-serif;
 }
 .content {
-  width: 100%;
-  height: 90%;
+  width  : 100%;
+  height : 90% ;
   display: flex;
 }
 .sidebar {
-  width: 30%;
-  height: 100%;
+  width       : 30% ;
+  height      : 100%;
   border-right: 1px solid rgba(123, 123, 123, 0.412);
 }
 .impor-content {
-  width: 70%;
+  width : 70%;
   height: 100%;
 }
 .impor-content textarea {
-  width: 100%;
+  width  : 100%;
   /* height: calc(100% - 41px); */
-  height: 100%;
+  height : 100%;
   padding: 16px;
   background: transparent;
-  border: none;
+  border : none;
   outline: none;
-  resize: none;
+  resize : none;
   display: none;
-  color: var(--color-white-900);
-  font-size: 18px;
+  color  : var(--color-white-900)   ;
+  font-size  : 18px;
   font-family: 'Raleway', sans-serif;
 }
 .notes {
   display: none;
   width  : 100%;
   height : 100%;
-  flex-direction   column;
-  align-items     : center;
-  justify-content : flex-start;
+  flex-direction  : column     ;
+  align-items     : center     ;
+  justify-content : flex-start ;
   background-color: transparent;
-  animation: top-to-bottom 0.3s;
+  animation       : top-to-bottom 0.3s;
 }
 .notes input[type='text'] {
   width       : 100%;
