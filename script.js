@@ -29,6 +29,7 @@ var point_note = document.querySelector('#point-note');
 var app_name_terminal = document.querySelector('#Terminal');
 var app_name_notes = document.querySelector('#notes');
 var app_name_calculator = document.querySelector('#calculator');
+var container_apps = document.querySelector('.container_apps');
 // change lang
 var change_lang = document.querySelector('.change_lang');
 
@@ -56,12 +57,16 @@ function handleBackfullnote() {
 function handleClose() {
   terminal.style.display = 'none';
   point_terminal.style.display = 'none';
+  container_apps.style.display = 'grid';
+  container.style.display = 'none';
   app_name_terminal.style.display = 'none';
 }
 
 function handleClosenote() {
   note.style.display = 'none';
   point_note.style.display = 'none';
+  container_apps.style.display = 'grid';
+  container.style.display = 'none';
   app_name_notes.style.display = 'none';
 }
 
@@ -77,10 +82,12 @@ function handleOpenLaunching() {
     launchpad.style.display = 'block';
     navbar.style.display = 'none';
     point_launchpad.style.display = 'block';
+    container_apps.style.display = 'none';
   } else {
     launchpad.style.display = 'none';
     navbar.style.display = 'flex';
     point_launchpad.style.display = 'none';
+    container_apps.style.display = 'grid';
   }
   container.style.display = 'none';
 }
@@ -89,6 +96,7 @@ function handleOpenLaunching() {
 function handleOpening() {
   terminal.style.display = 'block';
   container.style.display = 'flex';
+  container_apps.style.display = 'none';
   navbar.style.display = 'flex';
   launchpad.style.display = 'none';
   point_terminal.style.display = 'block';
@@ -99,6 +107,7 @@ function handleOpening() {
 function handleOpenNote() {
   note.style.display = 'block';
   container.style.display = 'flex';
+  container_apps.style.display = 'none';
   navbar.style.display = 'flex';
   launchpad.style.display = 'none';
   point_note.style.display = 'block';
@@ -117,6 +126,7 @@ function handleNotes() {
 function handleOpenCal() {
   calculator.style.display = 'block';
   container.style.display = 'flex';
+  container_apps.style.display = 'none';
   navbar.style.display = 'flex';
   launchpad.style.display = 'none';
   point_cal.style.display = 'block';
@@ -127,6 +137,8 @@ function handleCloseCal() {
   calculator.style.display = 'none';
   point_cal.style.display = 'none';
   app_name_calculator.style.display = 'none';
+  container.style.display = 'none';
+  container_apps.style.display = 'grid';
 }
 function handleOpenCal_lunchpad() {
   calculator.style.display = 'block';
