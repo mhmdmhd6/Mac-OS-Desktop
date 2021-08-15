@@ -22,6 +22,9 @@
   border: 0;
   list-style: none;
 }
+button img{
+  cursor     : url('./cursor/Link.cur'), pointer;
+}
 body {
   user-select: none;
   font-family: 'Lexend', sans-serif;
@@ -54,59 +57,48 @@ body {
   align-items: center;
 }
 .navbar li {
-  font-size: 15px;
-  cursor: url('./cursor/Link.cur'), pointer;
+  position   : relative;
+  font-size  : 15px;
+  margin   : 0 4px;
+  cursor     : url('./cursor/Link.cur'), pointer;
+  text-shadow: 0 3px 10px rgb(0, 0, 0);
+  transition : 0.2s;
+}
+.navbar .leftLi.logo img {
+  transform  : translateY(1px);
 }
 .navbar svg {
   fill: var(--color-white);
 }
-.navbar .rightLi {
-  position: relative;
-  transition: 0.2s;
-  padding: 4px 8px;
-  margin: 0 4px;
-  text-shadow: 0 3px 10px rgb(0, 0, 0);
+.navbar .leftLi {
+  padding  : 4px 8px;
 }
 @media screen and (max-width: 900px) {
   .hidden {
     display: none;
   }
 }
-.navbar .rightLi.logo img {
-  transform: translateY(1px);
-}
-.navbar .rightLi:hover {
-  color: var(--color-white);
-  border-radius: 5px;
+.navbar .leftLi:hover {
+  color           : var(--color-white);
+  border-radius   : 5px;
   background-color: var(--color-white-200);
 }
-
 li.app_name {
-  display: none;
+  display    : none;
   font-weight: 900 !important;
 }
-
-.rightLi > ul > li > button:active {
-  background-color: #0063f7;
-}
 .navbar__right{
-  display: flex;
+  display    : flex;
   align-items: center;
-}
-.navbar__right li {
-  margin: 0 5px;
 }
 .navbar__right .changing_lang{
-  position: relative;
-  display: flex;
+  display    : flex;
   align-items: center;
-  transition: 0.2s;
-  padding: 4px 8px;
-  text-shadow: 0 3px 10px rgb(0, 0, 0);
+  padding    : 4px 8px;
 }
 @media screen and (max-width:600px) {
   .navbar__right .changing_lang{
-    display: none;
+    display  : none;
   }
 }
 .navbar__right .changing_lang img {
@@ -120,11 +112,8 @@ li.app_name {
   border-radius: 3px;
   background-color: var(--color-white-200);
 }
-.navbar__right .clock {
-  text-shadow: 0 3px 10px rgb(0, 0, 0);
-}
 .navbar__right .clock #clock {
-  margin-left: 15px;
+  margin-left : 15px;
   margin-right: 15px;
 }
 .navbar__right li .control-center{
@@ -148,7 +137,7 @@ li > ul {
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.363);
 }
 li:hover > ul {
-  display: block;
+  display: flex;
 }
 li > ul > li {
   width: 100%;
