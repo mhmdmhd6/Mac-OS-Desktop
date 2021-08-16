@@ -53,15 +53,15 @@ body {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .navbar > ul {
-  display    : flex  ;
-  align-items: center;
+  display    : flex    ;
+  align-items: center  ;
 }
 .navbar li {
   position   : relative;
   font-size  : 15px    ;  
-  margin   : 0 4px     ;
+  margin     : 0 4px   ;
   cursor     : url('./cursor/Link.cur'), pointer;
-  text-shadow: 0 3px 10px rgb(0, 0, 0);
+  text-shadow: 0 3px 10px rgb(0, 0, 0)        ;
   transition : 0.2s    ;
 }
 .navbar .leftLi.logo img {
