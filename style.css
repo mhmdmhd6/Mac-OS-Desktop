@@ -389,6 +389,9 @@ li > ul > li > button:active {
   display    : flex  ;
   align-items: center;
 }
+.window__taskbar--actions:hover button::after {
+  color: black;
+}
 .window__taskbar--actions button {
   display: flex      ;
   justify-content: center;
@@ -405,16 +408,15 @@ li > ul > li > button:active {
 }
 .window__taskbar--actions button:nth-child(1) {
   background-color: #FF6057;
-  position        : relative ;
+}
+.window__taskbar--actions button::after {
+  display    : block;
+  font-size  : 14px ;
+  color      : transparent;
+  font-weight: 900  ;
 }
 .window__taskbar--actions button:nth-child(1)::after{
   content  : '×'        ;
-  display  : block      ;
-  font-size: 14px       ;
-  color    : transparent;
-}
-.window__taskbar--actions button:nth-child(1):hover::after{
-  color: black;
 }
 .window__taskbar--actions button:nth-child(1):hover {
   background-color: #fc3c32;
@@ -424,12 +426,6 @@ li > ul > li > button:active {
 }
 .window__taskbar--actions button:nth-child(2)::after{
   content  : '−'  ;
-  display  : block;
-  font-size: 14px ;
-  color    : transparent;
-}
-.window__taskbar--actions button:nth-child(2):hover::after{
-  color: black;
 }
 .window__taskbar--actions button:nth-child(2):hover {
   background-color: #ffa600;
@@ -440,13 +436,6 @@ li > ul > li > button:active {
 .window__taskbar--actions button:nth-child(3)::after{
   content    : '↨'  ;
   transform  : rotate(-45deg) translateX(-1px) translateY(-2px);
-  display    : block;
-  font-size  : 14px ;
-  color      : transparent;
-  font-weight: 900  ;
-}
-.window__taskbar--actions button:nth-child(3):hover::after{
-  color      : black;
 }
 .window__taskbar--actions button:nth-child(3):hover {
   background-color: #12aa29;
