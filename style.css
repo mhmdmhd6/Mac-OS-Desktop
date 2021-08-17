@@ -564,10 +564,10 @@ li > ul > li > button:active {
   background-color: #1b1b1b;
 }
 /* telegram app */
-.content__iframe {
+/* .content__iframe {
   width: 100%;
   height: 100%;
-}
+} */
 @media screen and (max-width:900px) {
   .window__taskbar--right {
     width: 70%;
