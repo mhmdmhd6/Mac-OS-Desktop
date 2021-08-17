@@ -314,11 +314,10 @@ li > ul > li > button:active {
 }
 /**********DOCK End*********/
 
-/*******APPS CONTAINER********/
+/*******APPS CONTAINER start********/
 .container_apps {
   width: 100%;
   height: 90%;
-  z-index: -50;
   display: grid;
   direction: rtl;
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
@@ -346,6 +345,11 @@ li > ul > li > button:active {
 .container_apps button img {
   width: 50%;
 }
+@media screen and (max-width:1000px) {
+  .container_apps button img {
+    width: 35%;
+  }
+}
 .container_apps button input {
   width: 100%;
   background-color: transparent;
@@ -355,6 +359,8 @@ li > ul > li > button:active {
   font-weight: 900;
   letter-spacing: 0.8px;
 }
+/*******APPS CONTAINER end********/
+
 /********** WINDOW Start**********/
 .container__Window {
   width  : 100%;
