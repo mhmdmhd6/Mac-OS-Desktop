@@ -761,7 +761,10 @@ li > ul > li > button:active {
   border-radius: 50% ;
   margin-left  : 8px ;
   transition   : 0.4s;
-}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
 .calculator__top--taskabr button:nth-child(1) {
   background-color: #ff6059;
 }
@@ -779,6 +782,26 @@ li > ul > li > button:active {
 }
 .calculator__top--taskabr button:nth-child(3):hover {
   background-color: #12aa29;
+}
+.calculator__top--taskabr button::after {
+  display    : block;
+  font-size  : 14px ;
+  color      : transparent;
+  font-weight: 900  ;
+}
+.calculator__top--taskabr:hover button::after {
+  color: black;
+}
+
+.calculator__top--taskabr button:nth-child(1)::after{
+  content  : '×'        ;
+}
+.calculator__top--taskabr button:nth-child(2)::after{
+  content  : '−'  ;
+}
+.calculator__top--taskabr button:nth-child(3)::after{
+  content    : '↨'  ;
+  transform  : rotate(-45deg) translateX(-1px) translateY(-2px);
 }
 .calculator__top--output {
   flex : 1;
