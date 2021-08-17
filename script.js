@@ -32,6 +32,15 @@ var app_name_calculator = document.querySelector('#calculator');
 var container_apps = document.querySelector('.container_apps');
 // change lang
 var change_lang = document.querySelector('.change_lang');
+var onhover = document.querySelector('.onhover');
+var Telegram = document.querySelector('.Telegram');
+var open_Telegram = document.querySelector('.open_Telegram');
+
+
+function change_size() {
+  onhover.previousElementSibling.style.display.scale = '1.3';
+  onhover.nextElementSibling.style.display.scale = '1.3';
+}
 
 function lang_change() {
   if (change_lang.style.display === "none") {
@@ -114,6 +123,14 @@ function handleOpenNote() {
   point_launchpad.style.display = 'none';
   app_name_notes.style.display = 'block';
 }
+function handleOpenTelegram() {
+  Telegram.style.display = 'block';
+  container.style.display = 'flex';
+  container_apps.style.display = 'none';
+  navbar.style.display = 'flex';
+  launchpad.style.display = 'none';
+  point_launchpad.style.display = 'none';
+}
 
 function handleDeleting() {
   notes.style.display = 'none';
@@ -176,6 +193,7 @@ notes.addEventListener('click', handleNotes);
 opening.addEventListener('click', handleOpening);
 openNote.addEventListener('click', handleOpenNote);
 opencalculator.addEventListener('click', handleOpenCal);
+open_Telegram.addEventListener('click', handleOpenTelegram);
 closecal.addEventListener('click', handleCloseCal);
 opencalculator_lunchpad.addEventListener('click', handleOpenCal_lunchpad);
 launchpad_searchbox.addEventListener('input', handleLaunchpadSearch);

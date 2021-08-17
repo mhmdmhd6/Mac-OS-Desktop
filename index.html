@@ -186,7 +186,7 @@
       <button class="icon">
         <img src="./icon/dock/finder.png" alt="Finder Logo" class="hidden" />
       </button>
-      <button accesskey="o" class="block-point icon" onclick="handleOpenLaunching()">
+      <button accesskey="o" class="block-point icon onhover" onclick="handleOpenLaunching()">
         <img class="launching hidden" src="./icon/dock/launchpad.png" alt="Launchpad Logo" />
         <hr class="point hidden" id="point-launchpad"/>  
       </button>
@@ -199,8 +199,8 @@
       <button class="icon">
         <img src="./icon/dock/music.png" alt="Music Logo" />
       </button>
-      <button class="icon">
-        <img src="./icon/dock/books.png" alt="Books Logo" class="hidden" />
+      <button class="icon open_Telegram" >
+        <img src="./icon/dock/telegram.png" alt="telegram apps" class="hidden" />
       </button>
       <button class="icon">
         <img src="./icon/dock/mail.png" alt="Mail Logo" class="hidden" />
@@ -380,6 +380,21 @@
         </div>
       </div>
       <!--note app end-->
+
+      <!-- telegram app start-->
+      <div class="window Telegram">
+        <div class="window__taskbar">
+          <div class="window__taskbar--actions">
+            <button class="close-note"></button>
+            <button class="backfull-note"></button>
+            <button class="full-note"></button>
+          </div>
+        </div>
+        <div class="content">
+          <iframe src="https://web.telegram.org" frameborder="0" class="content__iframe" title="Telegram"></iframe>
+        </div>
+      </div>
+      <!-- telegram app snd -->
 
       <!-- calculator -->
       <div class="calculator">
