@@ -299,6 +299,7 @@ $(function () {
       });
   $('.note').draggable();
   $('.calculator').draggable();
+  $('.Vscode').draggable();
 });
 //date and time
 var d = new Date();
