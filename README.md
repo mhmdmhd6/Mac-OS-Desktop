@@ -64,6 +64,7 @@ An example of new icons that are added:
 > - [ ] Search on navbar 
 > - [ ] Preference app     
 > - [ ] Map app      
+> - [x] VSCode app      
 > - [ ] Weather app      
 > - [ ] Calendar app      
 > - [x] Launchpad      
