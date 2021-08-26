@@ -2,8 +2,14 @@
 var adding = document.querySelector('.adding');
 var backfull = document.querySelector('.backfull');
 var backfullnote = document.querySelector('.backfull-note');
+var app_name_calculator = document.querySelector('#calculator');
+var calculator = document.querySelector('.calculator');
+var change_lang = document.querySelector('.change_lang');
+var closecal = document.querySelector('.close-cal');
 var close = document.querySelector('.close');
 var closenote = document.querySelector('.close-note');
+var container_apps = document.querySelector('.container_apps');
+var notes = document.querySelector('.content__sidebar--notes');
 var container = document.querySelector('.container__Window');
 var deleting = document.querySelector('.deleting');
 var full = document.querySelector('.full');
@@ -13,42 +19,53 @@ var launchpad_searchbox = document.querySelector('.launchpad .searchbox');
 var launchpad_app_container = document.querySelector('.Apps-container');
 var navbar = document.querySelector('.navbar');
 var note = document.querySelector('.note');
-var notes = document.querySelector('.content__sidebar--notes');
-var opening = document.querySelector('.opening');
-var openNote = document.querySelector('.openNote');
-var terminal = document.querySelector('.terminal');
-var typing = document.querySelector('.typing');
-var calculator = document.querySelector('.calculator');
-var opencalculator = document.querySelector('.open-cal');
-var closecal = document.querySelector('.close-cal');
-var opencalculator_lunchpad = document.querySelector('.open-cal-lunching');
-var point_terminal = document.querySelector('#point-terminal');
-var point_launchpad = document.querySelector('#point-launchpad');
-var point_cal = document.querySelector('#point-cal');
-var point_note = document.querySelector('#point-note');
-var app_name_terminal = document.querySelector('#Terminal');
 var app_name_notes = document.querySelector('#notes');
-var app_name_calculator = document.querySelector('#calculator');
-var container_apps = document.querySelector('.container_apps');
-// change lang
-var change_lang = document.querySelector('.change_lang');
-var onhover = document.querySelector('.onhover');
-/*
-var Telegram = document.querySelector('.Telegram');
-var open_Telegram = document.querySelector('.open_Telegram');
-*/
+var opencalculator = document.querySelector('.open-cal');
+var point_cal = document.querySelector('#point-cal');
+var openNote = document.querySelector('.openNote');
+var opencalculator_lunchpad = document.querySelector('.open-cal-lunching');
+var opening = document.querySelector('.opening');
+var point_launchpad = document.querySelector('#point-launchpad');
+var point_terminal = document.querySelector('#point-terminal');
+var point_note = document.querySelector('#point-note');
+var terminal = document.querySelector('.terminal');
+var content__typing = document.querySelector('.content__typing');
+var app_name_terminal = document.querySelector('#Terminal');
 
-function change_size() {
-  onhover.previousElementSibling.style.display.scale = '1.3';
-  onhover.nextElementSibling.style.display.scale = '1.3';
+var open_vscode = document.querySelector('.open_vscode');
+var Vscode_window = document.querySelector('.Vscode');
+var close_Vscode = document.querySelector('.close-Vscode');
+var backfull_Vscode = document.querySelector('.backfull-Vscode');
+var full_Vscode = document.querySelector('.full-Vscode');
+
+function handleOpenVScode() {
+  Vscode_window.style.display = 'block';
+  container.style.display = 'flex';
+  container_apps.style.display = 'none';
+  navbar.style.display = 'flex';
+  launchpad.style.display = 'none';
+  point_launchpad.style.display = 'none';
+}
+
+function handleCloseVscode() {
+  Vscode_window.style.display = 'none';
+}
+
+function handleBackFullVscode() {
+  Vscode_window.style.width = '70%';
+  Vscode_window.style.height = '430px';
+}
+
+function handleFullVscode() {
+  Vscode_window.style.display = 'none';
 }
 
 function lang_change() {
   if (change_lang.style.display === "none") {
-    change_lang.style.display = "flex";
-} else {
+      change_lang.style.display = "flex";
+  } else {
     change_lang.style.display = "none";
-}
+  }
 }
 function handleAdding() {
   notes.style.display = 'flex';
@@ -86,7 +103,6 @@ function handleFullScreen(app) {
 }
 
 
-
 function handleOpenLaunching() {
   if(launchpad.style.display === 'none') {
     launchpad.style.display = 'block';
@@ -99,9 +115,8 @@ function handleOpenLaunching() {
     point_launchpad.style.display = 'none';
     container_apps.style.display = 'grid';
   }
-  container.style.display = 'none';
+    container.style.display = 'none';
 }
-
 
 function handleOpening() {
   terminal.style.display = 'block';
@@ -125,22 +140,13 @@ function handleOpenNote() {
   app_name_notes.style.display = 'block';
 }
 
-// function handleOpenTelegram() {
-//   Telegram.style.display = 'block';
-//   container.style.display = 'flex';
-//   container_apps.style.display = 'none';
-//   navbar.style.display = 'flex';
-//   launchpad.style.display = 'none';
-//   point_launchpad.style.display = 'none';
-// }
-
 function handleDeleting() {
   notes.style.display = 'none';
-  typing.style.display = 'none';
+  content__typing.style.display = 'none';
 }
 
 function handleNotes() {
-  typing.style.display = 'flex';
+  content__typing.style.display = 'block';
 }
 function handleOpenCal() {
   calculator.style.display = 'block';
@@ -190,12 +196,15 @@ closenote.addEventListener('click', handleClosenote);
 deleting.addEventListener('click', handleDeleting);
 full.addEventListener('click', () => handleFullScreen(terminal));
 fullnote.addEventListener('click', () => handleFullScreen(note));
+full_Vscode.addEventListener('click', () => handleFullScreen(Vscode_window));
 handleOpenLaunching();
 notes.addEventListener('click', handleNotes);
 opening.addEventListener('click', handleOpening);
 openNote.addEventListener('click', handleOpenNote);
 opencalculator.addEventListener('click', handleOpenCal);
-// open_Telegram.addEventListener('click', handleOpenTelegram);
+open_vscode.addEventListener('click', handleOpenVScode);
+close_Vscode.addEventListener('click', handleCloseVscode);
+backfull_Vscode.addEventListener('click', handleBackFullVscode);
 closecal.addEventListener('click', handleCloseCal);
 opencalculator_lunchpad.addEventListener('click', handleOpenCal_lunchpad);
 launchpad_searchbox.addEventListener('input', handleLaunchpadSearch);

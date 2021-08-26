@@ -32,6 +32,9 @@ body {
   background-size    : cover    ;
   background-position: center   ;
   background-repeat  : no-repeat;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
 }
 
 /********** NAVBAR **********/
@@ -144,13 +147,12 @@ li > ul > li {
   width         : 100%;
   border-bottom : 1px solid rgba(0, 0, 0, 0.15);
   padding-bottom: 5px ;
-  margin-bottom : 5px ;
+  margin-bottom : 5px !important;
 }
 li > ul > li:last-child {
   border-bottom : 0   ;
-  padding-bottom: 0   ;
-  margin-bottom : 0   ;
-  margin-top    : 5px ;
+  padding-bottom: 0   !important;
+  margin-bottom : 0   !important;
 }
 li > ul > li > button {
   width  : 100%;
@@ -233,9 +235,7 @@ li > ul > li > button:active {
   outline    : none    ;
   transition : all 0.1s;
 }
-/* .dock button:hover + button {
-  transform: scale(1.2);
-} */
+
 .dock .icon::after {
   position   : absolute     ;
   display    : block        ;
@@ -263,7 +263,7 @@ li > ul > li > button:active {
   content: 'Itunes music';
 }
 .dock .icon:nth-child(6):hover::after{
-  content: 'Telegram'        ;
+  content: 'VScode'      ;
 }
 .dock .icon:nth-child(7):hover::after{
   content: 'Mail'        ;
@@ -289,7 +289,7 @@ li > ul > li > button:active {
   z-index  : 1       ;
   top      : -45%    ;
   left     : -15%    ;
-  width    : 78px    ;
+  width    : 80px    ;
   height   : 16px    ;
   padding  : 4px 3px 10px 3px;
   border-radius: 6px ;
@@ -306,11 +306,10 @@ li > ul > li > button:active {
   transform: translateY(-2.5px);
   filter   : drop-shadow(0 0 5px rgb(44, 44, 44));
 }
+
 .dock .icon img:active {
   /* animation: to-top-bottom 1s; */
   filter   : brightness(0.6) drop-shadow(0 0 5px rgb(44, 44, 44));
-  /* outline: none;
-  background: transparent; */
 }
 /**********DOCK End*********/
 
@@ -377,7 +376,8 @@ li > ul > li > button:active {
   height  : 430px    ;
   overflow: hidden   ;
   border-radius: 1rem;
-  background   : var(--color-black);
+  /* background   : var(--color-black); */
+  background: transparent;
   box-shadow   : 0 20px 30px var(--color-black-200);
   border   : 1px solid #7c7d7d34 ;
   animation: zoom-out 0.3s;
@@ -470,7 +470,8 @@ li > ul > li > button:active {
   color      : white;
   width      : 100%   ;
   height     : 90%    ;
-  background-color: transparent;
+  /* background-color: transparent; */
+  background : var(--color-black);
 }
 .color_green{
   color: green;
@@ -525,11 +526,16 @@ li > ul > li > button:active {
   height : 90% ;
   display: flex;
 }
+
+.Parent__content--typing {
+  width: 70%;
+  height: 100%;
+  background : var(--color-black);
+}
 .content__typing {
-  width  : 70%;
+  width  : 100%;
   /* height: calc(100% - 41px); */
   height : 100%;
-  padding: 16px;
   background: transparent;
   border : none;
   outline: none;
@@ -538,11 +544,14 @@ li > ul > li > button:active {
   color  : var(--color-white-900)   ;
   font-size  : 18px;
   font-family: 'Raleway', sans-serif;
+  padding: 16px;
 }
 .content__sidebar {
   width       : 30% ;
   height      : 100%;
   border-right: 1px solid rgba(123, 123, 123, 0.412);
+  background: #1e1e1e8a;
+  backdrop-filter: blur(1rem);
 }
 .content__sidebar--notes {
   display: none;
@@ -760,6 +769,7 @@ li > ul > li > button:active {
   align-items: center;
 }
 .calculator__top--taskabr button {
+  position: relative;
   width  : 1px;
   height : 1px;
   cursor : pointer;
@@ -794,6 +804,7 @@ li > ul > li > button:active {
   font-size  : 14px ;
   color      : transparent;
   font-weight: 900  ;
+  position: absolute;
 }
 .calculator__top--taskabr:hover button::after {
   color: black;
@@ -808,6 +819,7 @@ li > ul > li > button:active {
 .calculator__top--taskabr button:nth-child(3)::after{
   content    : '↨'  ;
   transform  : rotate(-45deg) translateX(-1px) translateY(-2px);
+  font-weight: 100;
 }
 .calculator__top--output {
   flex : 1;
