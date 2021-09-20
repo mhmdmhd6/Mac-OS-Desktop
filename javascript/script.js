@@ -8,8 +8,7 @@ var change_lang = document.querySelector('.change_lang');
 var closecal = document.querySelector('.close-cal');
 var close = document.querySelector('.close');
 var closenote = document.querySelector('.close-note');
-var container_apps = document.querySelector('.container_apps');
-var notes = document.querySelector('.content__sidebar--notes');
+var notes = document.querySelector('.content__sidebar--notes input');
 var container = document.querySelector('.container__Window');
 var deleting = document.querySelector('.deleting');
 var full = document.querySelector('.full');
@@ -34,32 +33,14 @@ var app_name_terminal = document.querySelector('#Terminal');
 
 var open_vscode = document.querySelector('.open_vscode');
 var Vscode_window = document.querySelector('.Vscode');
+var app_name_VScode = document.querySelector('#VScode');
 var close_Vscode = document.querySelector('.close-Vscode');
 var backfull_Vscode = document.querySelector('.backfull-Vscode');
 var full_Vscode = document.querySelector('.full-Vscode');
+var point_vscode = document.querySelector('#point-vscode');
 
-function handleOpenVScode() {
-  Vscode_window.style.display = 'block';
-  container.style.display = 'flex';
-  container_apps.style.display = 'none';
-  navbar.style.display = 'flex';
-  launchpad.style.display = 'none';
-  point_launchpad.style.display = 'none';
-}
 
-function handleCloseVscode() {
-  Vscode_window.style.display = 'none';
-}
-
-function handleBackFullVscode() {
-  Vscode_window.style.width = '70%';
-  Vscode_window.style.height = '430px';
-}
-
-function handleFullVscode() {
-  Vscode_window.style.display = 'none';
-}
-
+/*****Change language Functions start****** */
 function lang_change() {
   if (change_lang.style.display === "none") {
       change_lang.style.display = "flex";
@@ -67,104 +48,84 @@ function lang_change() {
     change_lang.style.display = "none";
   }
 }
+/*****Change language Functions end****** */
+
+
+
+// Notes app function start
+
 function handleAdding() {
-  notes.style.display = 'flex';
+  notes.style.visibility = 'visible';
+  notes.style.opacity = '1';
+  notes.style.transform = 'scale(1)';
 }
-
-function handleBackfull() {
-  terminal.style.width = '70%';
-  terminal.style.height = '430px';
-}
-
-function handleBackfullnote() {
-  note.style.width = '70%';
-  note.style.height = '430px';
-}
-
-function handleClose() {
-  terminal.style.display = 'none';
-  point_terminal.style.display = 'none';
-  container_apps.style.display = 'grid';
-  container.style.display = 'none';
-  app_name_terminal.style.display = 'none';
-}
-
-function handleClosenote() {
-  note.style.display = 'none';
-  point_note.style.display = 'none';
-  container_apps.style.display = 'grid';
-  container.style.display = 'none';
-  app_name_notes.style.display = 'none';
-}
-
-function handleFullScreen(app) {
-  app.style.width = '100%';
-  app.style.height = '90%';
-}
-
-
-function handleOpenLaunching() {
-  if(launchpad.style.display === 'none') {
-    launchpad.style.display = 'block';
-    navbar.style.display = 'none';
-    point_launchpad.style.display = 'block';
-    container_apps.style.display = 'none';
-  } else {
-    launchpad.style.display = 'none';
-    navbar.style.display = 'flex';
-    point_launchpad.style.display = 'none';
-    container_apps.style.display = 'grid';
-  }
-    container.style.display = 'none';
-}
-
-function handleOpening() {
-  terminal.style.display = 'block';
-  container.style.display = 'flex';
-  container_apps.style.display = 'none';
-  navbar.style.display = 'flex';
-  launchpad.style.display = 'none';
-  point_terminal.style.display = 'block';
-  point_launchpad.style.display = 'none';
-  app_name_terminal.style.display = 'block';
-}
-
-function handleOpenNote() {
-  note.style.display = 'block';
-  container.style.display = 'flex';
-  container_apps.style.display = 'none';
-  navbar.style.display = 'flex';
-  launchpad.style.display = 'none';
-  point_note.style.display = 'block';
-  point_launchpad.style.display = 'none';
-  app_name_notes.style.display = 'block';
-}
-
 function handleDeleting() {
-  notes.style.display = 'none';
+  notes.style.visibility = 'hidden';
+  notes.style.transform = 'scale(1.2)';
+  notes.style.opacity = '0.6';
   content__typing.style.display = 'none';
 }
-
 function handleNotes() {
   content__typing.style.display = 'block';
 }
-function handleOpenCal() {
-  calculator.style.display = 'block';
-  container.style.display = 'flex';
-  container_apps.style.display = 'none';
+// Notes app function end
+
+function handleMinimize(Minimize) {
+  Minimize.style.maxWidth = '80%';
+  Minimize.style.minWidth = '70%';
+  Minimize.style.height = '430px';
+}
+function handleFullScreen(maximize) {
+  maximize.style.maxWidth = '95%';
+  maximize.style.minWidth = '95%';
+  maximize.style.height = '90%';
+}
+
+function close_window(close, point){
+  close.style.display = 'none';
+
+  point.style.display = 'none';
+}
+function open_window(open, point) {
   navbar.style.display = 'flex';
+  open.style.display = 'block';
+  container.style.display = 'flex';
   launchpad.style.display = 'none';
-  point_cal.style.display = 'block';
   point_launchpad.style.display = 'none';
-  app_name_calculator.style.display = 'block';
+
+  point.style.display = 'block';
 }
-function handleCloseCal() {
-  calculator.style.display = 'none';
-  point_cal.style.display = 'none';
-  app_name_calculator.style.display = 'none';
+
+
+// Launchpad function start
+function handleOpenLaunching() {
+  if (launchpad.style.display === 'none') {
+    launchpad.style.display = 'block';
+    navbar.style.display = 'none';
+    point_launchpad.style.display = 'block';
+  } else {
+      launchpad.style.display = 'none';
+      navbar.style.display = 'flex';
+      point_launchpad.style.display = 'none';
+  }
   container.style.display = 'none';
-  container_apps.style.display = 'grid';
 }
+
+function handleLaunchpadSearch(e) {
+  for (let app of launchpad_app_container.children) {
+      if (e.target.value) {
+          app.style.display = "none";
+          if (app.dataset.keywords.includes(e.target.value)) {
+              app.style.display = "flex";
+          }
+      } else
+          app.style.display = "flex";
+
+  }
+}
+// Launchpad function end
+
+// Calculator app start
 function handleOpenCal_lunchpad() {
   calculator.style.display = 'block';
   container.style.display = 'flex';
@@ -173,39 +134,31 @@ function handleOpenCal_lunchpad() {
   point_cal.style.display = 'block';
   point_launchpad.style.display = 'none';
 }
+// Calculator app end
 
-function handleLaunchpadSearch(e) {
-    for (let app of launchpad_app_container.children) {
-        if (e.target.value) {
-            app.style.display = "none";
-            if (app.dataset.keywords.includes(e.target.value)) {
-                app.style.display = "flex";
-            }
-        } else
-            app.style.display = "flex";
 
-    }
-}
 /********** LISTENERS **********/
+
 lang_change();
+handleOpenLaunching();
 adding.addEventListener('click', handleAdding);
-backfull.addEventListener('click', handleBackfull);
-backfullnote.addEventListener('click', handleBackfullnote);
-close.addEventListener('click', handleClose);
-closenote.addEventListener('click', handleClosenote);
+backfull.addEventListener('click', () => handleMinimize(terminal));
+backfullnote.addEventListener('click',() => handleMinimize(note));
+close.addEventListener('click', () => close_window(terminal, point_terminal));
+closenote.addEventListener('click', () => close_window(note, point_note));
 deleting.addEventListener('click', handleDeleting);
 full.addEventListener('click', () => handleFullScreen(terminal));
 fullnote.addEventListener('click', () => handleFullScreen(note));
 full_Vscode.addEventListener('click', () => handleFullScreen(Vscode_window));
-handleOpenLaunching();
 notes.addEventListener('click', handleNotes);
-opening.addEventListener('click', handleOpening);
-openNote.addEventListener('click', handleOpenNote);
-opencalculator.addEventListener('click', handleOpenCal);
-open_vscode.addEventListener('click', handleOpenVScode);
-close_Vscode.addEventListener('click', handleCloseVscode);
-backfull_Vscode.addEventListener('click', handleBackFullVscode);
-closecal.addEventListener('click', handleCloseCal);
+opening.addEventListener('click', () => open_window(terminal, point_terminal));
+openNote.addEventListener('click', () => open_window(note, point_note));
+opencalculator.addEventListener('click', () => open_window(calculator, point_cal));
+open_vscode.addEventListener('click',() => open_window(Vscode_window, point_vscode));
+close_Vscode.addEventListener('click',() => close_window(Vscode_window, point_vscode));
+close_Vscode.addEventListener('click',() => deletePointApps(point_vscode));
+backfull_Vscode.addEventListener('click',() => handleMinimize(Vscode_window));
+closecal.addEventListener('click', () => close_window(calculator, point_cal));
 opencalculator_lunchpad.addEventListener('click', handleOpenCal_lunchpad);
 launchpad_searchbox.addEventListener('input', handleLaunchpadSearch);
 
@@ -308,8 +261,7 @@ document.getElementById('date').innerHTML = d.toDateString();
 function digi() {
   var date = new Date(),
     hour = date.getHours(),
-    minute = checkTime(date.getMinutes()),
-    ss = checkTime(date.getSeconds());
+    minute = checkTime(date.getMinutes());
 
   function checkTime(i) {
     if (i < 10) {
@@ -330,15 +282,8 @@ function digi() {
   } else {
     document.getElementById('clock').innerHTML = hour + ':' + minute + ' AM';
   }
-  var time = setTimeout(digi, 1000);
 }
 
-function checkTime(i) {
-  if (i < 10) {
-    i = '0' + i;
-  } // add zero in front of numbers < 10
-  return i;
-}
 let terminal_line_html = $('.terminal_line').html();
 let path = "~";
 function init_terminal_line(){
@@ -389,26 +334,24 @@ function placeCaretAtEnd(el) {
 }
 
 //Right click to desktop 
-    document.onclick = hideMenu;
-		document.oncontextmenu = rightClick;
+document.onclick = hideMenu;
+document.oncontextmenu = rightClick;
 
-		function hideMenu() {
-			document.getElementById(
-				"contextMenu").style.display = "none"
-		}
+  function hideMenu() {
+    document.getElementById("contextMenu").style.display = "none"
+  }
 
-		function rightClick(e) {
-			e.preventDefault();
+  function rightClick(e) {
+    e.preventDefault();
 
-			if (document.getElementById(
-				"contextMenu").style.display == "block")
-				hideMenu();
-			else {
-				var menu = document
-					.getElementById("contextMenu")
-					
-				menu.style.display = 'block';
-				menu.style.left = e.pageX + "px";
-				menu.style.top = e.pageY + "px";
-			}
-		}
+    if (document.getElementById("contextMenu").style.display == "block")
+      hideMenu();
+    else {
+      var menu = document
+        .getElementById("contextMenu")
+        
+      menu.style.display = 'block';
+      menu.style.left = e.pageX + "px";
+      menu.style.top = e.pageY + "px";
+    }
+  }
