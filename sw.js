@@ -70,7 +70,7 @@ const limitCacheSize = (name, size) => {
 
 // service has been instaalled
 self.addEventListener('install', evnt => {
-    // console.log("service worker has been installed!");
+    console.log("service worker has been installed!");
 
     evnt.waitUntil (
         caches.open(staticCachesName).then(caches =>{
@@ -82,7 +82,7 @@ self.addEventListener('install', evnt => {
 
 //activate event
 self.addEventListener('activate', evnt => {
-    // console.log("service worker has been activated!");
+    console.log("service worker has been activated!");
 
     evnt.waitUntil(
         caches.keys().then(keys => {
@@ -97,7 +97,7 @@ self.addEventListener('activate', evnt => {
 
 
 self.addEventListener('fetch', evnt => {
-    //  console.log("fetch", evnt);
+     console.log("fetch", evnt);
     evnt.respondWith(
         caches.match(evnt.request).then(CacheRes => {
             return CacheRes || fetch(evnt.request).then(fetchRes => {
