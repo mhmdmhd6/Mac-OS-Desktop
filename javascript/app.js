@@ -11,7 +11,6 @@ if ('serviceWorker' in navigator) {
         let msg = `Service Worker Error (${error})`;
         console.error(msg);
         // display a warning dialog (using Sweet Alert 2)
-        Swal.fire('', msg, 'error');
       });
   } else {
     // happens when the app isn't served over a TLS connection (HTTPS)
