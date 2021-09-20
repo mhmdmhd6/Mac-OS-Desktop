@@ -34,7 +34,7 @@
 // }
 
 if ('serviceWorker' in navigator){
-    navigator.serviceWorker.register('../sw.js').then(function(registration){
+    navigator.serviceWorker.register('https://mhmdmhd6.github.io/Mac-OS-Desktop/sw.js').then(function(registration){
       console.log('service worker registration succeeded:',registration);
     },
   function(error){
