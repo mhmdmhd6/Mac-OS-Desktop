@@ -1,8 +1,8 @@
 {
     "name": "Mac os",
     "short_name": "Mac os desktop",
-    "start_url": "/",
-    "display": "fullscreen",
+    "start_url": "/index.html",
+    "display": "standalone",
     "background_color": "#DCE9E9",
     "theme_color": "#d1d1d1",
     "orientation": "portrait-primary",

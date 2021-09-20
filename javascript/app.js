@@ -1,19 +1,9 @@
-// does the browser support service workers?
 if ('serviceWorker' in navigator) {
-    // then register our service worker
-    navigator.serviceWorker.register('../sw.js')
-      .then(reg => {
-        // display a success message
-        console.log(`Service Worker Registration (Scope: ${reg.scope})`);
-      })
-      .catch(error => {
-        // display an error message
-        let msg = `Service Worker Error (${error})`;
-        console.error(msg);
-        // display a warning dialog (using Sweet Alert 2)
-      });
-  } else {
-    // happens when the app isn't served over a TLS connection (HTTPS)
-    // or if the browser doesn't support service workers
-    console.warn('Service Worker not available');
-  }
+    navigator.serviceWorker.register('sw.js', { scope: '../Mac-OS-Desktop/' }).then(function(reg) {
+      // registration worked
+      console.log('Registration succeeded. Scope is ' + reg.scope);
+    }).catch(function(error) {
+      // registration failed
+      console.log('Registration failed with ' + error);
+    });
+  };
