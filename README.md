@@ -4,6 +4,8 @@ I am planing to make a mac OS simulator using HTML, CSS, and JavaScript 😀
 You can try this project:
 https://mhmdmhd6.github.io/Mac-OS-Desktop
 
+
+<h1 style="text-align:center;">Mac Os Monterey</h1>
                                       Sample Desktop Application 👇
 [![Screenshot 2021-08-01 211447](https://user-images.githubusercontent.com/79286306/127778858-f7a4ddf3-676e-4bf9-b934-bad51014c096.jpg)](https://mhmdmhd6.github.io/Mac-OS-Desktop/)
 
