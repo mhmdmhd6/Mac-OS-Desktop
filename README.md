@@ -60,7 +60,7 @@ An example of new icons that are added:
 > - [x] Note app
 > - [ ] Add more notes on note app
 > - [x] Calculator app 
-> - [ ] Control center   
+> - [x] Control center   
 > - [ ] Search on navbar 
 > - [ ] Preference app     
 > - [ ] Map app      
@@ -69,12 +69,15 @@ An example of new icons that are added:
 > - [ ] Calendar app      
 > - [x] Launchpad      
 > - [x] search in Launchpad      
-> - [ ] Launchpad icons vibrate    
+> - [x] Launchpad icons vibrate    
 > - [ ] Launchpad change page 
 > - [ ] Launchpad animation      
 > - [ ] dragable icon on dock      
 > - [ ] right click to duck icons
 > - [x] right click to desktop
+> - [ ] Siri
+> - [ ] Spotlight search
+> - [ ] Change dekstop background
 > - [x] shortcuts for opening app and other parts of site     
 
 
