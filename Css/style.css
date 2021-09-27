@@ -508,10 +508,8 @@ li>.menu__container>.grid__controling .control_center--grid {
 .container__Window {
 	width: 100%;
 	height: 90%;
-	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
-	margin: 0 auto;
 	display: none
 }
 
@@ -523,7 +521,7 @@ li>.menu__container>.grid__controling .control_center--grid {
 	overflow: hidden;
 	border-radius: 1rem;
 	background: transparent;
-	box-shadow: 0 20px 30px var(--color-black-200);
+	box-shadow: 0 20px 30px var(--color-black-500);
 	border: 1px solid #7c7d7d34;
 	animation: zoom-out .3s
 }
@@ -617,9 +615,13 @@ li>.menu__container>.grid__controling .control_center--grid {
 	font-size: 18px
 }
 
+.terminal .window__taskbar {
+	height: 8%;
+}
+
 .terminal_content {
 	width: 100%;
-	height: 88%;
+	height: 92%;
 	padding: 16px;
 	background: var(--color-black);
 	color: #fff;
@@ -723,12 +725,12 @@ li>.menu__container>.grid__controling .control_center--grid {
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
+	overflow-y: scroll;
 	background-color: transparent
 }
 
-.content__sidebar--notes input[type='text'] {
-	visibility: hidden;
-	width: 100%;
+.content__sidebar--notes input {
+	width: 90%;
 	padding-left: 10px;
 	height: 15%;
 	background-color: transparent;
@@ -739,14 +741,54 @@ li>.menu__container>.grid__controling .control_center--grid {
 	transition: all .2s
 }
 
+.content__sidebar--notes input::placeholder {
+	color: white;
+	text-shadow: 0 3px 10px rgb(46, 46, 46);
+	padding: 7px;
+}
+
+.container_spotlight {
+	display: none;
+}
+
+.spotlight_serach {
+	width: 400px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	border: 1px solid var(--color-white-100);
+	justify-content: start;
+	border-radius: 8px;
+	background-color: transparent;
+	backdrop-filter: blur(10px);
+	z-index: 10;
+	box-shadow:  0 10px 10px rgba(37, 37, 37, 0.137);
+}
+.spotlight_serach svg {
+	margin-left: 10px;
+}
+.spotlight_serach input {
+	width: 90%;
+	font-size: 20px;
+	font-weight: 100;
+	font-family: Lexend;
+	margin-left: 10px;
+	padding-right: 10px;
+}
+.spotlight_serach input::placeholder {
+	color: white;
+}
+
+
 
 .launchpad {
 	display: none;
+	animation: opacity 300ms;
 	width: 100%;
 	height: 100%;
 	background-color: transparent;
 	backdrop-filter: blur(25px);
-	-webkit-backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(25px);
 	z-index: -10
 }
 
@@ -761,7 +803,6 @@ li>.menu__container>.grid__controling .control_center--grid {
 .searchbox .searchContainer {
 	height: 30px;
 	width: 220px;
-	backdrop-filter: blur(6px);
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
@@ -800,7 +841,7 @@ li>.menu__container>.grid__controling .control_center--grid {
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
-	grid-template-rows: 33% 33% 33%
+	grid-template-rows: 25% 25% 25% 25%
 }
 
 .launchpad .child-launchpad {
@@ -833,8 +874,10 @@ li>.menu__container>.grid__controling .control_center--grid {
 }
 
 ::-webkit-scrollbar-track {
-	background-color: #34282d;
-	border-radius: 10px;
+	background-color: transparent;
+	border: 1px solid rgba(51, 49, 49, 0.137);
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
 	cursor: url(/cursor/Link.cur), pointer
 }
 
@@ -843,7 +886,7 @@ li>.menu__container>.grid__controling .control_center--grid {
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #8b8b8d;
+	background: #b1b1b8;
 	border-radius: 10px;
 	cursor: url(/cursor/Link.cur), pointer
 }
@@ -897,6 +940,16 @@ li>.menu__container>.grid__controling .control_center--grid {
 	100% {
 		transform: none;
 		opacity: 1
+	}
+}
+@keyframes opacity {
+	0%{
+		opacity: 0;
+		transform: scale(1.2);
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1);
 	}
 }
 
@@ -992,8 +1045,9 @@ li>.menu__container>.grid__controling .control_center--grid {
 .calculator__top--output {
 	flex: 1;
 	color: var(--color-white);
-	font-size: 1.8rem;
-	font-family: "Roboto", sans-serif;
+	font-size: 2rem;
+	text-align: right;
+	font-family: 'Lexend';
 	border: none;
 	background: transparent;
 	padding: 0 .8rem
@@ -1011,8 +1065,9 @@ li>.menu__container>.grid__controling .control_center--grid {
 	width: 100%;
 	height: 100%;
 	font-size: 1.8rem;
-	font-family: "Roboto", sans-serif;
-	border: 1px solid rgba(48, 48, 48, 0.563)
+	font-family: 'Montserrat';
+	font-weight: bold;
+	border: 1px solid rgba(95, 95, 95, 0.336)
 }
 
 .r-radius {
@@ -1030,19 +1085,19 @@ li>.menu__container>.grid__controling .control_center--grid {
 }
 
 .number {
-	background-color: #6c7177;
-	color: #fff
+	background-color: #D6D6D6;
+	color: rgb(0, 0, 0)
 }
 
 .operator-2 {
-	background-color: #4b4b4b;
-	color: #fff
+	background-color: #ccc9c9;
+	color: rgb(0, 0, 0)
 }
 
 .context-menu {
-	padding: 7px;
+	padding: 0 3px;
 	position: absolute;
-	border-radius: 12px;
+	border-radius: 7px;
 	text-align: center;
 	background: rgba(255, 255, 255, 0.219);
 	border: 1px solid rgba(255, 255, 255, 0.281);
@@ -1058,6 +1113,7 @@ li>.menu__container>.grid__controling .control_center--grid {
 }
 
 .context-menu ul li {
+	margin: 4px 0;
 	border-bottom: 1px solid rgba(65, 64, 64, 0.288)
 }
 
@@ -1074,16 +1130,13 @@ li>.menu__container>.grid__controling .control_center--grid {
 	font-family: 'Lexend', sans-serif;
 	border-radius: 5px;
 	padding: 4px 8px;
-	margin: 4px 0;
 	transition: 80ms;
 	font-weight: 300;
+	margin: 0 0 4px 0;
 	display: flex;
 	flex-direction: row;
 	cursor: url(./cursor/Link.cur), pointer
 }
 .context-menu ul button:hover {
 	background: var(--color-blue-800)
-}
-.context-menu ul li button:first-child {
-	margin-top: 0;
 }

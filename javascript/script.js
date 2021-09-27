@@ -1,4 +1,5 @@
 /********** ELEMENTS **********/
+var body = document.querySelector('body');
 var adding = document.querySelector('.adding');
 var backfull = document.querySelector('.backfull');
 var backfullnote = document.querySelector('.backfull-note');
@@ -8,7 +9,6 @@ var change_lang = document.querySelector('.change_lang');
 var closecal = document.querySelector('.close-cal');
 var close = document.querySelector('.close');
 var closenote = document.querySelector('.close-note');
-var notes = document.querySelector('.content__sidebar--notes input');
 var container = document.querySelector('.container__Window');
 var deleting = document.querySelector('.deleting');
 var full = document.querySelector('.full');
@@ -35,9 +35,25 @@ var open_vscode = document.querySelector('.open_vscode');
 var Vscode_window = document.querySelector('.Vscode');
 var app_name_VScode = document.querySelector('#VScode');
 var close_Vscode = document.querySelector('.close-Vscode');
+var notes = document.querySelector(".content__sidebar--notes");
 var backfull_Vscode = document.querySelector('.backfull-Vscode');
 var full_Vscode = document.querySelector('.full-Vscode');
 var point_vscode = document.querySelector('#point-vscode');
+var create_input = document.createElement("input");
+
+var open_spotlight = document.querySelector('.open_Search');
+var spotlight_serach = document.querySelector('.container_spotlight');
+
+var brightness_range = document.getElementById('brightness');
+var sound_range = document.getElementById('sound');
+
+
+function change_brightness() {
+  var brightnessVal = brightness_range.value;
+
+  body.style.filter = `brightness(${brightnessVal + '%'})`;
+  body.style.backdropFilter = `brightness(${brightnessVal + '%'})`;
+}
 
 
 /*****Change language Functions start****** */
@@ -50,19 +66,28 @@ function lang_change() {
 }
 /*****Change language Functions end****** */
 
+// Spotlight 
+function handleopen_spotlight() {
+  if (spotlight_serach.style.display === 'none') {
+    spotlight_serach.style.display = 'block';
+    container.style.display = 'flex';
+  } else {
+    spotlight_serach.style.display = 'none';
+  }
+}
 
 
 // Notes app function start
 
 function handleAdding() {
-  notes.style.visibility = 'visible';
-  notes.style.opacity = '1';
-  notes.style.transform = 'scale(1)';
+  var create_input = document.createElement("input");
+  create_input.placeholder = "writing name";
+  notes.append(create_input);
 }
 function handleDeleting() {
-  notes.style.visibility = 'hidden';
-  notes.style.transform = 'scale(1.2)';
-  notes.style.opacity = '0.6';
+  var inputChild = document.querySelector('.content__sidebar--notes input');
+  // inputChild.style.display = 'none';
+  inputChild.remove();
   content__typing.style.display = 'none';
 }
 function handleNotes() {
@@ -81,17 +106,19 @@ function handleFullScreen(maximize) {
   maximize.style.height = '90%';
 }
 
-function close_window(close, point){
+function close_window(close, point, appName){
   close.style.display = 'none';
 
   point.style.display = 'none';
+  appName.style.display = 'none';
 }
-function open_window(open, point) {
+function open_window(open, point, appName) {
   navbar.style.display = 'flex';
   open.style.display = 'block';
   container.style.display = 'flex';
   launchpad.style.display = 'none';
   point_launchpad.style.display = 'none';
+  appName.style.display = 'block';
 
   point.style.display = 'block';
 }
@@ -110,6 +137,7 @@ function handleOpenLaunching() {
   }
   container.style.display = 'none';
 }
+
 
 function handleLaunchpadSearch(e) {
   for (let app of launchpad_app_container.children) {
@@ -140,26 +168,27 @@ function handleOpenCal_lunchpad() {
 /********** LISTENERS **********/
 
 lang_change();
+handleopen_spotlight();
 handleOpenLaunching();
 adding.addEventListener('click', handleAdding);
 backfull.addEventListener('click', () => handleMinimize(terminal));
 backfullnote.addEventListener('click',() => handleMinimize(note));
 close.addEventListener('click', () => close_window(terminal, point_terminal));
-closenote.addEventListener('click', () => close_window(note, point_note));
+closenote.addEventListener('click', () => close_window(note, point_note, app_name_notes));
 deleting.addEventListener('click', handleDeleting);
 full.addEventListener('click', () => handleFullScreen(terminal));
 fullnote.addEventListener('click', () => handleFullScreen(note));
 full_Vscode.addEventListener('click', () => handleFullScreen(Vscode_window));
 notes.addEventListener('click', handleNotes);
 opening.addEventListener('click', () => open_window(terminal, point_terminal));
-openNote.addEventListener('click', () => open_window(note, point_note));
-opencalculator.addEventListener('click', () => open_window(calculator, point_cal));
+openNote.addEventListener('click', () => open_window(note, point_note, app_name_notes));
+opencalculator.addEventListener('click', () => open_window(calculator, point_cal, app_name_calculator));
 open_vscode.addEventListener('click',() => open_window(Vscode_window, point_vscode));
 close_Vscode.addEventListener('click',() => close_window(Vscode_window, point_vscode));
-close_Vscode.addEventListener('click',() => deletePointApps(point_vscode));
 backfull_Vscode.addEventListener('click',() => handleMinimize(Vscode_window));
-closecal.addEventListener('click', () => close_window(calculator, point_cal));
+closecal.addEventListener('click', () => close_window(calculator, point_cal, app_name_calculator));
 opencalculator_lunchpad.addEventListener('click', handleOpenCal_lunchpad);
+open_spotlight.addEventListener('click', handleopen_spotlight);
 launchpad_searchbox.addEventListener('input', handleLaunchpadSearch);
 
 //calculator code
@@ -175,7 +204,7 @@ buttons.forEach(button => {
 
 operators = ['+','-','*','/']
 function lastNumber(value){
-  var tempChar = operators[0]; // We can use the first token as a temporary join character
+  var tempChar = operators[0]; 
   for(var i = 1; i < operators.length; i++){
     value = value.split(operators[i]).join(tempChar);
   }
@@ -239,20 +268,21 @@ function calculate(value) {
 //App dragable
 $(function () {
   $('.terminal').draggable()
-      .click(function(){
-        if ( $(this).is('.ui-draggable-dragging') ) {
-          return;
-        }
-        $(this).draggable( "option", "disabled", true );
-        $(this).find('.cursor').attr('contenteditable','true');
-      })
-      .blur(function(){
-        $(this).draggable( 'option', 'disabled', false);
-        $(this).find('.cursor').attr('contenteditable','false');
-      });
+      // .click(function(){
+      //   if ( $(this).is('.ui-draggable-dragging') ) {
+      //     return;
+      //   }
+      //   $(this).draggable( "option", "disabled", true );
+      //   $(this).find('.cursor').attr('contenteditable','true');
+      // })
+      // .blur(function(){
+      //   $(this).draggable( 'option', 'disabled', false);
+      //   $(this).find('.cursor').attr('contenteditable','false');
+      // });
   $('.note').draggable();
   $('.calculator').draggable();
   $('.Vscode').draggable();
+  $('.spotlight_serach').draggable();
 });
 //date and time
 var d = new Date();
@@ -286,6 +316,13 @@ function digi() {
 
 let terminal_line_html = $('.terminal_line').html();
 let path = "~";
+let dirName;
+let dirs = [
+    "Desktop",
+    "Downloads",
+    "Music",
+    "Documents",
+]
 function init_terminal_line(){
   $('.cursor').keydown(function(e) {
 
@@ -301,21 +338,25 @@ function init_terminal_line(){
         path = command.substring(3)
         command_output = "";
       } else if(command === "ls"){
-        dirs = [
-            "Desktop",
-            "Downloads",
-            "Music",
-            "Documents",
-        ]
         command_output = dirs.join("\t");
-      } else
-      $(this).removeAttr('contenteditable');
-      $(this).removeClass('cursor');
-      $('.terminal_content').append(command_output).append(terminal_line_html.replace("~",path));
-      placeCaretAtEnd( document.querySelector('.cursor') );
-      init_terminal_line();
+      } else if(command === "pwd"){
+        command_output = path + "/";
+      } else if(command.startsWith("mkdir ") ){
+        dirName = command.substring(6);
+        dirs.push(dirName);
+        command_output = "";  
+      }
+      else if(command === ("rmdir") ){
+        dirs.pop();
+        command_output = "";  
+      }
+          $(this).removeAttr('contenteditable');
+          $(this).removeClass('cursor');
+          $('.terminal_content').append(command_output).append(terminal_line_html.replace("~",path));
+          placeCaretAtEnd( document.querySelector('.cursor') );
+          init_terminal_line();
     }
-  });
+  })
 }
 
 init_terminal_line();

@@ -33,10 +33,9 @@
       rel="stylesheet"
     />
     
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
 
     <!-- Google font icon-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
@@ -150,7 +149,7 @@
             <circle cx="12" cy="18" r="2"></circle>
           </svg>
         </li>
-        <li>
+        <li class="open_Search">
           <svg width="24" height="24">
             <path
               d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z"
@@ -266,10 +265,17 @@
               </button>
           </div>
           <div class="control_center--grid col-12">
-              <input type="range" id="brightness">
+              <input 
+                type="range" id="brightness" 
+                oninput="change_brightness()"
+                min="0" max="100" step="1" value="100"
+              />
           </div>
           <div class="control_center--grid col-12">
-            <input type="range" id="sound">
+            <input 
+              type="range" id="sound"
+              min="0" max="16" step="1" value="8"
+            />
           </div>
           <div class="control_center--grid col-12--music">
             <div class="musicPlayer">
@@ -301,18 +307,22 @@
     <div id="contextMenu" class="context-menu"
 		style="display:none">
 		<ul>
-			<li><button>New folder</button></li>
+			<li>
+        <button>New folder</button>
+      </li>
 			<li>
         <button>Get info</button>
         <button>Change Desktop Background</button>
-        </li>
+      </li>
 			<li>
         <button>Sort By</button>
         <button>Show View Option</button>
       </li>
 		</ul>
 	</div>
-    <!--navbar bottom start-->
+
+
+    <!--Dock start-->
 
     <div class="dock">
       <button class="icon">
@@ -426,6 +436,22 @@
           <img src="./icon/Launchpad/pages.png" alt="" />
           <strong>pages</strong>
         </div>
+        <div class="child-launchpad" data-keywords="Siri, Assiasent">
+          <img src="./icon/Launchpad/siri.png" alt="" />
+          <strong>Siri</strong>
+        </div>
+        <div class="child-launchpad" data-keywords="podcasts">
+          <img src="./icon/Launchpad/podcasts.png" alt="" />
+          <strong>Podcasts</strong>
+        </div>
+        <div class="child-launchpad" data-keywords="safarim browser,web browser">
+          <img src="./icon/Launchpad/safari.png" alt="" />
+          <strong>Podcasts</strong>
+        </div>
+        <div class="child-launchpad" data-keywords="activity, monitor">
+          <img src="./icon/Launchpad/activitymonitor.png" alt="" />
+          <strong>Monitor <br /> activity</strong>
+        </div>
         <div class="child-launchpad" data-keywords="zoom,video,call">
           <img src="./icon/Launchpad/zoom.png" alt="" />
           <strong>zoom</strong>
@@ -495,12 +521,6 @@
                 ios_share
               </span>                
             </div>
-              <!-- <input
-                type="search"
-                name="searching"
-                id="searching"
-                placeholder="Search"
-              /> -->
               <div class="containerSearch">
                 <svg width="24" height="24">
                   <path
@@ -513,9 +533,7 @@
         </div>
         <div class="content">
           <div class="content__sidebar">
-            <div class="content__sidebar--notes">
-              <input type="text" name="txt" placeholder="writing name" />
-            </div>
+            <div class="content__sidebar--notes"></div>
           </div>
           <div class="Parent__content--typing">
             <textarea cols="30" rows="12" class="content__typing"></textarea>
@@ -575,6 +593,16 @@
           <button value="=" class="button operator r-radius">=</button>
         </div>
       </div>
+      <div class="container_spotlight">
+        <div class="spotlight_serach">
+          <svg width="24" height="24">
+            <path
+              d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z"
+            />
+          </svg>
+        <input type="search" placeholder="Spotlight Search">
+      </div>
+    </div>
     </div>
 
 

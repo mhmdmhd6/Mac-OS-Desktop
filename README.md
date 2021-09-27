@@ -1,15 +1,24 @@
 ## Hello World 👋
 I am planing to make a mac OS simulator using HTML, CSS, and JavaScript 😀
 
+<h1>
+  Mac Os Monterey
+</h1>
+
 You can try this project:
 https://mhmdmhd6.github.io/Mac-OS-Desktop
 
-                                      Sample Desktop Application 👇
+
+<p align="center">
+  Sample Desktop Application 👇
+</p>
+
 [![Screenshot 2021-08-01 211447](https://user-images.githubusercontent.com/79286306/127778858-f7a4ddf3-676e-4bf9-b934-bad51014c096.jpg)](https://mhmdmhd6.github.io/Mac-OS-Desktop/)
 
 
-
-                                       Sample Mobile Application 👇
+<p align="center">
+  Sample Mobile Application 👇
+</p>
                                            
 <p align="center">
   <img src="https://user-images.githubusercontent.com/79286306/126490693-326fa6dd-a431-461d-8e06-45c9d164b868.jpg">
@@ -21,17 +30,21 @@ https://mhmdmhd6.github.io/Mac-OS-Desktop
 ## New Available features in this recent versions are: 😀
 
 - [x] New background image.
-- [x] Bluring the taskbars (Bottom and Top).
+- [x] Bluring the navbar (Bottom and Top).
 - [x] New icons are added to the bottom taskbar.
 - [x] Menu is added to top taskbar.
 - [x] Dots under the icons of open apps.
+- [x] Apps name is in top navbar.
+- [x] Add light theme to project.
+- [x] Right click Menubar.
+- [x] control center for control brightness, sound, WiFi and others.
 
 ## Sample images for the changes are as follow:👇
 
 <hr> <br>
 
 In this version I have added new icons, launchpad, Notepad and calculator. 😃
-An example of new icons that are added:
+An example of new icons those are added:
 > This is how the new features looks like :)
 
 |new feature in this version| Launchpad |
@@ -58,12 +71,12 @@ An example of new icons that are added:
 > - [x] Drop down menu on navbar top
 > - [x] Terminal app
 > - [x] Note app
-> - [ ] Add more notes on note app
+> - [x] Add more notes on note app
 > - [x] Calculator app 
-> - [ ] Control center   
-> - [ ] Search on navbar 
+> - [x] Control center
 > - [ ] Preference app     
 > - [ ] Map app      
+> - [ ] Siri  
 > - [x] VSCode app      
 > - [ ] Weather app      
 > - [ ] Calendar app      
@@ -71,17 +84,19 @@ An example of new icons that are added:
 > - [x] search in Launchpad      
 > - [ ] Launchpad icons vibrate    
 > - [ ] Launchpad change page 
-> - [ ] Launchpad animation      
+> - [x] Launchpad animation      
 > - [ ] dragable icon on dock      
 > - [ ] right click to duck icons
 > - [x] right click to desktop
-> - [x] shortcuts for opening app and other parts of site     
+> - [x] shortcuts for opening app and other parts of site    
+> - [x] Spotlight search
+> - [ ] Change dekstop background
 
 
-list of Shorcuts : <br>
-Alt + t = opening Terminal  <br>
-Alt + o = opening Launchpad <br>
-Alt + s = opening serach in  launchpad <br>
+## list of Shorcuts : <br>
+> Alt + t = opening Terminal  <br>
+> Alt + o = opening Launchpad <br>
+> Alt + s = opening serach in  launchpad <br>
 
 <!-- ACKNOWLEDGEMENTS -->
 
