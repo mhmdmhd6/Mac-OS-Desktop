@@ -8,6 +8,11 @@ I am planing to make a mac OS simulator using HTML, CSS, and JavaScript 😀
 You can try this project:
 https://mhmdmhd6.github.io/Mac-OS-Desktop
 
+<h1>Mac Os Monterey</h1>
+
+
+                                        Sample Desktop Application 👇
+[![Screenshot 2021-08-01 211447](https://user-images.githubusercontent.com/79286306/127778858-f7a4ddf3-676e-4bf9-b934-bad51014c096.jpg)](https://mhmdmhd6.github.io/Mac-OS-Desktop/)
 
 <p align="center">
   Sample Desktop Application 👇
@@ -74,6 +79,8 @@ An example of new icons those are added:
 > - [x] Add more notes on note app
 > - [x] Calculator app 
 > - [x] Control center
+> - [x] Control center   
+> - [ ] Search on navbar 
 > - [ ] Preference app     
 > - [ ] Map app      
 > - [ ] Siri  
@@ -82,7 +89,7 @@ An example of new icons those are added:
 > - [ ] Calendar app      
 > - [x] Launchpad      
 > - [x] search in Launchpad      
-> - [ ] Launchpad icons vibrate    
+> - [x] Launchpad icons vibrate    
 > - [ ] Launchpad change page 
 > - [x] Launchpad animation      
 > - [ ] dragable icon on dock      
@@ -91,6 +98,10 @@ An example of new icons those are added:
 > - [x] shortcuts for opening app and other parts of site    
 > - [x] Spotlight search
 > - [ ] Change dekstop background
+> - [ ] Siri
+> - [ ] Spotlight search
+> - [ ] Change dekstop background
+> - [x] shortcuts for opening app and other parts of site 
 
 
 ## list of Shorcuts : <br>
