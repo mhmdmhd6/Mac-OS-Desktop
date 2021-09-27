@@ -12,7 +12,7 @@ https://mhmdmhd6.github.io/Mac-OS-Desktop
   Sample Desktop Application 👇
 </p>
 
-[![Screenshot 2021-08-01 211447](https://user-images.githubusercontent.com/79286306/127778858-f7a4ddf3-676e-4bf9-b934-bad51014c096.jpg)](https://mhmdmhd6.github.io/Mac-OS-Desktop/)
+[![Screenshot 2021-09-27 224557](https://user-images.githubusercontent.com/79286306/134971324-e51a4327-12d1-44b3-b66c-8e9a9558b76c.jpg)](https://mhmdmhd6.github.io/Mac-OS-Desktop/)
 
 
 <p align="center">
@@ -20,7 +20,7 @@ https://mhmdmhd6.github.io/Mac-OS-Desktop
 </p>
                                            
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/79286306/126490693-326fa6dd-a431-461d-8e06-45c9d164b868.jpg">
+  <img src="https://user-images.githubusercontent.com/79286306/134972775-48abfec8-9774-4b21-82ea-7f375312bf0d.jpg">
 </p>
                                       
 
@@ -48,7 +48,7 @@ An example of new icons those are added:
 
 |new feature in this version| Launchpad |
 |------------|------------|
-| ![desktop](https://user-images.githubusercontent.com/79286306/128682239-bf386345-7cf9-4414-b49f-52ed1ec72ddc.jpg) | ![Screenshot 2021-08-09 124147](https://user-images.githubusercontent.com/79286306/128676847-d07d0017-8241-44e0-bb16-8c26425d6f5f.jpg) |
+| ![new feature](https://user-images.githubusercontent.com/79286306/134972995-e7fc56e8-6a91-4b27-90cc-c0d968cb2209.jpg)| ![Screenshot 2021-08-09 124147](https://user-images.githubusercontent.com/79286306/128676847-d07d0017-8241-44e0-bb16-8c26425d6f5f.jpg) |
 
 
 
