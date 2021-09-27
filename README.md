@@ -48,13 +48,18 @@ An example of new icons those are added:
 
 |new feature in this version| Launchpad |
 |------------|------------|
-| ![new feature](https://user-images.githubusercontent.com/79286306/134972995-e7fc56e8-6a91-4b27-90cc-c0d968cb2209.jpg)| ![Screenshot 2021-08-09 124147](https://user-images.githubusercontent.com/79286306/128676847-d07d0017-8241-44e0-bb16-8c26425d6f5f.jpg) |
+| ![new feature](https://user-images.githubusercontent.com/79286306/134972995-e7fc56e8-6a91-4b27-90cc-c0d968cb2209.jpg)| ![launchpad](https://user-images.githubusercontent.com/79286306/134975627-07cec7d6-4327-42cf-847b-6893eea9d48c.jpg) |
 
 
 
 | Terminal | Calculator App  |
 |------------|-----------------|
-| <img src="https://user-images.githubusercontent.com/79286306/128681722-00bc96af-72e6-48c1-a69d-3faedfc6bf8d.jpg" width="100%"> | <img src="https://user-images.githubusercontent.com/79286306/128676997-516155f0-3e7e-487e-a353-719059f39dc0.jpg" width="100%"> |  
+| <img src="https://user-images.githubusercontent.com/79286306/134975665-f7e81071-18a2-4f2c-b034-bb1ec99e1be2.jpg" width="100%"> | <img src="https://user-images.githubusercontent.com/79286306/134975739-5c816139-df8b-4bd5-bba0-9dbbaafcbbab.jpg" width="100%"> |  
+<p>
+  and also Note app
+</p>
+![note](https://user-images.githubusercontent.com/79286306/134975862-e7638efa-bf1a-4bb0-8755-56a54a8c28ec.jpg)
+
 
 <hr>
 
@@ -73,8 +78,6 @@ An example of new icons those are added:
 > - [x] Add more notes on note app
 > - [x] Calculator app 
 > - [x] Control center
-> - [x] Control center   
-> - [ ] Search on navbar 
 > - [ ] Preference app     
 > - [ ] Map app      
 > - [ ] Siri  
@@ -92,9 +95,9 @@ An example of new icons those are added:
 > - [x] shortcuts for opening app and other parts of site    
 > - [x] Spotlight search
 > - [ ] Change dekstop background
-> - [ ] Siri
-> - [ ] Spotlight search
+> - [x] Spotlight search
 > - [ ] Change dekstop background
+> - [ ] Add change brightness range input 
 > - [x] shortcuts for opening app and other parts of site 
 
 
