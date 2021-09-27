@@ -97,7 +97,7 @@ An example of new icons those are added:
 > - [ ] Change dekstop background
 > - [x] Spotlight search
 > - [ ] Change dekstop background
-> - [ ] Add change brightness range input 
+> - [x] Add change brightness range input 
 > - [x] shortcuts for opening app and other parts of site 
 
 
