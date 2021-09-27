@@ -8,8 +8,6 @@ I am planing to make a mac OS simulator using HTML, CSS, and JavaScript 😀
 You can try this project:
 https://mhmdmhd6.github.io/Mac-OS-Desktop
 
-<h1>Mac Os Monterey</h1>
-
 <p align="center">
   Sample Desktop Application 👇
 </p>
