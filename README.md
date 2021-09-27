@@ -20,7 +20,7 @@ https://mhmdmhd6.github.io/Mac-OS-Desktop
 </p>
                                            
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/79286306/134972775-48abfec8-9774-4b21-82ea-7f375312bf0d.jpg">
+  <img width="300" src="https://user-images.githubusercontent.com/79286306/134972775-48abfec8-9774-4b21-82ea-7f375312bf0d.jpg">
 </p>
                                       
 
