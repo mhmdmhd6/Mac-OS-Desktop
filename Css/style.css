@@ -595,6 +595,7 @@ li>.menu__container>.grid__controling .control_center--grid {
 
 .window__taskbar--actions button:nth-child(3)::after {
 	content: '⤡';
+	font-size: 13px;
 }
 
 .window__taskbar--actions button:nth-child(3):hover {
@@ -840,6 +841,7 @@ li>.menu__container>.grid__controling .control_center--grid {
 	height: 60%;
 	margin: 0 auto;
 	display: grid;
+	grid-row-gap: 10px;
 	grid-template-columns: 25% 25% 25% 25%;
 	grid-template-rows: 25% 25% 25% 25%
 }
@@ -856,8 +858,11 @@ li>.menu__container>.grid__controling .control_center--grid {
 }
 
 @media screen and (min-width:1200px) {
+	.launchpad .Apps-container {
+		grid-row-gap: 20px;
+	}
 	.launchpad .child-launchpad img {
-		width: 115px
+		width: 100px
 	}
 	.launchpad .child-launchpad strong {
 		font-size: 21px;
