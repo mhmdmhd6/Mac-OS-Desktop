@@ -334,20 +334,19 @@ function init_terminal_line(){
       let command_output = "zsh: command not found: " + command  + "<br>";
 
       if(command.startsWith("cd ")){
-        path = command.substring(3)
-        command_output = "";
+          path = command.substring(3)
+          command_output = "";
       } else if(command === "ls"){
-        command_output = dirs.join("\t");
+          command_output = dirs.join("\t");
       } else if(command === "pwd"){
-        command_output = path + "/";
+          command_output = path + "/";
       } else if(command.startsWith("mkdir ") ){
-        dirName = command.substring(6);
-        dirs.push(dirName);
-        command_output = "";  
-      }
-      else if(command === ("rmdir") ){
-        dirs.pop();
-        command_output = "";  
+          dirName = command.substring(6);
+          dirs.push(dirName);
+          command_output = "";  
+      } else if(command === "rmdir" ){
+          dirs.pop();
+          command_output = "";  
       }
           $(this).removeAttr('contenteditable');
           $(this).removeClass('cursor');
