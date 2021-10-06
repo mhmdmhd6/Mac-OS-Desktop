@@ -58,7 +58,8 @@ An example of new icons those are added:
 <p>
   and also Note app
 </p>
-![note](https://user-images.githubusercontent.com/79286306/134975862-e7638efa-bf1a-4bb0-8755-56a54a8c28ec.jpg)
+![note](https://user-images.githubusercontent.com/79286306/136186848-1a675a71-4cb6-4ab2-9445-bb53c9746641.jpg)
+
 
 
 <hr>
