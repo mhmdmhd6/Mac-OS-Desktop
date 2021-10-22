@@ -55,10 +55,12 @@ An example of new icons those are added:
 | Terminal | Calculator App  |
 |------------|-----------------|
 | <img src="https://user-images.githubusercontent.com/79286306/134975665-f7e81071-18a2-4f2c-b034-bb1ec99e1be2.jpg" width="100%"> | <img src="https://user-images.githubusercontent.com/79286306/134975739-5c816139-df8b-4bd5-bba0-9dbbaafcbbab.jpg" width="100%"> |  
-<p>
+
   and also Note app
-</p>
-![note](https://user-images.githubusercontent.com/79286306/134975862-e7638efa-bf1a-4bb0-8755-56a54a8c28ec.jpg)
+
+
+![note](https://user-images.githubusercontent.com/79286306/136186848-1a675a71-4cb6-4ab2-9445-bb53c9746641.jpg)
+
 
 
 <hr>
