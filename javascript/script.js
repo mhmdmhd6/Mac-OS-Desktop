@@ -1,3 +1,4 @@
+
 /********** ELEMENTS **********/
 var body = document.querySelector('body');
 var adding = document.querySelector('.adding');
@@ -5,7 +6,6 @@ var backfull = document.querySelector('.backfull');
 var backfullnote = document.querySelector('.backfull-note');
 var app_name_calculator = document.querySelector('#calculator');
 var calculator = document.querySelector('.calculator');
-var change_lang = document.querySelector('.change_lang');
 var closecal = document.querySelector('.close-cal');
 var close = document.querySelector('.close');
 var closenote = document.querySelector('.close-note');
@@ -18,7 +18,7 @@ var launchpad_searchbox = document.querySelector('.launchpad .searchbox');
 var launchpad_app_container = document.querySelector('.Apps-container');
 var navbar = document.querySelector('.navbar');
 var note = document.querySelector('.note');
-var app_name_notes = document.querySelector('#notes');
+var app_name_notes = document.querySelector('#Notes');
 var opencalculator = document.querySelector('.open-cal');
 var point_cal = document.querySelector('#point-cal');
 var openNote = document.querySelector('.openNote');
@@ -42,11 +42,10 @@ var point_vscode = document.querySelector('#point-vscode');
 var create_input = document.createElement("input");
 
 var open_spotlight = document.querySelector('.open_Search');
-var spotlight_serach = document.querySelector('.container_spotlight');
+var spotlight_serach = document.querySelector('.spotlight_serach');
 
 var brightness_range = document.getElementById('brightness');
 var sound_range = document.getElementById('sound');
-
 
 function change_brightness() {
   var brightnessVal = brightness_range.value;
@@ -56,21 +55,10 @@ function change_brightness() {
 }
 
 
-/*****Change language Functions start****** */
-function lang_change() {
-  if (change_lang.style.display === "none") {
-      change_lang.style.display = "flex";
-  } else {
-    change_lang.style.display = "none";
-  }
-}
-/*****Change language Functions end****** */
-
 // Spotlight 
 function handleopen_spotlight() {
   if (spotlight_serach.style.display === 'none') {
-    spotlight_serach.style.display = 'block';
-    container.style.display = 'flex';
+    spotlight_serach.style.display = 'flex';
   } else {
     spotlight_serach.style.display = 'none';
   }
@@ -93,7 +81,6 @@ function handleNotes() {
   content__typing.style.display = 'block';
 }
 // Notes app function end
-
 function handleMinimize(Minimize) {
   Minimize.style.maxWidth = '80%';
   Minimize.style.minWidth = '70%';
@@ -166,24 +153,23 @@ function handleOpenCal_lunchpad() {
 
 /********** LISTENERS **********/
 
-lang_change();
 handleopen_spotlight();
 handleOpenLaunching();
 adding.addEventListener('click', handleAdding);
 backfull.addEventListener('click', () => handleMinimize(terminal));
 backfullnote.addEventListener('click',() => handleMinimize(note));
-close.addEventListener('click', () => close_window(terminal, point_terminal));
+close.addEventListener('click', () => close_window(terminal, point_terminal, app_name_terminal));
 closenote.addEventListener('click', () => close_window(note, point_note, app_name_notes));
 deleting.addEventListener('click', handleDeleting);
 full.addEventListener('click', () => handleFullScreen(terminal));
 fullnote.addEventListener('click', () => handleFullScreen(note));
 full_Vscode.addEventListener('click', () => handleFullScreen(Vscode_window));
 notes.addEventListener('click', handleNotes);
-opening.addEventListener('click', () => open_window(terminal, point_terminal));
+opening.addEventListener('click', () => open_window(terminal, point_terminal, app_name_terminal));
 openNote.addEventListener('click', () => open_window(note, point_note, app_name_notes));
 opencalculator.addEventListener('click', () => open_window(calculator, point_cal, app_name_calculator));
-open_vscode.addEventListener('click',() => open_window(Vscode_window, point_vscode));
-close_Vscode.addEventListener('click',() => close_window(Vscode_window, point_vscode));
+open_vscode.addEventListener('click',() => open_window(Vscode_window, point_vscode, app_name_VScode));
+close_Vscode.addEventListener('click',() => close_window(Vscode_window, point_vscode, app_name_VScode));
 backfull_Vscode.addEventListener('click',() => handleMinimize(Vscode_window));
 closecal.addEventListener('click', () => close_window(calculator, point_cal, app_name_calculator));
 opencalculator_lunchpad.addEventListener('click', handleOpenCal_lunchpad);
@@ -377,20 +363,26 @@ document.onclick = hideMenu;
 document.oncontextmenu = rightClick;
 
   function hideMenu() {
-    document.getElementById("contextMenu").style.display = "none"
+    document.getElementById("contextMenu").style.opacity = "0"
   }
 
   function rightClick(e) {
     e.preventDefault();
 
-    if (document.getElementById("contextMenu").style.display == "block")
+    if (document.getElementById("contextMenu").style.opacity == "1")
       hideMenu();
     else {
       var menu = document
         .getElementById("contextMenu")
         
-      menu.style.display = 'block';
+      menu.style.opacity = '1';
       menu.style.left = e.pageX + "px";
       menu.style.top = e.pageY + "px";
     }
   }
+
+// loading 
+var load = document.getElementById('loading');
+function lockload() {
+  load.style.display = 'none';
+}
