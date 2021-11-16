@@ -545,7 +545,8 @@ li > .menu__container > .grid__controling .control_center--grid {
 }
 
 .window__taskbar {
-  height: 12%;
+  border-radius: 1rem 1rem 0 0;  
+  height: 45px;
   display: flex;
   justify-content: space-between;
   padding: 0 16px;
