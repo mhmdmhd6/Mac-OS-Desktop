@@ -552,6 +552,12 @@ li > .menu__container > .grid__controling .control_center--grid {
   padding: 0 16px;
   background-color: var(--app-color-white);
 }
+
+/*class selector for removing rounded corners*/
+.window__taskbar.is-fullscreen {
+  border-radius: 0;
+}
+
 .window__taskbar--actions {
   display: flex;
   align-items: center;
