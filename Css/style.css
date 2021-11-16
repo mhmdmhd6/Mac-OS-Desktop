@@ -885,7 +885,7 @@ li > .menu__container > .grid__controling .control_center--grid {
 
 /*VSCode content*/ 
 .Vscode .content {
-  height: 100%;
+  height: 94%;
   overflow: hidden;
   border-radius: 0 0 1rem 1rem;
 }
