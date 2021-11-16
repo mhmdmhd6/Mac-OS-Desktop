@@ -180,13 +180,21 @@ backfullnote.addEventListener('click',() => handleMinimize(note));
 close.addEventListener('click', () => close_window(terminal, point_terminal));
 closenote.addEventListener('click', () => close_window(note, point_note, app_name_notes));
 deleting.addEventListener('click', handleDeleting);
-full.addEventListener('click', () => handleFullScreen(terminal));
-fullnote.addEventListener('click', () => handleFullScreen(note));
-full_Vscode.addEventListener('click', (ev) => { 
-  handleFullScreen(Vscode_window);
-  // remove rounded corners
-  ev.target.parentElement.parentElement.classList.add('is-fullscreen')
-});
+
+// FULL SCREEN
+// add the `fullscreen button` here to allow it to also full screeen`
+const programs = [terminal, note, Vscode_window]; // programs
+const fullscreenBtns = [full, fullnote, full_Vscode]; // their fullscreens buttons 
+
+// loop through the fullscreen buttons and add event listener to each
+for(let i = 0; i < fullscreenBtns.length; i++) {
+    fullscreenBtns[i].addEventListener('click', (ev) => {
+      handleFullScreen(programs[i]);
+      // remove rounded corners
+      ev.target.parentElement.parentElement.classList.add('is-fullscreen')
+    })
+}
+
 notes.addEventListener('click', handleNotes);
 opening.addEventListener('click', () => open_window(terminal, point_terminal));
 openNote.addEventListener('click', () => open_window(note, point_note, app_name_notes));
