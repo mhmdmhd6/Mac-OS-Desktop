@@ -648,6 +648,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   font-size: 20px;
   font-family: 'Roboto Mono', monospace;
   overflow-y: scroll;
+  border-radius: 0 0 1rem 1rem;
 }
 
 .color_green {
