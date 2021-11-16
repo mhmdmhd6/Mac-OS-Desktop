@@ -537,7 +537,6 @@ li > .menu__container > .grid__controling .control_center--grid {
   min-width: 70%;
   max-width: 80%;
   height: 430px;
-  overflow: hidden;
   border-radius: 1rem;
   background: transparent;
   box-shadow: 0 20px 30px var(--color-black-500);
@@ -636,6 +635,8 @@ li > .menu__container > .grid__controling .control_center--grid {
 
 .terminal .window__taskbar {
   height: 8%;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .terminal_content {
@@ -646,6 +647,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   color: #fff;
   font-size: 20px;
   font-family: 'Roboto Mono', monospace;
+  overflow-y: scroll;
 }
 
 .color_green {
