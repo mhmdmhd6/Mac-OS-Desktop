@@ -877,6 +877,13 @@ li > .menu__container > .grid__controling .control_center--grid {
   width: 80px;
 }
 
+/*VSCode content*/ 
+.Vscode .content {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0 0 1rem 1rem;
+}
+
 @media screen and (min-width: 1200px) {
   .launchpad .Apps-container {
     grid-row-gap: 20px;
