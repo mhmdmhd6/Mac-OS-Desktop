@@ -634,7 +634,7 @@ li > .menu__container > .grid__controling .control_center--grid {
 }
 
 .terminal .window__taskbar {
-  height: 8%;
+  height: 45px;
   width: 100%;
   border-radius: 1rem 1rem 0 0;
 }
