@@ -182,14 +182,22 @@ closenote.addEventListener('click', () => close_window(note, point_note, app_nam
 deleting.addEventListener('click', handleDeleting);
 full.addEventListener('click', () => handleFullScreen(terminal));
 fullnote.addEventListener('click', () => handleFullScreen(note));
-full_Vscode.addEventListener('click', () => handleFullScreen(Vscode_window));
+full_Vscode.addEventListener('click', (ev) => { 
+  handleFullScreen(Vscode_window);
+  // remove rounded corners
+  ev.target.parentElement.parentElement.classList.add('is-fullscreen')
+});
 notes.addEventListener('click', handleNotes);
 opening.addEventListener('click', () => open_window(terminal, point_terminal));
 openNote.addEventListener('click', () => open_window(note, point_note, app_name_notes));
 opencalculator.addEventListener('click', () => open_window(calculator, point_cal, app_name_calculator));
 open_vscode.addEventListener('click',() => open_window(Vscode_window, point_vscode));
 close_Vscode.addEventListener('click',() => close_window(Vscode_window, point_vscode));
-backfull_Vscode.addEventListener('click',() => handleMinimize(Vscode_window));
+backfull_Vscode.addEventListener('click',(ev) => { 
+  handleMinimize(Vscode_window);
+  // add back rounded corners
+  ev.target.parentElement.parentElement.classList.remove('is-fullscreen')
+});
 closecal.addEventListener('click', () => close_window(calculator, point_cal, app_name_calculator));
 opencalculator_lunchpad.addEventListener('click', handleOpenCal_lunchpad);
 open_spotlight.addEventListener('click', handleopen_spotlight);
