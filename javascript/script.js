@@ -30,6 +30,9 @@ var point_note = document.querySelector('#point-note');
 var terminal = document.querySelector('.terminal');
 var content__typing = document.querySelector('.content__typing');
 var app_name_terminal = document.querySelector('#Terminal');
+var terminal_content = document.querySelector('.terminal .terminal_content');
+var terminal_taskbar = document.querySelector('.terminal .window__taskbar');
+
 
 var open_vscode = document.querySelector('.open_vscode');
 var Vscode_window = document.querySelector('.Vscode');
@@ -311,6 +314,11 @@ let dirs = [
 function init_terminal_line(){
   $('.cursor').keydown(function(e) {
 
+    // set terminal taskbar to fixed if content is overflowing/scrolling
+    if(isOverflown(terminal_content)) {
+      terminal_taskbar.classList.add('is_overflow'); // add class to set the taskbar to fixed position
+    }
+
     // trap the return key being pressed
     if (e.keyCode === 13) {
       e.preventDefault()
@@ -385,4 +393,10 @@ document.oncontextmenu = rightClick;
 var load = document.getElementById('loading');
 function lockload() {
   load.style.display = 'none';
+}
+
+//function checks if content of element is overflowing
+//returns boolean
+function isOverflown(element) {
+  return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
 }
