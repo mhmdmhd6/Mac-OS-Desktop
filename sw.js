@@ -1,5 +1,5 @@
-const staticCachesName = 'site-static-v4';
-const dynamicCache = 'site-dynamic-v5';
+const staticCachesName = 'site-static-v5';
+const dynamicCache = 'site-dynamic-v6';
 const assets = [
     '/',
     './index.html',
@@ -44,7 +44,7 @@ const assets = [
     './icon/manifest',
     './cursor/Normal.cur',
     './cursor/link.cur',
-    'https://www.github1s.com',
+    'https://vscode.dev',
     'https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Roboto:wght@100&display=swap',
     'https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap',
     'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap',
