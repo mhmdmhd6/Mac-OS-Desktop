@@ -650,6 +650,13 @@ li > .menu__container > .grid__controling .control_center--grid {
   height: 8%;
 }
 
+/*when terminal content is overflowing */
+.terminal .window__taskbar.is_overflow {
+  position: relative;
+  z-index: 99;
+  top: 2rem;
+}
+
 .Vscode .window__taskbar {
   height: 8%;
 }
@@ -663,6 +670,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   color: rgb(235, 235, 235);
   font-size: 20px;
   font-family: 'Roboto Mono', monospace;
+  overflow-y: scroll;
 }
 
 .color_green {
