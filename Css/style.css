@@ -877,6 +877,13 @@ li > .menu__container > .grid__controling .control_center--grid {
   text-align: left;
 }
 
+.searchbox input[type="search"]::-webkit-search-decoration:hover,
+.searchbox input[type="search"]::-webkit-search-cancel-button:hover,
+.searchbox input[type="search"]::-webkit-search-results-button:hover,
+.searchbox input[type="search"]::-webkit-search-results-decoration:hover {
+  cursor: url(/cursor/Link.cur), pointer;
+}
+
 .Apps-container {
   width: 90%;
   height: 60%;
