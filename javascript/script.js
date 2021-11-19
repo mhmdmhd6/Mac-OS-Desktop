@@ -130,14 +130,17 @@ function handleOpenLaunching() {
 
 function handleLaunchpadSearch(e) {
   for (let app of launchpad_app_container.children) {
-      if (e.target.value) {
-          app.style.display = "none";
-          if (app.dataset.keywords.includes(e.target.value)) {
-              app.style.display = "flex";
-          }
-      } else
-          app.style.display = "flex";
+    // if no value on search box, display all the apps
+    if (!e.target.value){
+      app.style.display = 'flex';
+      continue;
+    }
 
+    // add support for lower/upper case search
+    if (app.dataset.keywords.toLowerCase().includes(e.target.value.toLowerCase()))
+      app.style.display = 'flex';
+    else
+      app.style.display = 'none';
   }
 }
 // Launchpad function end
