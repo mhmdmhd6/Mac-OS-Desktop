@@ -7,7 +7,7 @@ const assets = [
     './javascript/script.js',
     './javascript/app.js',
     './manifest.json',
-    './background/MontereyBackground.jpg',
+    './background/monterey.jpg',
     './icon',
     './icon/dock',
     './icon/dock/appstore.png',
