@@ -1,0 +1,20 @@
+{
+  "name": "mac-os-desktop",
+  "version": "1.0.0",
+  "description": "I am planing to make a mac OS simulator using HTML, CSS, and JavaScript 😀",
+  "main": "sw.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhmdmhd6/Mac-OS-Desktop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mhmdmhd6/Mac-OS-Desktop/issues"
+  },
+  "homepage": "https://github.com/mhmdmhd6/Mac-OS-Desktop#readme"
+}

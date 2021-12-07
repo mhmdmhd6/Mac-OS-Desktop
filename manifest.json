@@ -1,0 +1,51 @@
+{
+    "name": "Mac os",
+    "short_name": "Mac os desktop",
+    "start_url": "https://mhmdmhd6.github.io/Mac-OS-Desktop/",
+    "display": "standalone",
+    "background_color": "#DCE9E9",
+    "theme_color": "#d1d1d1",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src":"./icon/manifest/72x72.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src":"./icon/manifest/96x96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src":"./icon/manifest/128x128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src":"./icon/manifest/144x144.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src":"./icon/manifest/152x152.png",
+            "type": "image/png",
+            "sizes": "152x152"
+        },
+        {
+            "src":"./icon/manifest/192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src":"./icon/manifest/384x384.png",
+            "type": "image/png",
+            "sizes": "384x384"
+        },
+        {
+            "src":"./icon/manifest/512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }        
+    ]
+}
