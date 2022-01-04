@@ -23,6 +23,12 @@
   list-style: none;
 }
 
+@media screen and (max-width: 900px) {
+  .hidden {
+    display: none;
+  }
+}
+
 button,
 input {
   background-color: transparent;
@@ -30,28 +36,26 @@ input {
   outline: 0;
   -webkit-tap-highlight-color: transparent;
 }
-button img,
-button,
-li {
-  cursor: url(/cursor/Link.cur), pointer;
-}
 
 body {
+  height: 100vh;
   user-select: none;
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   background: url(../background/monterey.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
-  height: 100vh;
 }
 
 #loading {
   width: 100%;
   height: 100vh;
   position: fixed;
+  top: 0;
+  left: 0;
   background: url(../background/lock.gif) no-repeat center;
+  background-size: cover;
   z-index: 9999;
 }
 
@@ -64,14 +68,11 @@ body {
   color: var(--color-white-900);
   box-shadow: 0 2px 10px var(--color-black-100);
   background: linear-gradient(to right, #c970b7, #e2b1e2, #eb71c6);
-  /* background:transparent;
-  backdrop-filter: blur(5px); */
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 20;
   animation: top-to-bottom 0.3s;
-  transition: 2s;
 }
 
 .navbar > ul {
@@ -99,12 +100,6 @@ body {
 
 .navbar .leftLi {
   padding: 4px 8px;
-}
-
-@media screen and (max-width: 900px) {
-  .hidden {
-    display: none;
-  }
 }
 
 .navbar .leftLi:hover {
@@ -195,7 +190,7 @@ li > ul > li > button {
   display: flex;
   flex-direction: row;
   text-align: left;
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 100;
   padding: 4px 8px;
   border-radius: 5px;
@@ -284,11 +279,11 @@ li > .menu__container > .grid__controling .control_center--grid {
   width: 100%;
   font-size: 20px;
   transition: all 120ms ease-in-out;
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   cursor: url(../cursor/Link.cur), pointer;
 }
 
-.menu__container > .grid__controling input[type='range'] {
+.menu__container > .grid__controling input[type="range"] {
   -webkit-appearance: none;
   overflow: hidden;
   outline: none;
@@ -305,7 +300,7 @@ li > .menu__container > .grid__controling .control_center--grid {
 .menu__container > .grid__controling #sound {
   background-image: url(../icon/volume.svg);
 }
-.menu__container > .grid__controling input[type='range']::-webkit-slider-thumb {
+.menu__container > .grid__controling input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 2rem;
   width: 2rem;
@@ -318,7 +313,7 @@ li > .menu__container > .grid__controling .control_center--grid {
 
 .menu__container
   > .grid__controling
-  input[type='range']::-webkit-slider-runnable-track {
+  input[type="range"]::-webkit-slider-runnable-track {
   cursor: url(/cursor/Link.cur), pointer;
   margin: 10px;
   padding: 5px 0;
@@ -330,7 +325,7 @@ li > .menu__container > .grid__controling .control_center--grid {
 .grid__controling .control_center--grid button p {
   display: block;
   font-size: 14px;
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
 }
 
 .grid__controling .control_center--grid button svg {
@@ -445,7 +440,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   height: 25px;
   padding: 4px 3px 10px;
   border-radius: 8px;
-  font-family: 'lexend', sans-serif;
+  font-family: "lexend", sans-serif;
   font-weight: 700;
   clip-path: polygon(
     100% 0%,
@@ -466,51 +461,51 @@ li > .menu__container > .grid__controling .control_center--grid {
 }
 
 .dock .icon:nth-child(1):hover::after {
-  content: 'Finder';
+  content: "Finder";
 }
 
 .dock .icon:nth-child(2):hover::after {
-  content: 'Launchpad';
+  content: "Launchpad";
 }
 
 .dock .icon:nth-child(3):hover::after {
-  content: 'App store';
+  content: "App store";
 }
 
 .dock .icon:nth-child(4):hover::after {
-  content: 'Message';
+  content: "Message";
 }
 
 .dock .icon:nth-child(5):hover::after {
-  content: 'Itunes music';
+  content: "Itunes music";
 }
 
 .dock .icon:nth-child(6):hover::after {
-  content: 'VScode';
+  content: "VScode";
 }
 
 .dock .icon:nth-child(7):hover::after {
-  content: 'Mail';
+  content: "Mail";
 }
 
 .dock .icon:nth-child(8):hover::after {
-  content: 'Photos';
+  content: "Photos";
 }
 
 .dock .icon:nth-child(9):hover::after {
-  content: 'Calculator';
+  content: "Calculator";
 }
 
 .dock .icon:nth-child(10):hover::after {
-  content: 'Notes';
+  content: "Notes";
 }
 
 .dock .icon:nth-child(11):hover::after {
-  content: 'Terminal';
+  content: "Terminal";
 }
 
 .dock .icon:nth-child(12):hover::after {
-  content: 'Preferences';
+  content: "Preferences";
 }
 
 .dock .icon img {
@@ -519,11 +514,11 @@ li > .menu__container > .grid__controling .control_center--grid {
   transform: translateY(-2.5px);
 }
 
-.dock .icon:hover img{
+.dock .icon:hover img {
   margin: 0 0 40px 0;
   width: 7.1rem;
 }
-.dock .icon:hover + .icon img{
+.dock .icon:hover + .icon img {
   width: 5.6rem;
   margin: 0 0 25px 0;
 }
@@ -531,6 +526,7 @@ li > .menu__container > .grid__controling .control_center--grid {
 .dock .icon img:active {
   filter: brightness(0.6) drop-shadow(0 0 10px #2c2c2c);
 }
+
 .container__Window {
   width: 100%;
   height: 90%;
@@ -541,7 +537,7 @@ li > .menu__container > .grid__controling .control_center--grid {
 
 .window {
   display: none;
-  min-width: 70%;
+  min-width: 50%;
   max-width: 80%;
   height: 430px;
   overflow: hidden;
@@ -599,7 +595,7 @@ li > .menu__container > .grid__controling .control_center--grid {
 }
 
 .window__taskbar--actions button:nth-child(1)::after {
-  content: '×';
+  content: "×";
 }
 
 .window__taskbar--actions button:nth-child(1):hover {
@@ -612,7 +608,7 @@ li > .menu__container > .grid__controling .control_center--grid {
 }
 
 .window__taskbar--actions button:nth-child(2)::after {
-  content: '−';
+  content: "−";
 }
 
 .window__taskbar--actions button:nth-child(2):hover {
@@ -625,7 +621,7 @@ li > .menu__container > .grid__controling .control_center--grid {
 }
 
 .window__taskbar--actions button:nth-child(3)::after {
-   content: '⤡'; 
+  content: "⤡";
 }
 
 .window__taskbar--actions button:nth-child(3):hover {
@@ -646,7 +642,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   font-size: 18px;
 }
 
-.terminal .window__taskbar {
+.terminal .window__taskbar, .Vscode .window__taskbar {
   height: 8%;
 }
 
@@ -657,10 +653,6 @@ li > .menu__container > .grid__controling .control_center--grid {
   top: 2rem;
 }
 
-.Vscode .window__taskbar {
-  height: 8%;
-}
-
 .terminal_content {
   width: 100%;
   height: 92%;
@@ -669,7 +661,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   backdrop-filter: blur(12px);
   color: rgb(235, 235, 235);
   font-size: 20px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 .color_green {
@@ -684,7 +676,6 @@ li > .menu__container > .grid__controling .control_center--grid {
   width: 60%;
   height: 100%;
   background-color: transparent;
-  float: right;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -717,14 +708,14 @@ li > .menu__container > .grid__controling .control_center--grid {
 .window__taskbar--right .containerSearch svg {
   fill: rgba(123, 123, 123, 0.412);
 }
-.window__taskbar--right input[type='search'] {
+.window__taskbar--right input[type="search"] {
   width: 85%;
   height: 100%;
   background-color: transparent;
   color: var(--color-black);
   font-size: 18px;
   padding-right: 10px;
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
 }
 
 .window .content {
@@ -751,7 +742,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   color: var(--color-black);
   font-weight: 900;
   font-size: 18px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   padding: 16px;
 }
 
@@ -766,6 +757,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   width: 100%;
   height: 100%;
   flex-direction: column;
+  display: flex;
   align-items: center;
   justify-content: flex-start;
   overflow-y: scroll;
@@ -776,12 +768,16 @@ li > .menu__container > .grid__controling .control_center--grid {
   width: 90%;
   padding-left: 10px;
   height: 15%;
-  background-color: transparent;
-  font-family: 'Source Sans Pro', sans-serif;
+  background-color: rgba(255, 255, 255, 0.301);
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
   outline: none;
   color: var(--color-black);
   transition: all 0.2s;
+  border-radius: 4px;
+  margin-top: 10px;
+  display: flex;
+  place-content: center;
 }
 
 .content__sidebar--notes input::placeholder {
@@ -864,7 +860,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   color: #fff;
   font-size: 17px;
   height: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .searchbox input::placeholder {
@@ -1076,15 +1072,15 @@ li > .menu__container > .grid__controling .control_center--grid {
 }
 
 .calculator__top--taskabr button:nth-child(1)::after {
-  content: '×';
+  content: "×";
 }
 
 .calculator__top--taskabr button:nth-child(2)::after {
-  content: '−';
+  content: "−";
 }
 
 .calculator__top--taskabr button:nth-child(3)::after {
-  content: '⤡';
+  content: "⤡";
 }
 
 .calculator__top--output {
@@ -1092,7 +1088,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   color: var(--color-white);
   font-size: 2rem;
   text-align: right;
-  font-family: 'Lexend';
+  font-family: "Lexend";
   border: none;
   background: transparent;
   padding: 0 0.8rem;
@@ -1110,7 +1106,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   width: 100%;
   height: 100%;
   font-size: 1.8rem;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: bold;
   border: 1px solid rgba(95, 95, 95, 0.336);
 }
@@ -1172,7 +1168,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   height: 100%;
   text-align: left;
   font-size: 15px;
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   border-radius: 5px;
   padding: 4px 8px;
   transition: 80ms;
