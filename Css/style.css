@@ -642,7 +642,8 @@ li > .menu__container > .grid__controling .control_center--grid {
   font-size: 18px;
 }
 
-.terminal .window__taskbar, .Vscode .window__taskbar {
+.terminal .window__taskbar,
+.Vscode .window__taskbar {
   height: 8%;
 }
 
@@ -1180,4 +1181,85 @@ li > .menu__container > .grid__controling .control_center--grid {
 }
 .context-menu ul button:hover {
   background: var(--color-blue-800);
+}
+
+/* Widgets panel */
+.widgets-panel {
+  position: fixed;
+  top: 42px;
+  right: 10px;
+  transform: translateX(115%);
+  transition: all 0.3s cubic-bezier(0.79, 0.14, 0.15, 0.86);
+}
+.widgets-panel.open {
+  transform: translateX(0);
+}
+.widgets-panel__calendar {
+  background: #2e2e2e;
+  border: 1px solid black;
+  border-radius: 16px;
+  padding: 16px;
+  min-width: 160px;
+  box-shadow: 0 2px 12px 8px rgba(0, 0, 0, 0.1);
+}
+.widgets-panel__calendar h4 {
+  color: #fc453a;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.widgets-panel__calendar h2 {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 4px;
+}
+.widgets-panel__calendar li {
+  position: relative;
+  color: #c1c2c2;
+  background: #403c40;
+  padding: 2px 6px;
+  font-size: 10px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+.widgets-panel__calendar li:not(:last-child) {
+  margin-bottom: 4px;
+}
+.widgets-panel__calendar li::before {
+  content: "";
+  width: 4px;
+  height: calc(100% - 2px);
+  background: #c1c2c2;
+  position: absolute;
+  border-radius: 99px;
+  top: 2px;
+  left: -8px;
+}
+.widgets-panel__calendar li.blue {
+  color: #34aadc;
+  background: #283646;
+}
+.widgets-panel__calendar li.blue::before {
+  background: #34aadc;
+}
+.widgets-panel__calendar li.green {
+  color: #32d74b;
+  background: #2d402e;
+}
+.widgets-panel__calendar li.green::before {
+  background: #32d74b;
+}
+.widgets-panel__calendar li.purple {
+  color: #cc74e0;
+  background: #422948;
+}
+.widgets-panel__calendar li.purple::before {
+  background: #cc74e0;
+}
+.widgets-panel__calendar li span {
+  display: block;
+}
+.widgets-panel__calendar li span:first-child {
+  font-weight: bold;
 }
