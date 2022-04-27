@@ -31,6 +31,7 @@ var content__typing = document.querySelector(".content__typing")
 var app_name_terminal = document.querySelector("#Terminal")
 var terminal_content = document.querySelector(".terminal .terminal_content")
 var terminal_taskbar = document.querySelector(".terminal .window__taskbar")
+
 var clockElement = document.getElementById("clock")
 var clockWrapper = document.querySelector(".clock")
 var widgetsPanel = document.querySelector(".widgets-panel")
