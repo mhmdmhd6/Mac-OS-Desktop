@@ -326,10 +326,7 @@ let dirName
 let dirs = ["Desktop", "Downloads", "Music", "Documents"]
 function init_terminal_line() {
   $(".cursor").keydown(function (e) {
-    // set terminal taskbar to fixed if content is overflowing/scrolling
-    if (isOverflown(terminal_content)) {
-      terminal_taskbar.classList.add("is_overflow") // add class to set the taskbar to fixed position
-    }
+  
 
     // trap the return key being pressed
     if (e.keyCode === 13) {
@@ -405,12 +402,10 @@ var load = document.getElementById("loading")
 function lockload() {
   load.style.display = "none"
 }
-
-//function checks if content of element is overflowing
-//returns boolean
-function isOverflown(element) {
-  return (
-    element.scrollHeight > element.clientHeight ||
-    element.scrollWidth > element.clientWidth
-  )
+/*
+function sleep(){
+  body.style.backdropFilter = "blur(5px)";
+  body.style.filter = "blur(5px)";
 }
+setTimeout(sleep, 10000)
+*/

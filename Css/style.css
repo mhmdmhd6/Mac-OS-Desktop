@@ -644,20 +644,14 @@ li > .menu__container > .grid__controling .control_center--grid {
 
 .terminal .window__taskbar,
 .Vscode .window__taskbar {
-  height: 8%;
-}
-
-/*when terminal content is overflowing */
-.terminal .window__taskbar.is_overflow {
-  position: relative;
-  z-index: 99;
-  top: 2rem;
+  height: 9%;
 }
 
 .terminal_content {
   width: 100%;
-  height: 92%;
-  padding: 16px;
+  height: 91%;
+  overflow-y: scroll;
+  padding-left: 1rem;
   background-color: rgba(5, 5, 99, 0.63);
   backdrop-filter: blur(12px);
   color: rgb(235, 235, 235);
@@ -757,34 +751,31 @@ li > .menu__container > .grid__controling .control_center--grid {
 .content__sidebar--notes {
   width: 100%;
   height: 100%;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   overflow-y: scroll;
   background-color: transparent;
 }
 
 .content__sidebar--notes input {
-  width: 90%;
+  width: 85%;
   padding-left: 10px;
-  height: 15%;
-  background-color: rgba(255, 255, 255, 0.301);
-  font-family: "Source Sans Pro", sans-serif;
+  height: 10%;
+  font-family: "Lexend", sans-serif;
   font-size: 18px;
   outline: none;
   color: var(--color-black);
   transition: all 0.2s;
   border-radius: 4px;
-  margin-top: 10px;
-  display: flex;
-  place-content: center;
+  margin: 10px auto;
+  font-weight: 100;
+  display: block;
+  transition: 0.3s;
+}
+.content__sidebar--notes input:hover {
+  background-color: rgba(0, 0, 0, 0.336);
 }
 
 .content__sidebar--notes input::placeholder {
   color: white;
-  text-shadow: 0 3px 10px rgb(46, 46, 46);
-  padding: 7px;
 }
 
 .spotlight_serach {
@@ -827,7 +818,6 @@ li > .menu__container > .grid__controling .control_center--grid {
   background-color: transparent;
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
-  z-index: -10;
 }
 
 .searchbox {
@@ -899,10 +889,10 @@ li > .menu__container > .grid__controling .control_center--grid {
     grid-row-gap: 20px;
   }
   .launchpad .child-launchpad img {
-    width: 100px;
+    width: 80px;
   }
   .launchpad .child-launchpad strong {
-    font-size: 21px;
+    font-size: 18px;
   }
 }
 
@@ -915,22 +905,26 @@ li > .menu__container > .grid__controling .control_center--grid {
   color: #fff;
 }
 
-::-webkit-scrollbar-track {
-  background-color: transparent;
-  border: 1px solid rgba(51, 49, 49, 0.137);
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  cursor: url(/cursor/Link.cur), pointer;
-}
-
 ::-webkit-scrollbar {
-  width: 11px;
+  background-color: #fff;
+  width: 16px;
 }
 
+/* background of the scrollbar except button or resizer */
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+/* scrollbar itself */
 ::-webkit-scrollbar-thumb {
-  background: #b1b1b8;
-  border-radius: 10px;
-  cursor: url(/cursor/Link.cur), pointer;
+  background-color: #babac0;
+  border-radius: 16px;
+  border: 4px solid #fff;
+}
+
+/* set button(top and bottom of the scrollbar) */
+::-webkit-scrollbar-button {
+  display:none;
 }
 
 /******Animations*****/
