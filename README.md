@@ -73,10 +73,10 @@ An example of new icons those are added:
 > - [x] Clock **(AM , PM)**
 > - [x] Date
 > - [x] App Window
-> - [x] Dot Under icons
 > - [x] Drop down menu on navbar top
 > - [x] Terminal app
 > - [x] Note app
+> - [x] notification page
 > - [x] Add more notes on note app
 > - [x] Calculator app 
 > - [x] Control center
@@ -98,9 +98,7 @@ An example of new icons those are added:
 > - [x] Spotlight search
 > - [ ] Change dekstop background
 > - [x] Spotlight search
-> - [ ] Change dekstop background
 > - [x] Add change brightness range input 
-> - [x] shortcuts for opening app and other parts of site 
 
 
 ## list of Shorcuts : <br>
