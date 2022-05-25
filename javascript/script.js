@@ -32,6 +32,12 @@ var app_name_terminal = document.querySelector("#Terminal")
 var terminal_content = document.querySelector(".terminal .terminal_content")
 var terminal_taskbar = document.querySelector(".terminal .window__taskbar")
 
+const batteryButton = document.querySelector(".battery")
+const batteryText = document.querySelector(".battery__text")
+const batteryPopup = document.querySelector(".battery__popup")
+const batteryPopupText = document.querySelector(".battery__popup header span")
+const batteryProgress = document.querySelector(".battery__progress")
+
 var clockElement = document.getElementById("clock")
 var clockWrapper = document.querySelector(".clock")
 var widgetsPanel = document.querySelector(".widgets-panel")
@@ -326,8 +332,6 @@ let dirName
 let dirs = ["Desktop", "Downloads", "Music", "Documents"]
 function init_terminal_line() {
   $(".cursor").keydown(function (e) {
-  
-
     // trap the return key being pressed
     if (e.keyCode === 13) {
       e.preventDefault()
@@ -409,3 +413,18 @@ function sleep(){
 }
 setTimeout(sleep, 10000)
 */
+
+/********** Start Battery **********/
+const calculateBattery = () => {
+  const number = Math.floor(Math.random() * 100)
+
+  batteryText.textContent = `${number}%`
+  batteryProgress.style.width = `${number}%`
+  batteryPopupText.textContent = `${number}%`
+}
+
+batteryButton.addEventListener("click", () => {
+  batteryPopup.classList.toggle("opened")
+  batteryButton.classList.toggle("selected")
+})
+/********** End Battery **********/

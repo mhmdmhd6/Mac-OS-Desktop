@@ -41,7 +41,7 @@ body {
   height: 100vh;
   user-select: none;
   font-family: "Lexend", sans-serif;
-  background: url(../background/monterey.jpg);
+  background: url("../background/monterey.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -148,6 +148,122 @@ li.app_name {
 .navbar__right li .control-center {
   width: 32px;
   height: 19px;
+}
+
+.navbar__right .battery {
+  margin: 0;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  border-radius: 4px;
+  align-items: center;
+  padding: 0.3rem 0.5rem;
+  background: transparent;
+  transition: all ease-out 0.2s;
+}
+
+.navbar__right .battery.selected {
+  background: var(--color-white-200);
+}
+
+.navbar__right .battery__container {
+  width: 22px;
+  height: 10px;
+  padding: 1px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.navbar__right .battery__container::after {
+  content: "";
+  background: rgba(255, 255, 255, 0.4);
+  width: 3px;
+  height: 7px;
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.navbar__right .battery__progress {
+  height: 100%;
+  background: white;
+  border-radius: 2px;
+}
+
+.navbar__right .battery__text {
+  font-size: 12px;
+  margin-right: 4px;
+}
+
+.navbar__right .battery__popup {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  opacity: 0;
+  width: 220px;
+  transition: all ease-out 0.2s;
+  padding: 4px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(60px);
+  backdrop-filter: blur(60px);
+  border-radius: 8px;
+}
+
+.navbar__right .battery__popup.opened {
+  opacity: 1;
+}
+
+.navbar__right .battery__popup header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.navbar__right .battery__popup header h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.navbar__right .battery__popup header span {
+  opacity: 0.75;
+  font-size: 12px;
+}
+
+.navbar__right .battery__popup p {
+  font-size: 11px;
+  margin-top: 4px;
+  padding: 0 10px;
+}
+
+.navbar__right .battery__popup hr {
+  margin: 6px 8px;
+  border: 0;
+  border-radius: 99px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar__right .battery__popup button {
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.navbar__right .battery__popup button:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 li > ul {
@@ -659,7 +775,6 @@ li > .menu__container > .grid__controling .control_center--grid {
   font-family: "Roboto Mono", monospace;
 }
 
-
 .color_green {
   color: green;
 }
@@ -925,7 +1040,7 @@ li > .menu__container > .grid__controling .control_center--grid {
 
 /* set button(top and bottom of the scrollbar) */
 ::-webkit-scrollbar-button {
-  display:none;
+  display: none;
 }
 
 /******Animations*****/
