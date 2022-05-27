@@ -57,7 +57,7 @@
 
   </head>
   
-  <body onload="digi(), lockload()">
+  <body onload="digi(), lockload(), calculateBattery()">
     <div id="loading"></div>
     <div class="navbar">
       <ul>
@@ -147,6 +147,22 @@
             ></path>
             <circle cx="12" cy="18" r="2"></circle>
           </svg>
+        </li>
+        <li class="battery">
+          <span class="battery__text"></span>
+          <div class="battery__container">
+            <div class="battery__progress"></div>
+          </div>
+
+          <div class="battery__popup">
+            <header>
+              <h3>Battery</h3>
+              <span></span>
+            </header>
+            <p>Power Source: Battery</p>
+            <hr />
+            <button>Battery Preferences...</button>
+          </div>
         </li>
         <li class="open_Search">
           <svg width="24" height="24">
