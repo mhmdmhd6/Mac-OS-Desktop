@@ -12,7 +12,8 @@ https://mhmdmhd6.github.io/Mac-OS-Desktop
   Sample Desktop Application 👇
 </p>
 
-[![Screenshot 2021-09-27 224557](https://user-images.githubusercontent.com/79286306/134971324-e51a4327-12d1-44b3-b66c-8e9a9558b76c.jpg)](https://mhmdmhd6.github.io/Mac-OS-Desktop/)
+![desktop](https://user-images.githubusercontent.com/79286306/170665149-9d6e4ef2-8211-4282-8b3f-d04c10d43994.jpg)
+
 
 
 <p align="center">
@@ -20,8 +21,9 @@ https://mhmdmhd6.github.io/Mac-OS-Desktop
 </p>
                                            
 <p align="center">
-  <img width="300" src="https://user-images.githubusercontent.com/79286306/134972775-48abfec8-9774-4b21-82ea-7f375312bf0d.jpg">
+  <img width="300" src="https://user-images.githubusercontent.com/79286306/170665240-c8feef83-d6b0-41de-9368-ac15c7f4f0af.jpg">
 </p>
+
                                       
 
 <hr> <br>
