@@ -62,7 +62,7 @@
     <div class="navbar">
       <ul>
         <li class="leftLi logo">
-          <img src="./icon/apple-white.png" alt="Apple" />
+          <img src="./icon/apple-white.png" alt="Apple logo" />
           <ul>
             <li>
               <button>About This Mac</button>
@@ -78,7 +78,7 @@
             </li>
             <li>
               <button>Sleep</button>
-              <button>Restart...</button>
+              <button onClick="window.location.reload();">Restart...</button>
               <button>Shut Down...</button>
             </li>
             <li>
@@ -98,6 +98,9 @@
         </li>
         <li class="leftLi app_name" id="VScode">
           <p>VScode</p>
+        </li>
+        <li class="leftLi app_name" id="map">
+          <p>Maps</p>
         </li>
         <li class="leftLi">
           File
@@ -363,6 +366,10 @@
       <button class="icon">
         <img src="./icon/dock/photos.png" alt="Photos Logo" class="hidden" />
       </button>
+      <button class="icon open_map">
+        <img src="./icon/dock/maps.png" alt="maps Logo" class="hidden" />
+        <hr class="point hidden" id="point-maps" />
+      </button>
       <button class="icon open-cal">
         <img src="./icon/dock/calculator.png" alt="Calculator Logo" />
         <hr class="point" id="point-cal" />
@@ -536,8 +543,9 @@
               <svg viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"><path d="M4.871 3.553L9.37 8.098V3.553H4.871zm3.134 5.769L3.506 4.777v4.545h4.499z"></path><circle cx="6.438" cy="6.438" r="6.438" fill="black"></circle></svg>
             </button>
           </div>
-          
+
           <div class="window__taskbar--right">
+            
             <div class="Customize__icon hidden">
               <span class="material-icons" accesskey="v"> window </span>
             </div>
@@ -594,7 +602,21 @@
         </div>
       </div>
       <!-- Vscode app end -->
-
+      <div class="window maps">
+        <div class="window__taskbar">
+          <div class="window__taskbar--actions">
+            <button class="close-map"></button>
+            <button class="backfull-map"></button>
+            <button class="full-map"></button>
+          </div>
+          <div class="window__taskbar--content">
+            <h2>Maps</h2>
+          </div>
+        </div>
+        <div class="content">
+          <iframe width="100%" height="100%" src="https://maps.google.com/maps?q=2880%20Broadway,%20Amol&t=&z=13&ie=UTF8&iwloc=&output=embed" ></iframe>
+        </div>
+      </div>
       <!-- calculator -->
       <div class="calculator">
         <div class="calculator__top">

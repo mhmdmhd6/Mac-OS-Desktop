@@ -493,18 +493,21 @@ li > .menu__container > .grid__controling .control_center--grid {
 }
 
 .dock .icon:nth-child(9):hover::after {
-  content: "Calculator";
+  content: "maps";
 }
 
 .dock .icon:nth-child(10):hover::after {
-  content: "Notes";
+  content: "Calculator";
 }
 
 .dock .icon:nth-child(11):hover::after {
-  content: "Terminal";
+  content: "notes";
 }
 
 .dock .icon:nth-child(12):hover::after {
+  content: "terminal";
+}
+.dock .icon:nth-child(13):hover::after {
   content: "Preferences";
 }
 
@@ -643,7 +646,8 @@ li > .menu__container > .grid__controling .control_center--grid {
 }
 
 .terminal .window__taskbar,
-.Vscode .window__taskbar {
+.Vscode .window__taskbar,
+.maps .window__taskbar{
   height: 9%;
 }
 
