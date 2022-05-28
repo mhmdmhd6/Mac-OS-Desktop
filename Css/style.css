@@ -398,44 +398,45 @@ li > .menu__container > .grid__controling .control_center--grid {
   font-family: "Lexend", sans-serif;
   cursor: url(../cursor/Link.cur), pointer;
 }
+.sound,
+.brightness {
+  position: relative;
+}
 
 .menu__container > .grid__controling input[type="range"] {
   -webkit-appearance: none;
-  overflow: hidden;
-  outline: none;
-  display: flex;
-  align-items: center;
 
-  background-position: left;
-  background-repeat: no-repeat;
-  background-position-x: 20px;
+  outline: 0;
+  border: 0;
 }
-.menu__container > .grid__controling #brightness {
-  background-image: url(../icon/Sun.svg);
+.sound img {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translatey(-50%);
 }
-.menu__container > .grid__controling #sound {
-  background-image: url(../icon/volume.svg);
+.brightness img {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translatey(-50%);
 }
 .menu__container > .grid__controling input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 2rem;
   width: 2rem;
-  cursor: url(/cursor/Link.cur), pointer;
-  background-color: rgba(255, 255, 255, 0.658);
-  box-shadow: -1px 1px 5px -1px rgba(0, 0, 0, 0.548);
-  border-radius: 50px;
-  border: 1px solid rgba(185, 179, 179, 0.459);
+  background-color: var(--color-white);
+  box-shadow: -2px 0px 3px -2px #5f6063, -340px 0 0 320px #ffffff;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.226);
+  cursor: pointer;
 }
 
-.menu__container
-  > .grid__controling
-  input[type="range"]::-webkit-slider-runnable-track {
-  cursor: url(/cursor/Link.cur), pointer;
+.grid__controling input[type="range"]::-webkit-slider-runnable-track {
   margin: 10px;
-  padding: 5px 0;
-  box-shadow: 5px 0 10px rgba(97, 96, 96, 0.486);
-  background: rgba(255, 255, 255, 0.247);
+  background: rgba(255, 255, 255, 0.404);
   border-radius: 50px;
+  overflow: hidden;
 }
 
 .grid__controling .control_center--grid button p {
@@ -763,7 +764,7 @@ li > .menu__container > .grid__controling .control_center--grid {
 
 .terminal .window__taskbar,
 .Vscode .window__taskbar,
-.maps .window__taskbar{
+.maps .window__taskbar {
   height: 9%;
 }
 
