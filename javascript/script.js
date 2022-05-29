@@ -32,21 +32,19 @@ var app_name_terminal = document.querySelector("#Terminal");
 var terminal_content = document.querySelector(".terminal .terminal_content");
 var terminal_taskbar = document.querySelector(".terminal .window__taskbar");
 
-
 var clockElement = document.getElementById("clock");
 var clockWrapper = document.querySelector(".clock");
 var widgetsPanel = document.querySelector(".widgets-panel");
 
-const batteryButton = document.querySelector(".battery")
-const batteryText = document.querySelector(".battery__text")
-const batteryPopup = document.querySelector(".battery__popup")
-const batteryPopupText = document.querySelector(".battery__popup header span")
-const batteryProgress = document.querySelector(".battery__progress")
+const batteryButton = document.querySelector(".battery");
+const batteryText = document.querySelector(".battery__text");
+const batteryPopup = document.querySelector(".battery__popup");
+const batteryPopupText = document.querySelector(".battery__popup header span");
+const batteryProgress = document.querySelector(".battery__progress");
 
-var clockElement = document.getElementById("clock")
-var clockWrapper = document.querySelector(".clock")
-var widgetsPanel = document.querySelector(".widgets-panel")
-
+var clockElement = document.getElementById("clock");
+var clockWrapper = document.querySelector(".clock");
+var widgetsPanel = document.querySelector(".widgets-panel");
 
 var open_vscode = document.querySelector(".open_vscode");
 var Vscode_window = document.querySelector(".Vscode");
@@ -302,21 +300,11 @@ function calculate(value) {
 //App dragable
 $(function () {
   $(".terminal").draggable();
-  // .click(function(){
-  //   if ( $(this).is('.ui-draggable-dragging') ) {
-  //     return;
-  //   }
-  //   $(this).draggable( "option", "disabled", true );
-  //   $(this).find('.cursor').attr('contenteditable','true');
-  // })
-  // .blur(function(){
-  //   $(this).draggable( 'option', 'disabled', false);
-  //   $(this).find('.cursor').attr('contenteditable','false');
-  // });
   $(".note").draggable();
   $(".calculator").draggable();
   $(".Vscode").draggable();
   $(".spotlight_serach").draggable();
+  $(".maps").draggable();
 });
 //date and time
 var d = new Date();
@@ -436,25 +424,24 @@ var load = document.getElementById("loading");
 function lockload() {
   load.style.display = "none";
 }
-/*
-function sleep(){
-  body.style.backdropFilter = "blur(5px)";
-  body.style.filter = "blur(5px)";
-}
-setTimeout(sleep, 10000)
-*/
 
 /********** Start Battery **********/
 const calculateBattery = () => {
-  const number = Math.floor(Math.random() * 100)
+  const number = Math.floor(Math.random() * 100);
 
-  batteryText.textContent = `${number}%`
-  batteryProgress.style.width = `${number}%`
-  batteryPopupText.textContent = `${number}%`
-}
+  batteryText.textContent = `${number}%`;
+  batteryProgress.style.width = `${number}%`;
+  batteryPopupText.textContent = `${number}%`;
+
+  if (number <= 20) {
+    batteryProgress.classList.add("battery__low");
+  } else if(number > 90) {
+    batteryProgress.classList.add("battery__high");
+  }
+};
 
 batteryButton.addEventListener("click", () => {
-  batteryPopup.classList.toggle("opened")
-  batteryButton.classList.toggle("selected")
-})
+  batteryPopup.classList.toggle("opened");
+  batteryButton.classList.toggle("selected");
+});
 /********** End Battery **********/

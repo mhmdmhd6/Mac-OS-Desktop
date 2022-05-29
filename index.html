@@ -137,17 +137,6 @@
       </ul>
 
       <ul class="navbar__right">
-        <li>
-          <svg width="24" height="24">
-            <path
-              d="M12 6c3.537 0 6.837 1.353 9.293 3.809l1.414-1.414C19.874 5.561 16.071 4 12 4 7.929 4.001 4.126 5.561 1.293 8.395l1.414 1.414C5.163 7.353 8.463 6 12 6zM17.671 14.307c-3.074-3.074-8.268-3.074-11.342 0l1.414 1.414c2.307-2.307 6.207-2.307 8.514 0L17.671 14.307z"
-            ></path>
-            <path
-              d="M20.437,11.293c-4.572-4.574-12.301-4.574-16.873,0l1.414,1.414c3.807-3.807,10.238-3.807,14.045,0L20.437,11.293z"
-            ></path>
-            <circle cx="12" cy="18" r="2"></circle>
-          </svg>
-        </li>
         <li class="battery">
           <span class="battery__text"></span>
           <div class="battery__container">
@@ -164,8 +153,19 @@
             <button>Battery Preferences...</button>
           </div>
         </li>
-        <li class="open_Search">
+        <li class="wifi">
           <svg width="24" height="24">
+            <path
+              d="M12 6c3.537 0 6.837 1.353 9.293 3.809l1.414-1.414C19.874 5.561 16.071 4 12 4 7.929 4.001 4.126 5.561 1.293 8.395l1.414 1.414C5.163 7.353 8.463 6 12 6zM17.671 14.307c-3.074-3.074-8.268-3.074-11.342 0l1.414 1.414c2.307-2.307 6.207-2.307 8.514 0L17.671 14.307z"
+            ></path>
+            <path
+              d="M20.437,11.293c-4.572-4.574-12.301-4.574-16.873,0l1.414,1.414c3.807-3.807,10.238-3.807,14.045,0L20.437,11.293z"
+            ></path>
+            <circle cx="12" cy="18" r="2"></circle>
+          </svg>
+        </li>
+        <li class="open_Search">
+          <svg width="20" height="20">
             <path
               d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z"
             ></path>
@@ -232,9 +232,9 @@
                 </button>
               </div>
 
-              <div class="control_center--grid col-3">
-                <button>
-                  <svg height="24px" width="24px" viewBox="0 0 100 100">
+              <div class="control_center--grid col-3--brightness">
+                <button class="nobtn">
+                  <svg height="40px" width="40px" viewBox="0 0 100 100">
                     <defs>
                       <g id="a">
                         <path
@@ -246,17 +246,12 @@
                       <use xlink:href="#a" />
                     </g>
                   </svg>
-                  <p>
-                    Keyboard
-                    <br />
-                    brightness
-                  </p>
                 </button>
               </div>
-              <div class="control_center--grid col-3">
-                <button>
+              <div class="control_center--grid col-3--battery">
+                <button class="nobtn">
                   <svg
-                    width="30px"
+                    width="40px"
                     style="
                       background-color: transparent;
                       transform: scale(1.3);
@@ -282,10 +277,9 @@
                       d="M10.768,27L58,27L58,49L10.768,49C8.689,49 7,47.311 7,45.232L7,30.768C7,28.689 8.688,27 10.768,27Z"
                     />
                   </svg>
-                  <p>Battery</p>
                 </button>
               </div>
-              <div class="control_center--grid col-12 brightness">
+              <div class="control_center--grid col-12--light brightness">
                 <input
                   type="range"
                   id="brightness"
@@ -297,7 +291,7 @@
                 />
                 <img src="./icon/Sun.svg" alt="" width="25">
               </div>
-              <div class="control_center--grid col-12 sound">
+              <div class="control_center--grid col-12--volume sound">
                 <input
                   type="range"
                   id="sound"

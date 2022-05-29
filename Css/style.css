@@ -13,6 +13,8 @@
   --color-black-600: rgba(0, 0, 0, 0.6);
   --color-blue-800: #007ff7;
   --app-color-white: rgb(252, 255, 251);
+  --color-red: rgba(255, 2, 2, 0.788);
+  --color-green: #11dd4e;
 }
 
 * {
@@ -41,7 +43,7 @@ body {
   height: 100vh;
   user-select: none;
   font-family: "Lexend", sans-serif;
-  background: url("../background/monterey.jpg");
+  background: url("../background/iridescence.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -67,7 +69,8 @@ body {
   left: 0;
   color: var(--color-white-900);
   box-shadow: 0 2px 10px var(--color-black-100);
-  background: linear-gradient(to right, #c970b7, #e2b1e2, #eb71c6);
+  background: linear-gradient(to right, #6e1438, #270598, #e54c2d);
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -82,12 +85,13 @@ body {
 
 .navbar li {
   position: relative;
-  font-size: 15px;
+  font-size: 14px;
   margin: 0 4px;
   cursor: url(./cursor/Link.cur), pointer;
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.288);
   transition: 0.2s;
   -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 .navbar .leftLi.logo img {
@@ -114,30 +118,14 @@ li.app_name {
 }
 
 .navbar__right li {
-  margin: 0 6px;
+  margin: 0 10px;
 }
-.navbar__right .rightButton {
-  display: flex;
-  align-items: center;
-  padding: 4px 8px;
+.navbar__right li svg {
+  transform: scale(0.8);
 }
-.navbar__right .rightButton img {
-  width: 30px;
-}
+.wifi svg {
+  transform: translateY(1px) scale(0.8) !important;
 
-.navbar__right .rightButton ul > li > button img {
-  margin-right: 5px;
-}
-
-.navbar__right .rightButton:hover {
-  border-radius: 3px;
-  background-color: var(--color-white-200);
-}
-
-@media screen and (max-width: 600px) {
-  .navbar__right .rightButton {
-    display: none;
-  }
 }
 
 .navbar__right .clock #clock {
@@ -148,6 +136,7 @@ li.app_name {
 .navbar__right li .control-center {
   width: 32px;
   height: 19px;
+  transform: scale(0.8) translateY(1px);
 }
 
 .navbar__right .battery {
@@ -193,6 +182,13 @@ li.app_name {
   height: 100%;
   background: white;
   border-radius: 2px;
+}
+
+.navbar__right .battery__low {
+  background-color: var(--color-red);
+}
+.navbar__right .battery__high {
+  background-color: var(--color-green);
 }
 
 .navbar__right .battery__text {
@@ -263,7 +259,10 @@ li.app_name {
 }
 
 .navbar__right .battery__popup button:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background-color: var(--color-blue-800);
+}
+.navbar__right .battery__popup button:active {
+  background-color: #0063f7;
 }
 
 li > ul {
@@ -273,6 +272,7 @@ li > ul {
   flex-direction: column;
   left: 0;
   top: 100%;
+  margin-top: 1px;
   font-weight: 600;
   padding: 4px;
   min-width: 200px;
@@ -327,13 +327,11 @@ li > ul > li > button:active {
 li > .menu__container {
   display: none;
   position: absolute;
-  align-items: center;
-  flex-direction: column;
   width: 380px;
-  min-height: 400px;
   border-radius: 20px;
   top: 100%;
   right: 50%;
+  height: 24rem;
   transform: translateX(50%);
   background-color: rgba(224, 222, 222, 0.349);
   backdrop-filter: blur(11px);
@@ -351,41 +349,45 @@ li > .menu__container > .grid__controling {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "Toggles Toggles DoNotDisturb DoNotDisturb"
+    "Toggles Toggles KeyboardBrightness Battery"
+    "Display Display Display Display"
+    "Audio Audio Audio Audio"
+    "Music Music Music Music";
+  grid-gap: 1em 1em;
 }
 li > .menu__container > .grid__controling .control_center--grid {
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  width: 100%;
-  height: 100%;
   box-shadow: 0 5px 15px rgba(44, 44, 44, 0.37);
   border: 1px solid rgba(255, 255, 255, 0.178);
   overflow: hidden;
   border-radius: 12px;
 }
 .menu__container > .grid__controling .col-5 {
-  grid-row-start: 4 span;
-  grid-column-start: 2 span;
+  grid-area: Toggles;
 }
 .menu__container > .grid__controling .col-7 {
-  grid-row-start: 2 span;
-  grid-column-start: 2 span;
+  grid-area: DoNotDisturb;
 }
 
-.menu__container > .grid__controling .col-3 {
-  grid-row-start: 2 span;
+.menu__container > .grid__controling .col-3--brightness {
+  grid-area: KeyboardBrightness;
+}
+.menu__container > .grid__controling .col-3--battery {
+  grid-area: Battery;
 }
 
-.menu__container > .grid__controling .col-12 {
-  grid-row-start: 2 span;
-  grid-column-start: 4 span;
+.menu__container > .grid__controling .col-12--light {
+  grid-area: Display;
+}
+.menu__container > .grid__controling .col-12--volume {
+  grid-area: Audio;
 }
 .menu__container > .grid__controling .col-12--music {
-  grid-row-start: 2 span;
-  grid-column-start: 4 span;
+  grid-area: Music;
 }
 
 .grid__controling .control_center--grid button {
@@ -444,12 +446,27 @@ li > .menu__container > .grid__controling .control_center--grid {
   font-size: 14px;
   font-family: "Lexend", sans-serif;
 }
+.nobtn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.nobtn svg {
+  background-color: transparent !important;
+}
 
 .grid__controling .control_center--grid button svg {
   background-color: var(--color-blue-800);
   padding: 5px;
   border-radius: 50%;
   margin: 0 5px;
+}
+.col-7 button svg {
+  background-color: #b63333 !important;
+}
+.col-7 button:focus {
+  background: #b63333 !important;
+  color: var(--color-white);
 }
 
 .grid__controling .control_center--grid button:focus {
@@ -1305,18 +1322,18 @@ li > .menu__container > .grid__controling .control_center--grid {
   right: 10px;
   transform: translateX(115%);
   transition: all 0.3s cubic-bezier(0.79, 0.14, 0.15, 0.86);
+  backdrop-filter: blur(1rem);
+  border: 1px solid var(--color-white-200);
+  border-radius: 16px;
+  overflow: hidden;
 }
 .widgets-panel.open {
   transform: translateX(0);
 }
 .widgets-panel__calendar {
   background: transparent;
-  /* border: 1px solid black; */
-  backdrop-filter: blur(1rem);
-  border-radius: 16px;
   padding: 16px;
   min-width: 160px;
-  /* box-shadow: 0 2px 12px 8px rgba(0, 0, 0, 0.1); */
 }
 .widgets-panel #taghvim {
   display: flex;
@@ -1324,7 +1341,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   justify-content: center;
 }
 .widgets-panel__calendar h4 {
-  color: #000000;
+  color: #ffffff;
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
@@ -1344,9 +1361,6 @@ li > .menu__container > .grid__controling .control_center--grid {
   margin-left: 8px;
   margin: 8px 0;
 }
-/* .widgets-panel__calendar li:not(:last-child) {
-  margin-bottom: 4px;
-} */
 .widgets-panel__calendar li::before {
   content: "";
   width: 8px;
