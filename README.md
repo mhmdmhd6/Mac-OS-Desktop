@@ -12,8 +12,7 @@ https://mhmdmhd6.github.io/Mac-OS-Desktop
   Sample Desktop Application 👇
 </p>
 
-![desktop](https://user-images.githubusercontent.com/79286306/170665149-9d6e4ef2-8211-4282-8b3f-d04c10d43994.jpg)
-
+![Screenshot 2022-06-04 155457](https://user-images.githubusercontent.com/79286306/171997338-103ee406-550d-4707-b7e9-c4627d1cb756.jpg)
 
 
 <p align="center">
@@ -50,13 +49,14 @@ An example of new icons those are added:
 
 |new feature in this version| Launchpad |
 |------------|------------|
-| ![new feature](https://user-images.githubusercontent.com/79286306/134972995-e7fc56e8-6a91-4b27-90cc-c0d968cb2209.jpg)| ![launchpad](https://user-images.githubusercontent.com/79286306/134975627-07cec7d6-4327-42cf-847b-6893eea9d48c.jpg) |
+| ![new feature](https://user-images.githubusercontent.com/79286306/171997418-85fea996-05ed-46e5-9338-d26ea4a3d2c7.jpg)| ![launchpad](https://user-images.githubusercontent.com/79286306/171997441-fad28051-24a5-4331-bbdc-b5c13c5dc663.jpg) |
 
 
 
 | Terminal | Calculator App  |
 |------------|-----------------|
-| <img src="https://user-images.githubusercontent.com/79286306/134975665-f7e81071-18a2-4f2c-b034-bb1ec99e1be2.jpg" width="100%"> | <img src="https://user-images.githubusercontent.com/79286306/134975739-5c816139-df8b-4bd5-bba0-9dbbaafcbbab.jpg" width="100%"> |  
+| <img src="https://user-images.githubusercontent.com/79286306/171997288-79440098-cd50-40aa-9903-9df0da8acfd1.jpg" width="100%"> | <img src="https://user-images.githubusercontent.com/79286306/171997312-167ee32a-e8bb-4787-863a-ff0f2135bbf0.jpg" width="100%"> |  
+
 
   and also Note app
 
@@ -83,7 +83,7 @@ An example of new icons those are added:
 > - [x] Calculator app 
 > - [x] Control center
 > - [ ] Preference app     
-> - [ ] Map app      
+> - [x] Map app      
 > - [ ] Siri  
 > - [x] VSCode app      
 > - [ ] Weather app      
