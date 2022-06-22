@@ -41,6 +41,8 @@ const batteryText = document.querySelector(".battery__text");
 const batteryPopup = document.querySelector(".battery__popup");
 const batteryPopupText = document.querySelector(".battery__popup header span");
 const batteryProgress = document.querySelector(".battery__progress");
+const batteryIsChargingLogo = document.querySelector(".is-charging");
+const powerSource = document.querySelector(".power-source");
 
 var clockElement = document.getElementById("clock");
 var clockWrapper = document.querySelector(".clock");
@@ -427,17 +429,33 @@ function lockload() {
 
 /********** Start Battery **********/
 const calculateBattery = () => {
-  const number = Math.floor(Math.random() * 100);
+  let number = Math.floor(Math.random() * 100); // If there is any error, it will be the random default battery level
 
-  batteryText.textContent = `${number}%`;
-  batteryProgress.style.width = `${number}%`;
-  batteryPopupText.textContent = `${number}%`;
+  let batteryIsCharging = false; // Charging status
 
-  if (number <= 20) {
-    batteryProgress.classList.add("battery__low");
-  } else if(number > 90) {
-    batteryProgress.classList.add("battery__high");
-  }
+  navigator
+    .getBattery()
+    .then(function (battery) {
+      number = battery.level * 100;
+
+      batteryIsCharging = battery.charging;
+      battery.addEventListener("chargingchange", function () {
+        batteryIsCharging = battery.charging;
+      });
+    })
+    .finally(() => {
+      batteryText.textContent = `${number}%`;
+      batteryProgress.style.width = `${number}%`;
+      batteryPopupText.textContent = `${number}%`;
+
+      if (number <= 20) {
+        batteryProgress.classList.add("battery__low");
+      } else if ((number > 90 && batteryIsCharging) || batteryIsCharging) {
+        batteryProgress.classList.add("battery__high");
+        batteryIsChargingLogo.classList.add("is-charging-visibel");
+        powerSource.textContent = "Power Adapter";
+      }
+    });
 };
 
 batteryButton.addEventListener("click", () => {
