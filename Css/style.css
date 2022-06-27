@@ -125,7 +125,6 @@ li.app_name {
 }
 .wifi svg {
   transform: translateY(1px) scale(0.8) !important;
-
 }
 
 .navbar__right .clock #clock {
@@ -180,8 +179,18 @@ li.app_name {
 
 .navbar__right .battery__progress {
   height: 100%;
+  display: flex;
   background: white;
   border-radius: 2px;
+}
+
+.navbar__right .battery__progress .is-charging {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.is-charging-visibel {
+  display: block !important;
 }
 
 .navbar__right .battery__low {

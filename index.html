@@ -138,9 +138,12 @@
 
       <ul class="navbar__right">
         <li class="battery">
-          <span class="battery__text"></span>
+          <span class="battery__text">
+          </span>
           <div class="battery__container">
-            <div class="battery__progress"></div>
+            <div class="battery__progress">
+              <img class="is-charging" src="./icon/charging.png" alt="Battery is charging">
+            </div>
           </div>
 
           <div class="battery__popup">
@@ -148,7 +151,7 @@
               <h3>Battery</h3>
               <span></span>
             </header>
-            <p>Power Source: Battery</p>
+            <p>Power Source: <span class="power-source">Battery</span></p>
             <hr />
             <button>Battery Preferences...</button>
           </div>
