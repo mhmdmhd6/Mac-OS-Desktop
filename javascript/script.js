@@ -73,10 +73,17 @@ var brightness_range = document.getElementById("brightness");
 var sound_range = document.getElementById("sound");
 
 function change_brightness() {
+  let brightnessValLocal = localStorage.getItem('brightnessVal');
+  brightness_range.setAttribute("value" , brightnessValLocal);
   var brightnessVal = brightness_range.value;
-
-  body.style.filter = `brightness(${brightnessVal + "%"})`;
-  body.style.backdropFilter = `brightness(${brightnessVal + "%"})`;
+  localStorage.setItem('brightnessVal' , brightnessVal);
+  if(brightnessValLocal != null) {
+    body.style.filter = `brightness(${brightnessValLocal + "%"})`;
+    body.style.backdropFilter = `brightness(${brightnessValLocal + "%"})`;
+  } else {
+    body.style.filter = `brightness(${brightnessVal + "%"})`;
+    body.style.backdropFilter = `brightness(${brightnessVal + "%"})`;
+  }
 }
 
 // Spotlight
@@ -92,7 +99,7 @@ function handleopen_spotlight() {
 
 function handleAdding() {
   var create_input = document.createElement("input");
-  create_input.placeholder = "writing name";
+  create_input.placeholder = "Writing name";
   notes.append(create_input);
 }
 function handleDeleting() {
