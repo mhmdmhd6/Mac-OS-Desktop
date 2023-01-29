@@ -243,22 +243,24 @@
               <img src="./icon/Sun.svg" alt="" width="25">
             </div>
             <div class="control_center--grid col-12--volume sound">
-              <input type="range" id="sound" min="0" max="16" step="1" value="8" />
+              <input type="range" id="sound" min="0" max="16" step="1" value="16" disabled/>
               <img src="./icon/volume.svg" alt="" width="25">
             </div>
             <div class="control_center--grid col-12--music">
               <div class="musicPlayer">
                 <div class="musicPlayer--image">
-                  <img src="./icon/dock/music.png" alt="" />
+                  <img src="" id="musicImage" alt="" />
                   &nbsp;&nbsp;&nbsp;
                   <div>
-                    <h2>Music</h2>
-                    <span>Click The Play Button</span>
+                    <h2 id="musicTitle"></h2>
+                    <span id="musicSinger"></span>
+                    <audio id="musicPlayerTag" src=""></audio>
                   </div>
                 </div>
                 <div class="musicPlayer--content">
-                  <span class="material-icons-round"> play_arrow </span>
-                  <span class="material-icons-round"> fast_forward </span>
+                  <span class="material-icons-round" onclick="previousMusic()"> fast_rewind </span>
+                  <span class="material-icons-round" id="musicPlayIcon" onclick="playMusic(event)"> play_arrow </span>
+                  <span class="material-icons-round" onclick="nextMusic()"> fast_forward </span>
                 </div>
               </div>
             </div>

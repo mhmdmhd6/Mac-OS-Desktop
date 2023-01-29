@@ -496,5 +496,53 @@ let navbarMusics = [
     singer: "Alan Walker",
     img: "faded.webp",
     source: "faded.mp3",
-  }
+  },
 ];
+
+let musicPlayerTag = document.getElementById("musicPlayerTag");
+let musicSinger = document.getElementById("musicSinger");
+let musicTitle = document.getElementById("musicTitle");
+let musicImage = document.getElementById("musicImage");
+let musicPlayIcon = document.getElementById("musicPlayIcon");
+
+let isPlay = false;
+let musicItem = 0;
+
+function playMusic() {
+  if (isPlay) {
+    isPlay = false;
+    musicPlayIcon.textContent = "play_arrow";
+    musicPlayerTag.pause();
+  } else {
+    isPlay = true;
+    musicPlayIcon.textContent = "pause";
+    musicPlayerTag.play();
+  }
+}
+
+function changeMusic() {
+  musicPlayerTag.src = musicsDirectory + navbarMusics[musicItem].source;
+  musicImage.src = musicsDirectory + navbarMusics[musicItem].img;
+  musicTitle.textContent = navbarMusics[musicItem].title;
+  musicSinger.textContent = navbarMusics[musicItem].singer;
+}
+
+changeMusic();
+
+function nextMusic() {
+  isPlay = false;
+  if (musicItem < navbarMusics.length - 1) {
+    musicItem++;
+    changeMusic();
+    playMusic();
+  }
+}
+
+function previousMusic() {
+  isPlay = false;
+  if (musicItem > 0) {
+    musicItem--;
+    changeMusic();
+    playMusic();
+  }
+}
