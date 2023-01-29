@@ -451,9 +451,9 @@ const calculateBattery = () => {
       });
     })
     .finally(() => {
-      batteryText.textContent = `${number}%`;
+      batteryText.textContent = `${Math.floor(number)}%`;
       batteryProgress.style.width = `${number}%`;
-      batteryPopupText.textContent = `${number}%`;
+      batteryPopupText.textContent = `${Math.floor(number)}%`;
 
       if (number <= 20) {
         batteryProgress.classList.add("battery__low");
