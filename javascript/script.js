@@ -73,11 +73,11 @@ var brightness_range = document.getElementById("brightness");
 var sound_range = document.getElementById("sound");
 
 function change_brightness() {
-  let brightnessValLocal = localStorage.getItem('brightnessVal');
-  brightness_range.setAttribute("value" , brightnessValLocal);
+  let brightnessValLocal = localStorage.getItem("brightnessVal");
+  brightness_range.setAttribute("value", brightnessValLocal);
   var brightnessVal = brightness_range.value;
-  localStorage.setItem('brightnessVal' , brightnessVal);
-  if(brightnessValLocal != null) {
+  localStorage.setItem("brightnessVal", brightnessVal);
+  if (brightnessValLocal != null) {
     body.style.filter = `brightness(${brightnessValLocal + "%"})`;
     body.style.backdropFilter = `brightness(${brightnessValLocal + "%"})`;
   } else {
@@ -470,3 +470,31 @@ batteryButton.addEventListener("click", () => {
   batteryButton.classList.toggle("selected");
 });
 /********** End Battery **********/
+
+/* 
+Code: Navbar Music Player
+Author: Armin Amiri Nasab
+Date: 2023/01/29
+ */
+
+let musicsDirectory = "./music/";
+let navbarMusics = [
+  {
+    title: "Cannon",
+    singer: "Johann Pachelbel",
+    img: "canon.jpg",
+    source: "canon.mp3",
+  },
+  {
+    title: "Rondo",
+    singer: "Mozart",
+    img: "mozart.jpg",
+    source: "mozart.mp3",
+  },
+  {
+    title: "Faded",
+    singer: "Alan Walker",
+    img: "faded.webp",
+    source: "faded.mp3",
+  }
+];

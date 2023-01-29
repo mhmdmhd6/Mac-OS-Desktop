@@ -505,6 +505,7 @@ li > .menu__container > .grid__controling .control_center--grid {
 .musicPlayer--image img {
   width: 50px;
   margin: 0 0 0 10px;
+  border-radius: 10px;
 }
 .musicPlayer--content {
   width: 30%;
