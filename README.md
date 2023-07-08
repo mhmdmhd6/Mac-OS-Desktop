@@ -101,6 +101,7 @@ An example of new icons those are added:
 > - [ ] Change dekstop background
 > - [x] Spotlight search
 > - [x] Add change brightness range input 
+> - [ ] Music Player App
 
 
 ## list of Shorcuts : <br>
