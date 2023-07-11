@@ -82,7 +82,7 @@ body {
   position: relative;
   font-size: 14px;
   margin: 0 4px;
-  cursor: url(./cursor/Link.cur), pointer;
+  cursor: url(../cursor/Link.cur), pointer;
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.288);
   transition: 0.2s;
   -webkit-tap-highlight-color: transparent;
@@ -325,7 +325,7 @@ li > ul > li > button {
   border-radius: 5px;
   transition: 80ms;
   font-size: 14px;
-  cursor: url(./cursor/Link.cur), pointer;
+  cursor: url(../cursor/Link.cur), pointer;
 }
 
 li > ul > li > button:hover {
@@ -836,7 +836,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   border-radius: 9px;
   transition: 0.2s;
   padding: 5px;
-  cursor: url(/cursor/Link.cur), pointer;
+  cursor: url(../cursor/Link.cur), pointer;
 }
 
 .window__taskbar--right .containerSearch {
@@ -1027,7 +1027,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   display: flex;
   place-items: center;
   flex-direction: column;
-  cursor: url(/cursor/Link.cur), pointer;
+  cursor: url(../cursor/Link.cur), pointer;
 }
 
 .launchpad .child-launchpad img {
@@ -1321,7 +1321,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   margin: 0 0 4px 0;
   display: flex;
   flex-direction: row;
-  cursor: url(./cursor/Link.cur), pointer;
+  cursor: url(../cursor/Link.cur), pointer;
 }
 .context-menu ul button:hover {
   background: var(--color-blue-800);

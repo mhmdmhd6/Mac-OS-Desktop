@@ -95,6 +95,17 @@ const launchpad = {
 
 /********** LISTENERS **********/
 
+/* 
+Now it's not good cause when i set this, the default blur will be remove of everywhere.
+
+function change_brightness() {
+  var brightnessVal = elements.brightness_range.value;
+
+  elements.body.style.filter = `brightness(${brightnessVal + '%'})`;
+  elements.body.style.backdropFilter = `brightness(${brightnessVal + '%'})`;
+}
+*/
+
 // Spotlight
 function handleopen_spotlight() {
   if (elements.spotlight_search.style.display === "none") {

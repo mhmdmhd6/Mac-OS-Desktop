@@ -57,7 +57,7 @@
 
   </head>
   
-  <body onload="digi(), lockload(), calculateBattery() , change_brightness()">
+  <body onload="digi(), lockload(), calculateBattery()">
     <div id="loading"></div>
     <div class="navbar">
       <ul>
@@ -285,7 +285,6 @@
                 <input
                   type="range"
                   id="brightness"
-                  oninput="change_brightness()"
                   min="20"
                   max="100"
                   step="1"
