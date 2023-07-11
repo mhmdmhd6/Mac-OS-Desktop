@@ -83,12 +83,17 @@ const mapsApp = {
   opening: document.querySelector(".open-map")
 };
 
-function change_brightness() {
-  var brightnessVal = brightness_range.value;
+// Launchpad
+const launchpad = {
+  container: document.querySelector(".container__Window"),
+  window: document.querySelector(".launchpad"),
+  searchbox: document.querySelector(".launchpad .searchbox"),
+  app_container: document.querySelector(".Apps-container"),
+  point: document.querySelector("#point-launchpad"),
+  opening: document.querySelector(".open-lunchpad")
+};
 
-  body.style.filter = `brightness(${brightnessVal + "%"})`;
-  body.style.backdropFilter = `brightness(${brightnessVal + "%"})`;
-}
+/********** LISTENERS **********/
 
 // Spotlight
 function handleopen_spotlight() {
@@ -101,9 +106,9 @@ function handleopen_spotlight() {
 
 // Notes app function start
 function handleAdding() {
-  var create_input = document.createElement("input");
-  create_input.placeholder = "writing name";
-  notes.append(create_input);
+  const create_input = document.createElement("input");
+  create_input.placeholder = "Writing name";
+  notesApp.adding.append(create_input);
 }
 
 function handleDeleting() {
@@ -456,7 +461,7 @@ function rightClick(e) {
 }
 
 // Loading
-var load = document.getElementById("loading");
+const load = document.getElementById("loading");
 function lockload() {
   load.style.display = "none";
 }

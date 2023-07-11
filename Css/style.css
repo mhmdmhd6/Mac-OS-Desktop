@@ -43,10 +43,7 @@ body {
   height: 100vh;
   user-select: none;
   font-family: "Lexend", sans-serif;
-  background: url("../background/iridescence.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("../background/iridescence.jpg") center/cover no-repeat;
   overflow: hidden;
 }
 
@@ -56,8 +53,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background: url(../background/lock.gif) no-repeat center;
-  background-size: cover;
+  background: url(../background/lock.gif) center/cover no-repeat;
   z-index: 9999;
 }
 
@@ -70,7 +66,6 @@ body {
   color: var(--color-white-900);
   box-shadow: 0 2px 10px var(--color-black-100);
   background: linear-gradient(to right, #6e1438, #270598, #e54c2d);
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -107,8 +102,8 @@ body {
 }
 
 .navbar .leftLi a {
-text-decoration: none;
-color: var(--color-white);;
+  text-decoration: none;
+  color: var(--color-white);
 }
 
 .navbar .leftLi:hover {
@@ -125,9 +120,11 @@ li.app_name {
 .navbar__right li {
   margin: 0 10px;
 }
+
 .navbar__right li svg {
   transform: scale(0.8);
 }
+
 .wifi svg {
   transform: translateY(1px) scale(0.8) !important;
 }
@@ -155,7 +152,6 @@ li.app_name {
   background: transparent;
   transition: all ease-out 0.2s;
 }
-
 .navbar__right .battery.selected {
   background: var(--color-white-200);
 }
@@ -194,13 +190,15 @@ li.app_name {
   width: 100%;
   height: 100%;
 }
-.is-charging-visibel {
+
+.is-charging-visible {
   display: block !important;
 }
 
 .navbar__right .battery__low {
   background-color: var(--color-red);
 }
+
 .navbar__right .battery__high {
   background-color: var(--color-green);
 }
@@ -275,6 +273,7 @@ li.app_name {
 .navbar__right .battery__popup button:hover {
   background-color: var(--color-blue-800);
 }
+
 .navbar__right .battery__popup button:active {
   background-color: #0063f7;
 }
@@ -421,7 +420,6 @@ li > .menu__container > .grid__controling .control_center--grid {
 
 .menu__container > .grid__controling input[type="range"] {
   -webkit-appearance: none;
-
   outline: 0;
   border: 0;
 }
