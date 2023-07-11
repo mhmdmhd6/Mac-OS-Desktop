@@ -57,7 +57,7 @@
 
   </head>
   
-  <body onload="digi(), lockload(), calculateBattery()">
+  <body onload="digi(), lockload(), calculateBattery() , change_brightness()">
     <div id="loading"></div>
     <div class="navbar">
       <ul>
@@ -65,7 +65,7 @@
           <img src="./icon/apple-white.png" alt="Apple logo" />
           <ul>
             <li>
-              <button>About This Mac</button>
+              <button><a href="https://github.com/mhmdmhd6/Mac-OS-Desktop" target="_blank">About This Mac</a></button>
             </li>
             <li>
               <button>System Preferences...</button>
@@ -286,7 +286,7 @@
                   type="range"
                   id="brightness"
                   oninput="change_brightness()"
-                  min="0"
+                  min="20"
                   max="100"
                   step="1"
                   value="100"
@@ -426,7 +426,7 @@
           <input
             type="search"
             name="search"
-            placeholder="search"
+            placeholder="Search"
             accesskey="s"
           />
         </div>
@@ -578,6 +578,7 @@
                 type="search"
                 name="search"
                 placeholder="search"
+                accesskey="s"
               />
             </div>
           </div>

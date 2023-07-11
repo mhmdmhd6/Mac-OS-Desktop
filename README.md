@@ -67,7 +67,7 @@ An example of new icons those are added:
 
 <hr>
 
-📌 Please feel free to contribute to this project with your commmits, and share this with your friends if you like this projects.😁 😃
+📌 Please feel free to contribute to this project with your commits, and share this with your friends if you like this projects.😁 😃
 
 ### List of components for this project:
 > - [x] Navbar top

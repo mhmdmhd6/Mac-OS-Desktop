@@ -83,17 +83,12 @@ const mapsApp = {
   opening: document.querySelector(".open-map")
 };
 
-// Launchpad
-const launchpad = {
-  container: document.querySelector(".container__Window"),
-  window: document.querySelector(".launchpad"),
-  searchbox: document.querySelector(".launchpad .searchbox"),
-  app_container: document.querySelector(".Apps-container"),
-  point: document.querySelector("#point-launchpad"),
-  opening: document.querySelector(".open-lunchpad")
-};
+function change_brightness() {
+  var brightnessVal = brightness_range.value;
 
-/********** LISTENERS **********/
+  body.style.filter = `brightness(${brightnessVal + "%"})`;
+  body.style.backdropFilter = `brightness(${brightnessVal + "%"})`;
+}
 
 // Spotlight
 function handleopen_spotlight() {
@@ -106,9 +101,9 @@ function handleopen_spotlight() {
 
 // Notes app function start
 function handleAdding() {
-  const create_input = document.createElement("input");
-  create_input.placeholder = "Writing name";
-  notesApp.adding.append(create_input);
+  var create_input = document.createElement("input");
+  create_input.placeholder = "writing name";
+  notes.append(create_input);
 }
 
 function handleDeleting() {
