@@ -138,8 +138,7 @@
 
       <ul class="navbar__right">
         <li class="battery">
-          <span class="battery__text">
-          </span>
+          <span class="battery__text"></span>
           <div class="battery__container">
             <div class="battery__progress">
               <img class="is-charging" src="./icon/charging.png" alt="Battery is charging">
@@ -350,11 +349,7 @@
       <button class="icon">
         <img src="./icon/dock/finder.png" alt="Finder Logo" class="hidden" />
       </button>
-      <button
-        accesskey="o"
-        class="block-point icon onhover"
-        onclick="handleOpenLaunching()"
-      >
+      <button accesskey="o" class="icon open-lunchpad">
         <img
           class="launching hidden"
           src="./icon/dock/launchpad.png"
@@ -371,7 +366,7 @@
       <button class="icon">
         <img src="./icon/dock/music.png" alt="Music Logo" />
       </button>
-      <button class="icon open_vscode">
+      <button class="icon open-vscode">
         <img src="./icon/dock/vscode.svg" alt="Vscode apps" class="hidden" />
         <hr class="point hidden" id="point-vscode" />
       </button>
@@ -381,7 +376,7 @@
       <button class="icon">
         <img src="./icon/dock/photos.png" alt="Photos Logo" class="hidden" />
       </button>
-      <button class="icon open_map">
+      <button class="icon open-map">
         <img src="./icon/dock/maps.png" alt="maps Logo" class="hidden" />
         <hr class="point hidden" id="point-maps" />
       </button>
@@ -389,11 +384,11 @@
         <img src="./icon/dock/calculator.png" alt="Calculator Logo" />
         <hr class="point" id="point-cal" />
       </button>
-      <button class="icon openNote">
+      <button class="icon open-note">
         <img src="./icon/dock/notes.png" alt="Notes Logo" />
         <hr class="point hidden" id="point-note" />
       </button>
-      <button accesskey="t" class="icon opening">
+      <button accesskey="t" class="icon open-terminal">
         <img
           src="./icon/dock/terminal.png"
           alt="Terminal Logo"
@@ -583,7 +578,6 @@
                 type="search"
                 name="search"
                 placeholder="search"
-                accesskey="s"
               />
             </div>
           </div>
@@ -600,7 +594,7 @@
       <!--note app end-->
 
       <!-- Vscode app start-->
-      <div class="window Vscode">
+      <!-- <div class="window Vscode">
         <div class="window__taskbar">
           <div class="window__taskbar--actions">
             <button class="close-Vscode"></button>
@@ -610,13 +604,14 @@
         </div>
         <div class="content">
           <iframe
-            src="https://vscode.dev"
+            src="https://github.dev/"
             height="100%"
             width="100%"
           ></iframe>
         </div>
-      </div>
+      </div> -->
       <!-- Vscode app end -->
+      
       <div class="window maps">
         <div class="window__taskbar">
           <div class="window__taskbar--actions">
@@ -629,7 +624,11 @@
           </div>
         </div>
         <div class="content">
-          <iframe width="100%" height="100%" src="https://maps.google.com/maps?q=2880%20Broadway,%20Amol&t=&z=13&ie=UTF8&iwloc=&output=embed" ></iframe>
+          <iframe 
+            width="100%" 
+            height="100%" 
+            src="https://maps.google.com/maps?q=2880%20Broadway,%20Amol&t=&z=13&ie=UTF8&iwloc=&output=embed">
+          </iframe>
         </div>
       </div>
       <!-- calculator -->

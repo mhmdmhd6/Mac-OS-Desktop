@@ -694,7 +694,6 @@ li > .menu__container > .grid__controling .control_center--grid {
   animation: zoom-out 0.3s;
   z-index: 10;
   touch-action: none;
-  transition: 110ms;
 }
 
 .window__taskbar {

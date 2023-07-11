@@ -1,114 +1,134 @@
 /********** ELEMENTS **********/
-var body = document.querySelector("body");
-var adding = document.querySelector(".adding");
-var backfull = document.querySelector(".backfull");
-var backfullnote = document.querySelector(".backfull-note");
-var app_name_calculator = document.querySelector("#calculator");
-var calculator = document.querySelector(".calculator");
-var closecal = document.querySelector(".close-cal");
-var close = document.querySelector(".close");
-var closenote = document.querySelector(".close-note");
-var container = document.querySelector(".container__Window");
-var deleting = document.querySelector(".deleting");
-var full = document.querySelector(".full");
-var fullnote = document.querySelector(".full-note");
-var launchpad = document.querySelector(".launchpad");
-var launchpad_searchbox = document.querySelector(".launchpad .searchbox");
-var launchpad_app_container = document.querySelector(".Apps-container");
-var navbar = document.querySelector(".navbar");
-var note = document.querySelector(".note");
-var app_name_notes = document.querySelector("#Notes");
-var opencalculator = document.querySelector(".open-cal");
-var point_cal = document.querySelector("#point-cal");
-var openNote = document.querySelector(".openNote");
-var opencalculator_lunchpad = document.querySelector(".open-cal-lunching");
-var opening = document.querySelector(".opening");
-var point_launchpad = document.querySelector("#point-launchpad");
-var point_terminal = document.querySelector("#point-terminal");
-var point_note = document.querySelector("#point-note");
-var terminal = document.querySelector(".terminal");
-var content__typing = document.querySelector(".content__typing");
-var app_name_terminal = document.querySelector("#Terminal");
-var terminal_content = document.querySelector(".terminal .terminal_content");
-var terminal_taskbar = document.querySelector(".terminal .window__taskbar");
+const elements = {
+  body: document.querySelector("body"),
+  navbar: document.querySelector(".navbar"),
+  open_spotlight: document.querySelector(".open_Search"),
+  spotlight_search: document.querySelector(".spotlight_serach"),
+  brightness_range: document.getElementById("brightness"),
+  sound_range: document.getElementById("sound"),
+  clockElement: document.getElementById("clock"),
+  clockWrapper: document.querySelector(".clock"),
+  widgetsPanel: document.querySelector(".widgets-panel"),
+  batteryButton: document.querySelector(".battery"),
+  batteryText: document.querySelector(".battery__text"),
+  batteryPopup: document.querySelector(".battery__popup"),
+  batteryPopupText: document.querySelector(".battery__popup header span"),
+  batteryProgress: document.querySelector(".battery__progress"),
+  batteryIsChargingLogo: document.querySelector(".is-charging"),
+  powerSource: document.querySelector(".power-source"),
+};
 
-var clockElement = document.getElementById("clock");
-var clockWrapper = document.querySelector(".clock");
-var widgetsPanel = document.querySelector(".widgets-panel");
+// Calculator App
+const calculatorApp = {
+  app_name: document.querySelector("#calculator"),
+  window: document.querySelector(".calculator"),
+  full: document.querySelector(".full"),
+  close: document.querySelector(".close-cal"),
+  backfull: document.querySelector(".min-cal"),
+  point: document.querySelector("#point-cal"),
+  opening: document.querySelector('.open-cal'),
+  opening_l: document.querySelector(".open-cal-lunching")
+};
 
-const batteryButton = document.querySelector(".battery");
-const batteryText = document.querySelector(".battery__text");
-const batteryPopup = document.querySelector(".battery__popup");
-const batteryPopupText = document.querySelector(".battery__popup header span");
-const batteryProgress = document.querySelector(".battery__progress");
-const batteryIsChargingLogo = document.querySelector(".is-charging");
-const powerSource = document.querySelector(".power-source");
+// Notes App
+const notesApp = {
+  app_name: document.querySelector("#Notes"),
+  window: document.querySelector(".note"),
+  full: document.querySelector(".full-note"),
+  close: document.querySelector(".close-note"),
+  backfull: document.querySelector(".backfull-note"),
+  point: document.querySelector("#point-note"),
+  adding: document.querySelector(".adding"),
+  deleting: document.querySelector(".deleting"),
+  content_typing: document.querySelector(".content__typing"),
+  opening: document.querySelector(".open-note")
+};
 
-var clockElement = document.getElementById("clock");
-var clockWrapper = document.querySelector(".clock");
-var widgetsPanel = document.querySelector(".widgets-panel");
+// Terminal App
+const terminalApp = {
+  app_name: document.querySelector("#Terminal"),
+  window: document.querySelector(".terminal"),
+  full: document.querySelector(".full"),
+  close: document.querySelector(".close"),
+  backfull: document.querySelector(".backfull"),
+  point: document.querySelector("#point-terminal"),
+  content: document.querySelector(".terminal .terminal_content"),
+  taskbar: document.querySelector(".terminal .window__taskbar"),
+  opening: document.querySelector(".open-terminal")
+};
 
-var open_vscode = document.querySelector(".open_vscode");
-var Vscode_window = document.querySelector(".Vscode");
-var app_name_VScode = document.querySelector("#VScode");
-var close_Vscode = document.querySelector(".close-Vscode");
-var notes = document.querySelector(".content__sidebar--notes");
-var backfull_Vscode = document.querySelector(".backfull-Vscode");
-var full_Vscode = document.querySelector(".full-Vscode");
-var point_vscode = document.querySelector("#point-vscode");
-var create_input = document.createElement("input");
+// VScode App
 
-var open_map = document.querySelector(".open_map");
-var maps_window = document.querySelector(".maps");
-var point_map = document.querySelector("#point-maps");
-var app_name_maps = document.querySelector("#map");
-var close_map = document.querySelector(".close-map");
-var backfull_map = document.querySelector(".backfull-map");
-var full_map = document.querySelector(".full-map");
+/*  Can't connect to the github.dev or vscode.dev 
+const vscodeApp = {
+  app_name: document.querySelector("#VScode"),
+  window: document.querySelector(".Vscode"),
+  close: document.querySelector(".close-Vscode"),
+  backfull: document.querySelector(".backfull-Vscode"),
+  full: document.querySelector(".full-Vscode"),
+  point: document.querySelector("#point-vscode"),
+  opening: document.querySelector(".open-vscode")
+};
+*/
 
-var open_spotlight = document.querySelector(".open_Search");
-var spotlight_serach = document.querySelector(".spotlight_serach");
 
-var brightness_range = document.getElementById("brightness");
-var sound_range = document.getElementById("sound");
+// Maps App
+const mapsApp = {
+  app_name: document.querySelector("#map"),
+  window: document.querySelector(".maps"),
+  full: document.querySelector(".full-map"),
+  close: document.querySelector(".close-map"),
+  backfull: document.querySelector(".backfull-map"),
+  point: document.querySelector("#point-maps"),
+  opening: document.querySelector(".open-map")
+};
 
-function change_brightness() {
-  var brightnessVal = brightness_range.value;
+// Launchpad
+const launchpad = {
+  container: document.querySelector(".container__Window"),
+  window: document.querySelector(".launchpad"),
+  searchbox: document.querySelector(".launchpad .searchbox"),
+  app_container: document.querySelector(".Apps-container"),
+  point: document.querySelector("#point-launchpad"),
+  opening: document.querySelector(".open-lunchpad")
+};
 
-  body.style.filter = `brightness(${brightnessVal + "%"})`;
-  body.style.backdropFilter = `brightness(${brightnessVal + "%"})`;
-}
+/********** LISTENERS **********/
 
 // Spotlight
 function handleopen_spotlight() {
-  if (spotlight_serach.style.display === "none") {
-    spotlight_serach.style.display = "flex";
+  if (elements.spotlight_search.style.display === "none") {
+    elements.spotlight_search.style.display = "flex";
   } else {
-    spotlight_serach.style.display = "none";
+    elements.spotlight_search.style.display = "none";
   }
 }
 
 // Notes app function start
-
 function handleAdding() {
-  var create_input = document.createElement("input");
-  create_input.placeholder = "writing name";
-  notes.append(create_input);
+  const create_input = document.createElement("input");
+  create_input.placeholder = "Writing name";
+  notesApp.adding.append(create_input);
 }
+
 function handleDeleting() {
-  var inputChild = document.querySelector(".content__sidebar--notes input");
+  const inputChild = document.querySelector(".content__sidebar--notes input");
   inputChild.remove();
-  content__typing.style.display = "none";
+  notesApp.content_typing.style.display = "none";
 }
+
 function handleNotes() {
-  content__typing.style.display = "block";
+  notesApp.content_typing.style.display = "block";
 }
+
 // Notes app function end
+
 function handleMinimize(Minimize) {
   Minimize.style.maxWidth = "80%";
   Minimize.style.minWidth = "70%";
   Minimize.style.height = "430px";
 }
+
 function handleFullScreen(maximize) {
   maximize.style.maxWidth = "95%";
   maximize.style.minWidth = "95%";
@@ -117,37 +137,38 @@ function handleFullScreen(maximize) {
 
 function close_window(close, point, appName) {
   close.style.display = "none";
-
   point.style.display = "none";
   appName.style.display = "none";
 }
-function open_window(open, point, appName) {
-  navbar.style.display = "flex";
-  open.style.display = "block";
-  container.style.display = "flex";
-  launchpad.style.display = "none";
-  point_launchpad.style.display = "none";
-  appName.style.display = "block";
 
+function open_window(open, point, appName) {
+  elements.navbar.style.display = "flex";
+  open.style.display = "block";
+  launchpad.container.style.display = "flex";
+  launchpad.window.style.display = "none";
+  launchpad.point.style.display = "none";
+  appName.style.display = "block";
   point.style.display = "block";
 }
 
 // Launchpad function start
+launchpad.opening.addEventListener("click", handleOpenLaunching);
+
 function handleOpenLaunching() {
-  if (launchpad.style.display === "none") {
-    launchpad.style.display = "block";
-    navbar.style.display = "none";
-    point_launchpad.style.display = "block";
+  if (launchpad.window.style.display === "none") {
+    launchpad.window.style.display = "block";
+    elements.navbar.style.display = "none";
+    launchpad.point.style.display = "block";
   } else {
-    launchpad.style.display = "none";
-    navbar.style.display = "flex";
-    point_launchpad.style.display = "none";
+    launchpad.window.style.display = "none";
+    elements.navbar.style.display = "flex";
+    launchpad.point.style.display = "none";
   }
-  container.style.display = "none";
+  launchpad.container.style.display = "none";
 }
 
 function handleLaunchpadSearch(e) {
-  for (let app of launchpad_app_container.children) {
+  for (let app of launchpad.app_container.children) {
     if (e.target.value) {
       app.style.display = "none";
       if (app.dataset.keywords.includes(e.target.value)) {
@@ -160,89 +181,104 @@ function handleLaunchpadSearch(e) {
 
 // Calculator app start
 function handleOpenCal_lunchpad() {
-  calculator.style.display = "block";
-  container.style.display = "flex";
-  navbar.style.display = "flex";
-  launchpad.style.display = "none";
-  point_cal.style.display = "block";
-  point_launchpad.style.display = "none";
+  calculatorApp.window.style.display = "block";
+  calculatorApp.app_name.style.display = "block";
+  launchpad.container.style.display = "flex";
+  elements.navbar.style.display = "flex";
+  launchpad.window.style.display = "none";
+  calculatorApp.point.style.display = "block";
+  launchpad.point.style.display = "none";
 }
 // Calculator app end
 
-/********** LISTENERS **********/
-
 handleopen_spotlight();
 handleOpenLaunching();
-adding.addEventListener("click", handleAdding);
-backfull.addEventListener("click", () => handleMinimize(terminal));
-backfullnote.addEventListener("click", () => handleMinimize(note));
-close.addEventListener("click", () =>
-  close_window(terminal, point_terminal, app_name_terminal)
+notesApp.adding.addEventListener("click", handleAdding);
+calculatorApp.backfull.addEventListener("click", () =>
+  handleMinimize(terminalApp.window)
 );
-closenote.addEventListener("click", () =>
-  close_window(note, point_note, app_name_notes)
+notesApp.backfull.addEventListener("click", () =>
+  handleMinimize(notesApp.window)
 );
-close_map.addEventListener("click", () =>
-  close_window(maps_window, point_map, app_name_maps)
+terminalApp.close.addEventListener("click", () =>
+  close_window(terminalApp.window, terminalApp.point, terminalApp.app_name)
 );
-deleting.addEventListener("click", handleDeleting);
-full.addEventListener("click", () => handleFullScreen(terminal));
-fullnote.addEventListener("click", () => handleFullScreen(note));
-full_Vscode.addEventListener("click", () => handleFullScreen(Vscode_window));
-full_map.addEventListener("click", () => handleFullScreen(maps_window));
-notes.addEventListener("click", handleNotes);
-opening.addEventListener("click", () =>
-  open_window(terminal, point_terminal, app_name_terminal)
+notesApp.close.addEventListener("click", () =>
+  close_window(notesApp.window, notesApp.point, notesApp.app_name)
 );
-openNote.addEventListener("click", () =>
-  open_window(note, point_note, app_name_notes)
+mapsApp.close.addEventListener("click", () =>
+  close_window(mapsApp.window, mapsApp.point, mapsApp.app_name)
 );
-opencalculator.addEventListener("click", () =>
-  open_window(calculator, point_cal, app_name_calculator)
+notesApp.deleting.addEventListener("click", handleDeleting);
+terminalApp.full.addEventListener("click", () =>
+  handleFullScreen(terminalApp.window)
 );
-open_vscode.addEventListener("click", () =>
-  open_window(Vscode_window, point_vscode, app_name_VScode)
+notesApp.full.addEventListener("click", () =>
+  handleFullScreen(notesApp.window)
 );
-open_map.addEventListener("click", () =>
-  open_window(maps_window, point_map, app_name_maps)
+/*
+vscodeApp.full.addEventListener("click", () =>
+  handleFullScreen(vscodeApp.window)
 );
-close_Vscode.addEventListener("click", () =>
-  close_window(Vscode_window, point_vscode, app_name_VScode)
+*/
+mapsApp.full.addEventListener("click", () => handleFullScreen(mapsApp.window));
+notesApp.window.addEventListener("click", handleNotes);
+terminalApp.opening.addEventListener("click", () =>
+  open_window(terminalApp.window, terminalApp.point, terminalApp.app_name)
 );
-backfull_Vscode.addEventListener("click", () => handleMinimize(Vscode_window));
-backfull_map.addEventListener("click", () => handleMinimize(maps_window));
-closecal.addEventListener("click", () =>
-  close_window(calculator, point_cal, app_name_calculator)
+notesApp.opening.addEventListener("click", () =>
+  open_window(notesApp.window , notesApp.point, notesApp.app_name)
 );
-opencalculator_lunchpad.addEventListener("click", handleOpenCal_lunchpad);
-open_spotlight.addEventListener("click", handleopen_spotlight);
-launchpad_searchbox.addEventListener("input", handleLaunchpadSearch);
-clockWrapper.addEventListener("click", () => {
-  widgetsPanel.classList.toggle("open");
+calculatorApp.opening.addEventListener("click", () =>
+  open_window(calculatorApp.window, calculatorApp.point, calculatorApp.app_name)
+);
+/*
+vscodeApp.opening.addEventListener("click", () =>
+  open_window(vscodeApp.window, vscodeApp.point, vscodeApp.app_name)
+);
+*/
+mapsApp.opening.addEventListener("click", () =>
+  open_window(mapsApp.window, mapsApp.point, mapsApp.app_name)
+);
+/*
+vscodeApp.close.addEventListener("click", () =>
+  close_window(vscodeApp.window, vscodeApp.point, vscodeApp.app_name)
+);
+vscodeApp.backfull.addEventListener("click", () =>
+  handleMinimize(vscodeApp.window)
+);
+*/
+mapsApp.backfull.addEventListener("click", () =>
+  handleMinimize(mapsApp.window)
+);
+calculatorApp.close.addEventListener("click", () =>
+  close_window(
+    calculatorApp.window,
+    calculatorApp.point,
+    calculatorApp.app_name
+  )
+);
+calculatorApp.opening_l.addEventListener("click", handleOpenCal_lunchpad);
+elements.open_spotlight.addEventListener("click", handleopen_spotlight);
+launchpad.searchbox.addEventListener("input", handleLaunchpadSearch);
+elements.clockWrapper.addEventListener("click", () => {
+  elements.widgetsPanel.classList.toggle("open");
 });
 
-//calculator code
+// Calculator code
 // select all the buttons
-const buttons = document.querySelectorAll(".input button");
+const calculatorButtons = document.querySelectorAll(".input button");
 // select the <input type="text" class="display" disabled> element
-const display = document.querySelector(".display");
+const calculatorDisplay = document.querySelector(".display");
 
 // add eventListener to each button
-buttons.forEach((button) => {
-  button.addEventListener("click", (event) => calculate(event.target.value));
+calculatorButtons.forEach((button) => {
+  button.addEventListener("click", (event) =>
+    calculate(event.target.value, calculatorDisplay)
+  );
 });
 
-operators = ["+", "-", "*", "/"];
-function lastNumber(value) {
-  var tempChar = operators[0];
-  for (var i = 1; i < operators.length; i++) {
-    value = value.split(operators[i]).join(tempChar);
-  }
-  value = value.split(tempChar);
-  return value[value.length - 1];
-}
-
-function calculate(value) {
+function calculate(value, display) {
   const latestChar = display.value[display.value.length - 1];
 
   const isEmpty = display.value === "0";
@@ -299,7 +335,7 @@ function calculate(value) {
   }
 }
 
-//App dragable
+// App draggable
 $(function () {
   $(".terminal").draggable();
   $(".note").draggable();
@@ -308,14 +344,16 @@ $(function () {
   $(".spotlight_serach").draggable();
   $(".maps").draggable();
 });
-//date and time
-var d = new Date();
-document.getElementById("date").innerHTML = d.toDateString();
+
+// Date and time
+const dateElement = document.getElementById("date");
+const currentDate = new Date();
+dateElement.innerHTML = currentDate.toDateString();
 
 function digi() {
-  var date = new Date(),
-    hour = date.getHours(),
-    minute = checkTime(date.getMinutes());
+  const date = new Date();
+  let hour = date.getHours();
+  let minute = checkTime(date.getMinutes());
 
   function checkTime(i) {
     if (i < 10) {
@@ -326,15 +364,15 @@ function digi() {
 
   if (hour > 12) {
     hour = hour - 12;
-    if (hour == 12) {
+    if (hour === 12) {
       hour = checkTime(hour);
-      clockElement.innerHTML = hour + ":" + minute + " AM";
+      elements.clockElement.innerHTML = hour + ":" + minute + " AM";
     } else {
       hour = checkTime(hour);
-      clockElement.innerHTML = hour + ":" + minute + " PM";
+      elements.clockElement.innerHTML = hour + ":" + minute + " PM";
     }
   } else {
-    clockElement.innerHTML = hour + ":" + minute + " AM";
+    elements.clockElement.innerHTML = hour + ":" + minute + " AM";
   }
 }
 
@@ -342,6 +380,7 @@ let terminal_line_html = $(".terminal_line").html();
 let path = "~";
 let dirName;
 let dirs = ["Desktop", "Downloads", "Music", "Documents"];
+
 function init_terminal_line() {
   $(".cursor").keydown(function (e) {
     // trap the return key being pressed
@@ -376,7 +415,7 @@ function init_terminal_line() {
 
       $(this).removeAttr("contenteditable");
       $(this).removeClass("cursor");
-      $(".terminal_content")
+      terminalApp.content
         .append(command_output)
         .append(terminal_line_html.replace("~", path));
       placeCaretAtEnd(document.querySelector(".cursor"));
@@ -386,7 +425,7 @@ function init_terminal_line() {
 }
 
 init_terminal_line();
-$(".terminal_content").click(function () {
+terminalApp.content.addEventListener("click", function () {
   placeCaretAtEnd(document.querySelector(".cursor"));
 });
 
@@ -400,7 +439,7 @@ function placeCaretAtEnd(el) {
   sel.addRange(range);
 }
 
-//Right click to desktop
+// Right click to desktop
 document.onclick = hideMenu;
 document.oncontextmenu = rightClick;
 
@@ -421,7 +460,7 @@ function rightClick(e) {
   }
 }
 
-// loading
+// Loading
 var load = document.getElementById("loading");
 function lockload() {
   load.style.display = "none";
@@ -430,7 +469,6 @@ function lockload() {
 /********** Start Battery **********/
 const calculateBattery = () => {
   let number = Math.floor(Math.random() * 100); // If there is any error, it will be the random default battery level
-
   let batteryIsCharging = false; // Charging status
 
   navigator
@@ -444,22 +482,26 @@ const calculateBattery = () => {
       });
     })
     .finally(() => {
-      batteryText.textContent = `${number}%`;
-      batteryProgress.style.width = `${number}%`;
-      batteryPopupText.textContent = `${number}%`;
+      elements.batteryText.textContent = `${number}%`;
+      elements.batteryProgress.style.width = `${number}%`;
+      elements.batteryPopupText.textContent = `${number}%`;
 
       if (number <= 20) {
-        batteryProgress.classList.add("battery__low");
+        elements.batteryProgress.classList.add("battery__low");
       } else if ((number > 90 && batteryIsCharging) || batteryIsCharging) {
-        batteryProgress.classList.add("battery__high");
-        batteryIsChargingLogo.classList.add("is-charging-visibel");
-        powerSource.textContent = "Power Adapter";
+        elements.batteryProgress.classList.add("battery__high");
+        elements.batteryIsChargingLogo.classList.add("is-charging-visibel");
+        elements.powerSource.textContent = "Power Adapter";
       }
     });
 };
 
-batteryButton.addEventListener("click", () => {
-  batteryPopup.classList.toggle("opened");
-  batteryButton.classList.toggle("selected");
+elements.batteryButton.addEventListener("click", () => {
+  elements.batteryPopup.classList.toggle("opened");
+  elements.batteryButton.classList.toggle("selected");
 });
 /********** End Battery **********/
+
+// Call the functions
+calculateBattery();
+digi();
